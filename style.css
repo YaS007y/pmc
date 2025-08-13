@@ -477,7 +477,29 @@ footer {
   color: #e0e0e0;
   border-top: 1px solid rgba(255,255,255,0.08);
   padding-top: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer-credits {
+  font-size: 0.8rem;
+  color: #FF6B35;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+  .footer-credits {
+    font-size: 0.85rem;
+    margin-top: 1rem;
+  }
 }
 
 /* Panier */
@@ -676,63 +698,112 @@ footer {
   }
 }
 
-/* Carousel mobile corrigé */
+/* AMÉLIORATIONS RESPONSIVITÉ MOBILE */
+
+/* Grilles produits mobile - 2 colonnes sur mobile */
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.8rem;
+  }
+  
+  /* Services et autres grilles restent en 1 colonne */
+  .services-grid, .reviews-grid, .info-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+}
+
+/* Produits mobile - cards plus compactes pour 2 colonnes */
+@media (max-width: 768px) {
+  .product-card {
+    height: auto;
+    min-height: 280px;
+  }
+  .product-image {
+    height: 120px;
+  }
+  .product-info {
+    padding: 0.7rem;
+  }
+  .product-name {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+  .product-price {
+    font-size: 0.9rem;
+  }
+  .product-btn {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+  .product-category {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.5rem;
+  }
+}
+
+/* Carousel mobile - taille augmentée */
 @media (max-width: 768px) {
   .carousel-container {
-    margin: 0 -1rem;
-    border-radius: 0;
+    margin: 0 -0.5rem;
+    border-radius: 8px;
+    max-width: none;
   }
   .carousel-wrapper {
-    min-height: 180px;
+    min-height: 240px; /* Augmenté de 180px à 240px */
   }
   .carousel-slide img, .carousel-slide video {
-    max-height: 180px;
+    max-height: 240px; /* Augmenté de 180px à 240px */
     object-fit: contain;
   }
   .carousel-btn {
-    width: 30px;
-    height: 30px;
-    font-size: 0.9rem;
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
   }
-  .carousel-btn.prev { left: 5px; }
-  .carousel-btn.next { right: 5px; }
+  .carousel-btn.prev { left: 8px; }
+  .carousel-btn.next { right: 8px; }
   .carousel-indicators {
-    gap: 0.3rem;
-    margin-top: 0.3rem;
+    gap: 0.4rem;
+    margin-top: 0.8rem;
   }
   .indicator {
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
   }
 }
 
-/* Section titles mobile */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 1.5rem;
-    margin: 1.5rem 0 1rem 0;
-  }
+/* Footer - séparation claire du copyright */
+.footer-bottom {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 1rem;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-/* Container mobile - padding réduit */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 0.5rem;
-  }
-  .about, .products, .services, .actualites, .info, .reviews {
-    padding: 30px 0;
-  }
+.footer-credits {
+  font-size: 0.8rem;
+  color: #FF6B35;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: 0.5rem;
 }
 
-/* Footer mobile */
 @media (max-width: 768px) {
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    text-align: center;
+  .footer-bottom {
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    gap: 1rem;
   }
-  .footer-section p {
-    font-size: 0.9rem;
+  .footer-credits {
+    font-size: 0.85rem;
+    margin-top: 1rem;
   }
 }
 
@@ -796,12 +867,24 @@ footer {
 @media (max-width: 768px) {
   .category-filters {
     gap: 0.5rem;
-    margin-bottom: 1rem;
-    padding: 0 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0;
+    justify-content: center;
   }
   .filter-btn {
-    padding: 0.4em 0.8em;
-    font-size: 0.9rem;
+    padding: 0.5em 1em;
+    font-size: 0.85rem;
+    border-radius: 20px;
+  }
+}
+
+/* Section spacing mobile */
+@media (max-width: 768px) {
+  .about, .products, .services, .actualites, .info, .reviews {
+    padding: 40px 0; /* Augmenté de 30px à 40px */
+  }
+  .section-title {
+    margin: 2rem 0 1.5rem 0; /* Plus d'espace */
   }
 }
 
