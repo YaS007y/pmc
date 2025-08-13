@@ -917,25 +917,46 @@ footer {
 /* Panier mobile corrigé */
 @media (max-width: 768px) {
   .cart-panel {
-    top: 0;
-    right: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    border-radius: 0;
-    border: none;
+    top: 80px;
+    right: 10px;
+    left: auto;
+    width: 340px;
+    max-width: calc(100vw - 20px);
+    height: auto;
+    max-height: 70vh;
+    border-radius: 10px;
+    border: 2px solid #2E5BBA;
     padding: 1rem;
-    max-width: none;
+    box-shadow: 0 8px 32px rgba(46,91,186,0.2);
   }
   .cart-header {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
   }
   .cart-list {
-    max-height: 60vh;
+    max-height: 40vh;
+    overflow-y: auto;
   }
   .cart-fab {
     right: 15px;
+    bottom: 20px;
+    width: 55px;
+    height: 55px;
+    font-size: 1.4rem;
+    box-shadow: 0 6px 20px rgba(46,91,186,0.25);
+  }
+}
+
+/* Panier mobile - très petits écrans */
+@media (max-width: 480px) {
+  .cart-panel {
+    width: 320px;
+    max-width: calc(100vw - 10px);
+    right: 5px;
+    top: 70px;
+  }
+  .cart-fab {
+    right: 10px;
     bottom: 15px;
     width: 50px;
     height: 50px;
@@ -943,140 +964,36 @@ footer {
   }
 }
 
-/* Info cards mobile */
-@media (max-width: 768px) {
-  .info-card, .review-card, .service-card {
-    padding: 1rem;
-    text-align: left;
-  }
-  .service-card {
-    text-align: center;
-  }
-  .service-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.3rem;
-  }
-}
-
-/* Map mobile */
-@media (max-width: 768px) {
-  .map-container {
-    margin: 1rem -0.5rem 0 -0.5rem;
-    border-radius: 0;
-  }
-  .map-container iframe {
-    height: 200px;
-  }
-}
-
-/* Category filters mobile */
-@media (max-width: 768px) {
-  .category-filters {
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-    padding: 0;
-    justify-content: center;
-  }
-  .filter-btn {
-    padding: 0.5em 1em;
-    font-size: 0.85rem;
-    border-radius: 20px;
-  }
-}
-
-/* Section spacing mobile */
-@media (max-width: 768px) {
-  .about, .products, .services, .actualites, .info, .reviews {
-    padding: 40px 0; /* Augmenté de 30px à 40px */
-  }
-  .section-title {
-    margin: 2rem 0 1.5rem 0; /* Plus d'espace */
-  }
-}
-
-/* Mobile très petit (320px et moins) */
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.4rem;
-  }
-  .hero p {
-    font-size: 0.9rem;
-  }
-  .cta-button {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-  .product-image {
-    height: 120px;
-  }
-  .carousel-slide img, .carousel-slide video {
-    max-height: 140px;
-  }
-  .section-title {
-    font-size: 1.3rem;
-  }
-  .about-image {
-    height: 100px;
-    font-size: 2rem;
-  }
-}
-
-/* Mode paysage mobile */
+/* Mode paysage mobile - ajustements du panier */
 @media (max-width: 900px) and (orientation: landscape) {
-  .hero {
-    padding: 60px 0 30px;
+  .cart-panel {
+    max-height: 60vh;
+    top: 70px;
   }
-  .hero h1 {
-    font-size: 1.6rem;
-  }
-  .carousel-wrapper {
-    min-height: 140px;
-  }
-  .carousel-slide img, .carousel-slide video {
-    max-height: 140px;
-  }
-  .about, .products, .services, .actualites, .info, .reviews {
-    padding: 20px 0;
+  .cart-list {
+    max-height: 30vh;
   }
 }
 
-/* Zoom image modal mobile */
+/* Amélioration de la box 🎁 mobile - largeur augmentée */
 @media (max-width: 768px) {
-  .image-zoom-modal img {
-    max-width: 95vw;
-    max-height: 95vh;
+  .about-image {
+    flex: 0 0 200px; /* Augmenté de 160px à 200px */
+    width: 200px; /* Largeur fixe plus grande */
+    height: 140px;
+    font-size: 3.5rem;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(255,107,53,0.2);
   }
 }
 
-/* Contact flottant mobile */
-.floating-contact {
-  position: fixed;
-  bottom: 80px;
-  right: 15px;
-  background: #25d366;
-  color: #fff;
-  padding: 12px;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  text-decoration: none;
-  box-shadow: 0 4px 16px rgba(37,211,102,0.3);
-  z-index: 9998;
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s;
-}
-.floating-contact:hover {
-  transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-  .floating-contact {
-    bottom: 90px;
-    right: 10px;
+@media (max-width: 480px) {
+  .about-image {
+    flex: 0 0 180px; /* Légèrement réduit pour très petits écrans */
+    width: 180px;
+    height: 120px;
+    font-size: 3rem;
   }
 }
 
