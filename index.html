@@ -675,16 +675,13 @@
                         <p>✅ Parking accessible en fauteuil roulant</p>
                         <p>✅ Accueil adapté à tous</p>
                     </div>
-                    <div class="info-card">
-                        <h3>🗺️ Carte</h3>
-                        <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.1585370898424!2d-1.5210024258381885!3d12.37231072773569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2ebf73101ed177%3A0x1b39fa333ead6b10!2sPETIT%20MOINS%20CHERS%20PMC!5e0!3m2!1sen!2sci!4v1754932605762!5m2!1sen!2sci"
-                                width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"
-                                title="Localisation de PMC sur Google Maps"
-                                sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
-                        </div>
-                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.1585370898424!2d-1.5210024258381885!3d12.37231072773569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2ebf73101ed177%3A0x1b39fa333ead6b10!2sPETIT%20MOINS%20CHERS%20PMC!5e0!3m2!1sen!2sci!4v1754932605762!5m2!1sen!2sci"
+                            width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Localisation de PMC sur Google Maps"
+                            sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
                 </div>
             </div>
         </section>
@@ -770,5 +767,10 @@
             Veuillez l’activer dans votre navigateur pour une expérience optimale.
         </div>
     </noscript>
+
+    <!-- Modal de zoom image produit -->
+    <div id="image-zoom-modal" class="image-zoom-modal" style="display:none;">
+      <img id="zoomed-image" src="" alt="Aperçu du produit">
+    </div>
 </body>
 </html>

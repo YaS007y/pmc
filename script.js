@@ -281,4 +281,34 @@ document.addEventListener('DOMContentLoaded', () => {
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js').catch(() => {});
     }
+
+    // === ZOOM IMAGE PRODUIT AU CLIC ===
+    try {
+        const modal = document.getElementById('image-zoom-modal');
+        const zoomedImg = document.getElementById('zoomed-image');
+        document.body.addEventListener('click', function(e) {
+            // Clic sur une image produit
+            if (e.target.closest('.product-image img')) {
+                const img = e.target.closest('.product-image img');
+                zoomedImg.src = img.src;
+                zoomedImg.alt = img.alt || 'Aperçu du produit';
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+            // Clic pour fermer le modal
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                zoomedImg.src = '';
+                document.body.style.overflow = '';
+            }
+        });
+        // Fermer avec Echap
+        document.addEventListener('keydown', function(e) {
+            if (modal.style.display === 'flex' && e.key === 'Escape') {
+                modal.style.display = 'none';
+                zoomedImg.src = '';
+                document.body.style.overflow = '';
+            }
+        });
+    } catch (e) { console.error('Erreur zoom image produit :', e); }
 });
