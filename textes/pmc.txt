@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PMC - Petit Moins Chers à Ouagadougou : Votre magasin d'articles de marque à petits prix. Montres, sacs, chaussures et accessoires de qualité.">
+  <meta name="keywords" content="PMC, Petit Moins Chers, Ouagadougou, Burkina Faso, montres, sacs, chaussures, Nike, Casio, Crocs, bon prix">
+  <meta property="og:title" content="PMC - Petit Moins Chers | Ouagadougou">
+  <meta property="og:description" content="Votre magasin d'articles de marque à petits prix à Ouagadougou">
+  <meta property="og:image" content="https://example.com/pmc-social.jpg">
+  <meta property="og:url" content="https://www.pmc.bf">
+  <title>PMC - Petit Moins Chers | Ouagadougou</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    :root {
+      --bleu-fonce: #1a2a4a;
+      --orange: #ff7b25;
+      --orange-hover: #e56a1a;
+      --blanc: #ffffff;
+      --gris-clair: #f5f5f5;
+      --gris-texte: #666;
+      --shadow: rgba(0, 0, 0, 0.1);
+      --whatsapp: #25D366;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--gris-clair);
+      color: var(--bleu-fonce);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: var(--bleu-fonce);
+      color: var(--blanc);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px var(--shadow);
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      background: var(--blanc);
+      padding: 0.4rem 1rem;
+      border-radius: 8px;
+      color: var(--bleu-fonce);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      animation: float 3s ease-in-out infinite;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: var(--blanc);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: var(--orange);
+      transition: width 0.3s ease-in-out;
+    }
+
+    nav ul li a:hover {
+      color: var(--orange);
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    .search-bar {
+      display: flex;
+      margin-left: 2rem;
+    }
+
+    .search-bar input {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px 0 0 20px;
+      outline: none;
+    }
+
+    .search-bar button {
+      background: var(--orange);
+      color: white;
+      border: none;
+      padding: 0 1rem;
+      border-radius: 0 20px 20px 0;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .search-bar button:hover {
+      background: var(--orange-hover);
+    }
+
+    .hero {
+      position: relative;
+      height: 90vh;
+      background: url('https://images.unsplash.com/photo-1607083205700-24552e06d92f?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(26, 42, 74, 0.85), rgba(0, 0, 0, 0.65));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero-content {
+      color: var(--blanc);
+      max-width: 800px;
+      z-index: 1;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero-content p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    .btn-hero {
+      background: var(--orange);
+      color: var(--blanc);
+      padding: 1rem 2rem;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      display: inline-block;
+    }
+
+    .btn-hero:hover {
+      background: var(--orange-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    .section-title h2::after {
+      content: "";
+      position: absolute;
+      width: 60%;
+      height: 3px;
+      background: var(--orange);
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .opening-hours, .about, .product-card, .testimonial-card, .faq-item {
+      background: var(--blanc);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover, .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-image {
+      height: 200px;
+      background: #e6e6e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.05);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: var(--orange);
+      color: white;
+      padding: 0.3rem 0.6rem;
+      border-radius: 3px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    .product-info {
+      padding: 1.5rem 0 0;
+    }
+
+    .product-info h3 {
+      margin-bottom: 0.5rem;
+      color: var(--bleu-fonce);
+    }
+
+    .product-info p {
+      color: var(--gris-texte);
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .price {
+      color: var(--orange);
+      font-weight: bold;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: var(--gris-texte);
+      font-size: 0.9rem;
+    }
+
+    .stock {
+      font-size: 0.8rem;
+      color: #e74c3c;
+      font-weight: bold;
+    }
+
+    .btn-product {
+      display: inline-block;
+      background: var(--bleu-fonce);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+
+    .btn-product:hover {
+      background: #0f1a2f;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .category-btn {
+      padding: 0.5rem 1.5rem;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .category-btn:hover, .category-btn.active {
+      background: var(--orange);
+      color: white;
+      border-color: var(--orange);
+    }
+
+    .testimonials {
+      margin: 4rem 0;
+    }
+
+    .testimonial-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #ddd;
+      margin-right: 1rem;
+      overflow: hidden;
+    }
+
+    .testimonial-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .testimonial-rating {
+      color: #f1c40f;
+      margin: 0.5rem 0;
+    }
+
+    .faq-section {
+      margin: 4rem 0;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      margin-top: 0;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      margin-top: 1rem;
+    }
+
+    .map-container {
+      height: 400px;
+      margin: 3rem 0;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px var(--shadow);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .promo-banner {
+      background: var(--orange);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .promo-banner.show {
+      transform: translateY(0);
+    }
+
+    .promo-banner .close-btn {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      text-align: left;
+    }
+
+    footer {
+      background: var(--bleu-fonce);
+      color: var(--blanc);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--orange);
+      display: inline-block;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-column ul li a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-column ul li a:hover {
+      color: var(--orange);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      color: white;
+      background: rgba(255,255,255,0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+    }
+
+    .social-icons a:hover {
+      background: var(--orange);
+    }
+
+    .copyright {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #ccc;
+    }
+
+    /* WhatsApp float button */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--whatsapp);
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: pulse 2s infinite;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 2px 2px 15px rgba(0,0,0,0.4);
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--bleu-fonce);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      z-index: 99;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--orange);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 1rem;
+      }
+
+      .logo {
+        margin-bottom: 1rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .search-bar {
+        margin: 1rem 0 0;
+        width: 100%;
+      }
+
+      .hero {
+        height: 80vh;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
+
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .back-to-top {
+        bottom: 90px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 0.8rem;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="WhatsApp Image 2025-07-27 à 16.40.53_3aa60e82.jpg" alt="">
+      PMC
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#products">Produits</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Rechercher un produit...">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Bienvenue chez PMC</h1>
+        <p>Des produits tendances, de qualité, à des prix imbattables – exclusivement à Ouagadougou.</p>
+        <a href="https://wa.me/22678997603" class="btn-hero">💬 Contact WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="container" id="about" data-aos="fade-up">
+    <div class="section-title"><h2>Notre Magasin</h2></div>
+    <div class="grid-2">
+      <div class="opening-hours">
+        <h3><i class="fas fa-clock"></i> Horaires d'ouverture</h3>
+        <ul>
+          <li><strong>Lundi :</strong> 08:40 - 18:00 / 07:30 - 20:40</li>
+          <li><strong>Mardi - Jeudi :</strong> 07:30 - 20:40</li>
+          <li><strong>Vendredi - Samedi :</strong> 07:30 - 21:00</li>
+        </ul>
+      </div>
+      <div class="about">
+        <h3><i class="fas fa-info-circle"></i> À propos de PMC</h3>
+        <p>PMC - Petit Moins Chers est votre magasin de référence à Ouagadougou pour des produits de qualité à des prix compétitifs depuis 2015.</p>
+        <p>Nous proposons une large sélection de montres, chaussures, sacs et accessoires de marques renommées.</p>
+        <a href="https://wa.me/22678997603" class="whatsapp-float-mobile">
+          <i class="fab fa-whatsapp"></i> Nous contacter
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="container" id="products" data-aos="fade-up">
+    <div class="section-title"><h2>Nos Produits</h2></div>
+    
+    <div class="categories">
+      <button class="category-btn active" data-category="all">Tous</button>
+      <button class="category-btn" data-category="montres">Montres</button>
+      <button class="category-btn" data-category="chaussures">Chaussures</button>
+      <button class="category-btn" data-category="sacs">Sacs</button>
+      <button class="category-btn" data-category="accessoires">Accessoires</button>
+    </div>
+    
+    <div class="product-grid">
+      <!-- Produit 1 -->
+      <div class="product-card" data-category="montres">
+        <div class="product-image">
+          <img src="casio-watch.jpg" alt="Montre CASIO" loading="lazy">
+          <span class="product-badge">Nouveau</span>
+        </div>
+        <div class="product-info">
+          <h3>Montre CASIO</h3>
+          <p>Montre élégante et résistante à l'eau</p>
+          <div class="price">
+            <span>6000 FCFA</span>
+            <span class="stock">Stock limité</span>
+          </div>
+          <a href="https://wa.me/22678997603?text=Je%20suis%20intéressé%20par%20la%20montre%20CASIO" class="btn-product">Commander</a>
+        </div>
+      </div>
+      
+      <!-- Produit 2 -->
+      <div class="product-card" data-category="chaussures">
+        <div class="product-image">
+          <img src="nike-benassi.jpg" alt="Benassi Nike" loading="lazy">
+          <span class="product-badge">Promo</span>
+        </div>
+        <div class="product-info">
+          <h3>Benassi Nike</h3>
+          <p>Tongues confortables en mousse</p>
+          <div class="price">
+            <div>
+              <span>1 paire: 5000 FCFA</span><br>
+              <span>2 paires: <strong>9000 FCFA</strong></span>
+            </div>
+          </div>
+          <a href="https://wa.me/22678997603?text=Je%20suis%20intéressé%20par%20les%20Benassi%20Nike" class="btn-product">Commander</a>
+        </div>
+      </div>
+      
+      <!-- Produit 3 -->
+      <div class="product-card" data-category="sacs">
+        <div class="product-image">
+          <img src="nike-backpack.jpg" alt="Sac à dos NIKE" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>Sac à dos NIKE</h3>
+          <p>Sac spacieux avec compartiment pour ordinateur</p>
+          <div class="price">
+            <span>12000 FCFA</span>
+          </div>
+          <a href="https://wa.me/22678997603?text=Je%20suis%20intéressé%20par%20le%20sac%20à%20dos%20NIKE" class="btn-product">Commander</a>
+        </div>
+      </div>
+      
+      <!-- Produit 4 -->
+      <div class="product-card" data-category="chaussures">
+        <div class="product-image">
+          <img src="crocs.jpg" alt="CROCS" loading="lazy">
+          <span class="product-badge">Best-seller</span>
+        </div>
+        <div class="product-info">
+          <h3>CROCS</h3>
+          <p>Confortables et légères, plusieurs coloris disponibles</p>
+          <div class="price">
+            <span>12000 FCFA</span>
+          </div>
+          <a href="https://wa.me/22678997603?text=Je%20suis%20intéressé%20par%20les%20CROCS" class="btn-product">Commander</a>
+        </div>
+      </div>
+      
+      <!-- Produit 5 -->
+      <div class="product-card" data-category="chaussures">
+        <div class="product-image">
+          <img src="air-force.jpg" alt="Air Force" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>Air Force</h3>
+          <p>Chaussures de sport emblématiques Nike</p>
+          <div class="price">
+            <span>23000 FCFA</span>
+          </div>
+          <a href="https://wa.me/22678997603?text=Je%20suis%20intéressé%20par%20les%20Air%20Force" class="btn-product">Commander</a>
+        </div>
+      </div>
+      
+      <!-- Produit 6 -->
+      <div class="product-card" data-category="montres">
+        <div class="product-image">
+          <img src="apple-watch.jpg" alt="Apple Watch" loading="lazy">
+          <span class="product-badge">Top</span>
+        </div>
+        <div class="product-info">
+          <h3>Apple Watch Séries 10/46mm</h3>
+          <p>Montre connectée haut de gamme</p>
+          <div class="price">
+            <span>25000 FCFA</span>
+          </div>
+          <a href="https://wa.me/22678997603?text=Je%20suis%20intéressé%20par%20l'Apple%20Watch" class="btn-product">Commander</a>
+        </div>
+      </div>
+      
+      <!-- Produit 7 -->
+      <div class="product-card" data-category="chaussures">
+        <div class="product-image">
+          <img src="under-armour.jpg" alt="Under Armour" loading="lazy">
+        </div>
+        <div class="product-info">
+          <h3>Claquettes Under Armour</h3>
+          <p>Confort optimal pour vos pieds</p>
+          <div class="price">
+            <span>8000 FCFA</span>
+          </div>
+          <a href="https://wa.me/22678997603?text=Je%20suis%20intéressé%20par%20les%20claquettes%20Under%20Armour" class="btn-product">Commander</a>
+        </div>
+      </div>
+      
+      <!-- Produit 8 -->
+      <div class="product-card" data-category="montres">
+        <div class="product-image">
+          <img src="hublot.jpg" alt="HUBLOT" loading="lazy">
+          <span class="product-badge">Luxe</span>
+        </div>
+        <div class="product-info">
+          <h3>HUBLOT QENEVE</h3>
+          <p>Montre de luxe suisse</p>
+          <div class="price">
+            <span>13000 FCFA</span>
+          </div>
+          <a href="https://wa.me/22678997603?text=Je%20suis%20intéressé%20par%20la%20HUBLOT%20QENEVE" class="btn-product">Commander</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="container testimonials" data-aos="fade-up">
+    <div class="section-title"><h2>Avis Clients</h2></div>
+    <div class="product-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-avatar">
+            <img src="client1.jpg" alt="Client 1" loading="lazy">
+          </div>
+          <div>
+            <h4>Amadou K.</h4>
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <p>"J'ai acheté la montre CASIO il y a 6 mois et elle fonctionne parfaitement. Excellent rapport qualité-prix !"</p>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-avatar">
+            <img src="client2.jpg" alt="Client 2" loading="lazy">
+          </div>
+          <div>
+            <h4>Fatou D.</h4>
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+        </div>
+        <p>"Les Crocs sont très confortables et le prix est imbattable. Livraison rapide et service client réactif sur WhatsApp."</p>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <div class="testimonial-avatar">
+            <img src="client3.jpg" alt="Client 3" loading="lazy">
+          </div>
+          <div>
+            <h4>Jean B.</h4>
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <p>"Mon sac à dos Nike est exactement comme sur les photos. Très satisfait de mon achat, je recommande PMC !"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="container faq-section" data-aos="fade-up">
+    <div class="section-title"><h2>Questions Fréquentes</h2></div>
+    
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Comment passer commande ?</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <p>Vous pouvez nous contacter directement via WhatsApp au +226 78 99 76 03 pour passer commande. Précisez le produit qui vous intéresse et nous vous guiderons pour finaliser votre achat.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Quels sont les modes de paiement acceptés ?</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <p>Nous acceptons les paiements en espèces (au magasin), par mobile money (Orange Money, Moov Money) et virement bancaire.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Proposez-vous la livraison ?</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <p>Oui, nous proposons la livraison à Ouagadougou avec des frais qui varient selon votre localisation. Contactez-nous pour plus de détails.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Puis-je retourner un produit ?</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="faq-answer">
+        <p>Les retours sont acceptés le meme jour pour les produits non utilisés, dans leur emballage d'origine. Les articles soldés ou en promotion ne peuvent pas être retournés.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="container" data-aos="fade-up">
+    <div class="section-title"><h2>Nous Trouver</h2></div>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.1585370898424!2d-1.5210024258381885!3d12.37231072773569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2ebf73101ed177%3A0x1b39fa333ead6b10!2sPETIT%20MOINS%20CHERS%20PMC!5e0!3m2!1sen!2sci!4v1753628129921!5m2!1sen!2sci" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" data-aos="fade-up">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>PMC - Petit Moins Chers</h3>
+        <p>Votre magasin d'articles de marque à petits prix à Ouagadougou depuis 2015.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/22678997603"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i> Ouagadougou, Burkina Faso</li>
+          <li><i class="fas fa-phone"></i> +226 78 99 76 03</li>
+          <li><i class="fas fa-envelope"></i> contact@pmc.bf</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Liens utiles</h3>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+          <li><a href="#">Conditions de vente</a></li>
+          <li><a href="#">Politique de retour</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2024 PMC - Petit Moins Chers. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/22678997603" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Promo Banner -->
+  <div class="promo-banner">
+    <span>🎉 Offre spéciale ! -10% sur votre première commande avec le code "PMC10"</span>
+    <button class="close-btn">&times;</button>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialiser AOS animations
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 120
+    });
+
+    // Back to top button
+    const backToTopBtn = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        backToTopBtn.classList.add('active');
+      } else {
+        backToTopBtn.classList.remove('active');
+      }
+    });
+    
+    backToTopBtn.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // FAQ accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        item.classList.toggle('active');
+        const icon = question.querySelector('i');
+        icon.classList.toggle('fa-chevron-down');
+        icon.classList.toggle('fa-chevron-up');
+      });
+    });
+
+    // Category filter
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const productCards = document.querySelectorAll('.product-card');
+    
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Active state for buttons
+        categoryBtns.forEach(btn => btn.classList.remove('active'));
+        btn.classList.add('active');
+        
+        // Filter products
+        const category = btn.dataset.category;
+        productCards.forEach(card => {
+          if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Promo banner
+    const promoBanner = document.querySelector('.promo-banner');
+    const closeBtn = document.querySelector('.close-btn');
+    
+    setTimeout(() => {
+      promoBanner.classList.add('show');
+    }, 3000);
+    
+    closeBtn.addEventListener('click', () => {
+      promoBanner.classList.remove('show');
+    });
+
+    // Product image zoom on hover
+    const productImages = document.querySelectorAll('.product-image img');
+    productImages.forEach(img => {
+      img.addEventListener('mousemove', (e) => {
+        const rect = e.target.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width * 100;
+        const y = (e.clientY - rect.top) / rect.height * 100;
+        img.style.transformOrigin = `${x}% ${y}%`;
+      });
+    });
+  </script>
+</body>
+</html>

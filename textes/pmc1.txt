@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PMC - Petit Moins Chers : Boutique de cadeaux à Ouagadougou. Articles de qualité à prix abordables.">
+    <meta name="keywords" content="PMC, Petit Moins Chers, cadeaux, Ouagadougou, boutique, accessoires, sacs, montres, chaussures">
+    <title>PMC - Petit Moins Chers | Boutique de Cadeaux à Ouagadougou</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- En-tête -->
+    <header id="header">
+        <nav>
+            <div class="logo">
+                <img src="images/infos/logo.jpg" alt="Logo de PMC - Petit Moins Chers">
+                <span>PMC - Petit Moins Chers</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À Propos</a></li>
+                <li><a href="#produits">Produits</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+        </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Section Hero -->
+        <section class="hero" id="accueil">
+            <div class="hero-content">
+                <h1>PMC - Petit Moins Chers</h1>
+                <p>Votre boutique de confiance à Ouagadougou<br>
+                Des articles de qualité à prix abordables</p>
+                <a href="#contact" class="cta-button">Nous Contacter</a>
+            </div>
+        </section>
+
+        <!-- Section À propos -->
+        <section class="about" id="apropos">
+            <div class="container">
+                <h2 class="section-title">À Propos de PMC</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>PMC (Petit Moins Chers) est votre espace shopping de confiance situé en plein cœur de Ouagadougou. Nous sommes spécialisés dans la vente d'articles de qualité à des prix accessibles, pensés pour tous les budgets.</p>
+                        <p>Avec une note moyenne de 4,5 étoiles et de nombreux clients satisfaits, nous mettons un point d'honneur à vous accueillir avec chaleur, écoute et professionnalisme. Notre équipe est toujours disponible pour vous orienter et vous aider à faire le meilleur choix.</p>
+                        <p>Que vous recherchiez des produits de marque comme Nike, des accessoires tendances ou des idées originales pour faire plaisir, PMC est là pour vous servir avec le sourire.</p>
+                    </div>
+                    <div class="about-image">
+                        🎁
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Actualités -->
+        <section class="actualites" id="actualites">
+            <div class="container">
+                <h2 class="section-title">Nos Actualités</h2>
+                <div class="carousel-container">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-slides" id="carouselSlides">
+                            <!-- Slide 1 -->
+                            <div class="carousel-slide active">
+                                <img src="images/affiches/image35.jpg" alt="" loading="lazy">
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="carousel-slide">
+                                <img src="images/affiches/image36.jpg" alt="" loading="lazy">
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="carousel-slide">
+                                <img src="images/affiches/image37.jpg" alt="" loading="lazy">
+                            </div>
+                            <!-- Slide 4 - Vidéo -->
+                            <div class="carousel-slide">
+                                <video autoplay muted loop>
+                                    <source src="images/affiches/video1.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <!-- Slide 5 -->
+                            <div class="carousel-slide">
+                                <img src="images/affiches/image41.jpg" alt="" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Indicateurs -->
+                    <div class="carousel-indicators">
+                        <button class="indicator active" data-slide="0"></button>
+                        <button class="indicator" data-slide="1"></button>
+                        <button class="indicator" data-slide="2"></button>
+                        <button class="indicator" data-slide="3"></button>
+                        <button class="indicator" data-slide="4"></button>
+                        <button class="indicator" data-slide="5"></button>
+                    </div>
+                    <!-- Boutons de navigation -->
+                    <button class="carousel-btn prev" id="prevBtn">‹</button>
+                    <button class="carousel-btn next" id="nextBtn">›</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Produits dynamique -->
+        <section class="products" id="produits">
+            <div class="container">
+                <h2 class="section-title">Notre Catalogue</h2>
+                <div class="products-grid" id="productsGrid">
+                    <!-- Les produits seront chargés ici dynamiquement -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Services -->
+        <section class="services" id="services">
+            <div class="container">
+                <h2 class="section-title">Nos Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">📦</div>
+                        <h3>Livraison</h3>
+                        <p>Service de livraison rapide et sécurisé dans tout Ouagadougou pour votre confort.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🏪</div>
+                        <h3>Achats en Magasin</h3>
+                        <p>Venez découvrir notre large gamme de produits directement dans notre boutique.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔄</div>
+                        <h3>Retrait en Magasin</h3>
+                        <p>Commandez en ligne et récupérez vos articles à votre convenance dans notre magasin.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Informations pratiques -->
+        <section class="info" id="horaires">
+            <div class="container">
+                <h2 class="section-title">Informations Pratiques</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🕒 Horaires d'Ouverture</h3>
+                        <table class="hours-table">
+                            <tr><td>Dimanche</td><td>07:30 - 21:30</td></tr>
+                            <tr><td>Lundi</td><td>07:30 - 21:30</td></tr>
+                            <tr><td>Mardi</td><td>07:30 - 21:30</td></tr>
+                            <tr><td>Mercredi</td><td>07:30 - 21:30</td></tr>
+                            <tr><td>Jeudi</td><td>07:30 - 21:30</td></tr>
+                            <tr><td>Vendredi</td><td>07:30 - 21:30</td></tr>
+                            <tr><td>Samedi</td><td>07:30 - 21:30</td></tr>
+                        </table>
+                    </div>
+                    <div class="info-card">
+                        <h3>📍 Localisation</h3>
+                        <p><strong>Adresse :</strong><br>
+                        Avenue du Capitaine Thomas Sankara<br>
+                        Paspanga, Ouagadougou<br>
+                        Burkina Faso</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>♿ Accessibilité</h3>
+                        <p>✅ Entrée accessible en fauteuil roulant</p>
+                        <p>✅ Parking accessible en fauteuil roulant</p>
+                        <p>✅ Accueil adapté à tous</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🗺️ Carte</h3>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.1585370898424!2d-1.5210024258381885!3d12.37231072773569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2ebf73101ed177%3A0x1b39fa333ead6b10!2sPETIT%20MOINS%20CHERS%20PMC!5e0!3m2!1sen!2sci!4v1754932605762!5m2!1sen!2sci" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Avis Clients -->
+        <section class="reviews">
+            <div class="container">
+                <h2 class="section-title">Avis Clients</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Une boutique super cool avec un accueil chaleureux. Le personnel est très professionnel et les prix sont vraiment abordables."</p>
+                        <div class="reviewer">- Alex Sanon</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Je kiff grave les claquettes Nike ! Excellent choix de produits et qualité au rendez-vous. Je recommande vivement PMC."</p>
+                        <div class="reviewer">- Gilchrist Tonde</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Note moyenne de 4,5 étoiles sur 24 avis - Une boutique de confiance avec des clients satisfaits depuis des années."</p>
+                        <div class="reviewer">- Avis Général</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PMC - Petit Moins Chers</h3>
+                    <p>Votre boutique de cadeaux de confiance à Ouagadougou. Nous vous offrons des produits de qualité à des prix compétitifs.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📞 +226 78 99 76 03</p>
+                    <p>📧 contact@pmc-burkina.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Adresse</h3>
+                    <p>Avenue du Capitaine Thomas Sankara<br>
+                    Paspanga, Ouagadougou<br>
+                    Burkina Faso</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horaires</h3>
+                    <p>Ouvert tous les jours<br>
+                    de 07:30 à 21:30</p>
+                </div>
+            </div>
+            <div class="footer-bottom" style="position: relative;">
+                <p>&copy; 2025 PMC - Petit Moins Chers. Tous droits réservés.</p>
+                <span style="position: absolute; right: 0; bottom: 0; font-size: 0.95rem; color: #e0e0e0; padding: 0.2rem 0.5rem;">
+                    &lt;by YASIN AMICHIA&gt;
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton flottant WhatsApp -->
+    <a href="https://wa.me/22678997603" class="floating-contact" title="Contactez-nous sur WhatsApp" target="_blank" rel="noopener">💬</a>
+</body>
+</html>
+
+
+CSS//
+
+/* Réinitialisation des marges et paddings par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles généraux pour le corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+    background-color: #f8f9fa; /* Couleur de fond */
+}
+
+:root {
+    --primary-orange: #FF6B35;
+    --primary-blue: #2E5BBA;
+    --light-gray: #f8f9fa;
+    --dark-gray: #343a40;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour le focus (accessibilité) */
+a:focus-visible, button:focus-visible {
+    outline: 2px dashed var(--primary-orange);
+    outline-offset: 4px;
+}
+
+/* En-tête */
+header {
+    background: var(--primary-blue);
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+    transition: background 0.3s ease;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    padding: 2px;
+    object-fit: contain;
+}
+
+/* Liens de navigation */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-orange);
+}
+
+/* Bouton pour le menu mobile */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Section Hero */
+.hero {
+    background: var(--primary-blue);
+    color: white;
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Bouton d'appel à l'action */
+.cta-button {
+    display: inline-block;
+    background: var(--primary-orange);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.cta-button:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Conteneur général */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Titres des sections */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+/* Section À propos */
+.about {
+    padding: 80px 0;
+    background: var(--light-gray);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+.about-image {
+    background: var(--primary-orange);
+    height: 400px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 4rem;
+    box-shadow: var(--shadow);
+}
+
+/* Section Produits */
+.products {
+    padding: 80px 0;
+}
+
+/* Filtres de catégories */
+.category-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: white;
+    border: 2px solid var(--primary-blue);
+    color: var(--primary-blue);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--primary-orange);
+    border-color: var(--primary-orange);
+    color: white;
+}
+
+/* Grille des produits */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* Carte produit */
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.2s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    width: 320px;
+    height: 440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Image du produit */
+.product-image {
+    width: 100%;
+    height: 220px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Affiche l'image entière, quitte à avoir des bandes */
+    display: block;
+    background: #f0f0f0; /* Optionnel : couleur de fond neutre pour les bandes */
+}
+
+/* Informations du produit */
+.product-info {
+    flex: 1 1 auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Catégorie du produit */
+.product-category {
+    background: var(--primary-orange);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+/* Nom du produit */
+.product-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* Prix du produit */
+.product-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+/* Bouton d'achat */
+.product-btn {
+    width: 100%;
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.product-btn:hover {
+    background: #1e3a8a;
+    transform: translateY(-2px);
+}
+
+/* Section Services */
+.services {
+    padding: 80px 0;
+    background: var(--light-gray);
+}
+
+/* Grille des services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Carte service */
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.service-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Icône du service */
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-orange);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+/* Titre du service */
+.service-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: var(--primary-blue);
+}
+
+/* Section Actualités */
+.actualites {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+/* Conteneur du carousel */
+.carousel-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+/* Slides du carousel */
+.carousel-slides {
+    display: flex;
+    width: 100%; /* Correction ici */
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 100%; /* Correction ici */
+    height: 100%;
+    overflow: hidden;
+    background: #f0f0f0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-slide img,
+.carousel-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Affiche l'image entière, quitte à avoir des bandes */
+    object-position: center;
+    display: block;
+}
+
+/* Indicateurs */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: var(--primary-orange);
+    border-color: var(--primary-orange);
+    transform: scale(1.2);
+}
+
+.indicator:hover {
+    border-color: white;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Boutons de navigation */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    color: var(--primary-blue);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: var(--primary-orange);
+}
+
+.carousel-btn.prev {
+    left: 15px;
+}
+
+.carousel-btn.next {
+    right: 15px;
+}
+
+/* Section Informations Pratiques */
+.info {
+    padding: 80px 0;
+    background: var(--light-gray);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.info-card {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(46,91,186,0.08), 0 1.5px 6px rgba(0,0,0,0.04);
+    padding: 2.5rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 260px;
+    position: relative;
+    transition: box-shadow 0.3s;
+}
+
+.info-card:hover {
+    box-shadow: 0 8px 32px rgba(46,91,186,0.13), 0 3px 12px rgba(0,0,0,0.07);
+}
+
+.info-card h3 {
+    font-size: 1.3rem;
+    color: var(--primary-blue);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-card p, .info-card table {
+    color: #444;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+.hours-table td {
+    padding: 0.3rem 0.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 1rem;
+}
+
+.hours-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Section Avis Clients */
+.reviews {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.review-card {
+    background: var(--light-gray);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(46,91,186,0.08), 0 1.5px 6px rgba(0,0,0,0.04);
+    padding: 2.5rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 220px;
+    position: relative;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.review-card:hover {
+    box-shadow: 0 8px 32px rgba(46,91,186,0.13), 0 3px 12px rgba(0,0,0,0.07);
+    transform: translateY(-6px) scale(1.03);
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.review-card p {
+    color: #333;
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+    font-style: italic;
+}
+
+.reviewer {
+    font-weight: 600;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+/* Pied de page */
+footer {
+    background: var(--primary-blue);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section {
+    text-align: left;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: var(--primary-orange);
+    letter-spacing: 1px;
+}
+
+.footer-section p {
+    font-size: 1rem;
+    color: #f8f9fa;
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .footer-section {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--primary-blue);
+        padding: 1rem 0;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 1rem;
+        text-align: center;
+        color: white;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .product-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-image {
+        height: 180px;
+    }
+
+    .product-info {
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .carousel-container {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .carousel-wrapper {
+        height: 300px;
+    }
+    
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .carousel-btn.prev {
+        left: 10px;
+    }
+
+    .carousel-btn.next {
+        right: 10px;
+    }
+
+    .carousel-indicators {
+        bottom: 15px;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .indicator {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-wrapper {
+        height: 250px;
+    }
+
+    .carousel-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+
+    .carousel-indicators {
+        bottom: 10px;
+        padding: 0.25rem 0.6rem;
+    }
+
+    .indicator {
+        width: 6px;
+        height: 6px;
+    }
+}
+
+@media (max-width: 600px) {
+    .info-grid, .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    .info-card, .review-card {
+        padding: 1.2rem 1rem;
+    }
+}
+
+/* Zoom image modale */
+.image-zoom-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: zoom-out;
+    animation: fadeIn 0.2s;
+}
+.image-zoom-modal img,
+.image-zoom-modal video {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    background: #fff;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+JS//
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // === MENU MOBILE ===
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        navLinks.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') navLinks.classList.remove('active');
+        });
+    }
+
+    // === DÉFILEMENT FLUIDE ===
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // === CHANGEMENT COULEUR HEADER ===
+    const header = document.getElementById('header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            header.style.background = window.scrollY > 100
+                ? 'rgba(46, 91, 186, 0.95)'
+                : '#2E5BBA';
+        });
+    }
+
+    // === CHARGEMENT PRODUITS VIA GOOGLE SHEETS ===
+    const productsGrid = document.getElementById('productsGrid');
+    if (productsGrid) {
+        fetch('https://opensheet.elk.sh/1cf-JJSN6J44m7jk5FWwoL2nBqNPGyhQzCU-ELOdq9FA/Sheet2')
+            .then(response => response.json())
+            .then(data => {
+                productsGrid.innerHTML = '';
+                data.forEach(product => {
+                    console.log(product); 
+                    const card = document.createElement('div');
+                    card.className = 'product-card';
+                    card.setAttribute('data-category', product['Categorie'] || '');
+                    card.innerHTML = `
+                        <div class="product-image">
+                            <img src="${product['Image'] || ''}" alt="${product['Nom'] || ''}" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">${product['Categorie'] || ''}</span>
+                            <h3 class="product-name">${product['Nom'] || ''}</h3>
+                            <div class="product-price">${product['Prix'] || ''}</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    `;
+                    productsGrid.appendChild(card);
+                });
+
+                initFilters();
+                initAnimations();
+                initProductButtons();
+            })
+            .catch(error => {
+                productsGrid.innerHTML = "<p style='color:red'>Erreur de chargement des produits.</p>";
+                console.error('Erreur lors du chargement des produits:', error);
+            });
+    }
+
+    // === FILTRAGE PRODUITS ===
+    function initFilters() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const category = button.getAttribute('data-category');
+                productCards.forEach(card => {
+                    const matches = category === 'tous' || card.getAttribute('data-category') === category;
+                    card.style.display = matches ? 'flex' : 'none';
+                });
+            });
+        });
+    }
+
+    // === ANIMATIONS PRODUITS ===
+    function initAnimations() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('animate');
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.product-card, .service-card, .info-card, .review-card')
+            .forEach(el => observer.observe(el));
+    }
+
+    // === BOUTON WHATSAPP PRODUIT ===
+    function initProductButtons() {
+        document.querySelectorAll('.product-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const card = e.target.closest('.product-card');
+                const name = card.querySelector('.product-name')?.textContent.trim() || 'Produit';
+                const message = `Bonjour, je suis intéressé(e) par le produit: ${name}`;
+                const url = `https://wa.me/22678997603?text=${encodeURIComponent(message)}`;
+                window.open(url, '_blank');
+            });
+        });
+    }
+});

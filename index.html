@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PMC - Petit Moins Chers : Boutique de cadeaux à Ouagadougou. Articles de qualité à prix abordables.">
+    <meta name="keywords" content="PMC, Petit Moins Chers, cadeaux, Ouagadougou, boutique, accessoires, sacs, montres, chaussures">
+    <title>PMC - Petit Moins Chers | Boutique de Cadeaux à Ouagadougou</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- En-tête -->
+    <header id="header">
+        <nav>
+            <div class="logo">
+                <img src="images/infos/logo.webp" alt="Logo de PMC - Petit Moins Chers">
+                <span>PMC - Petit Moins Chers</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À Propos</a></li>
+                <li><a href="#produits">Produits</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+        </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Section Hero -->
+        <section class="hero" id="accueil">
+            <div class="hero-content">
+                <h1>PMC - Petit Moins Chers</h1>
+                <p>Votre boutique de confiance à Ouagadougou<br>
+                Des articles de qualité à prix abordables</p>
+                <a href="#contact" class="cta-button">Nous Contacter</a>
+            </div>
+        </section>
+
+        <!-- Section À propos -->
+        <section class="about" id="apropos">
+            <div class="container">
+                <h2 class="section-title">À Propos de PMC</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>PMC (Petit Moins Chers) est votre espace shopping de confiance situé en plein cœur de Ouagadougou. Nous sommes spécialisés dans la vente d'articles de qualité à des prix accessibles, pensés pour tous les budgets.</p>
+                        <p>Avec une note moyenne de 4,5 étoiles et de nombreux clients satisfaits, nous mettons un point d'honneur à vous accueillir avec chaleur, écoute et professionnalisme. Notre équipe est toujours disponible pour vous orienter et vous aider à faire le meilleur choix.</p>
+                        <p>Que vous recherchiez des produits de marque comme Nike, des accessoires tendances ou des idées originales pour faire plaisir, PMC est là pour vous servir avec le sourire.</p>
+                    </div>
+                    <div class="about-image">
+                        🎁
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Actualités -->
+        <section class="actualites" id="actualites">
+            <div class="container">
+                <h2 class="section-title">Nos Actualités</h2>
+                <div class="carousel-container">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-slides" id="carouselSlides">
+                            <!-- Slide 1 -->
+                            <div class="carousel-slide active">
+                                <img src="images/affiches/image35.webp" alt="" loading="lazy">
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="carousel-slide">
+                                <img src="images/affiches/image36.webp" alt="" loading="lazy">
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="carousel-slide">
+                                <img src="images/affiches/image37.webp" alt="" loading="lazy">
+                            </div>
+                            <!-- Slide 4 - Vidéo -->
+                            <div class="carousel-slide">
+                                <video autoplay muted loop>
+                                    <source src="images/affiches/video1.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <!-- Slide 5 -->
+                            <div class="carousel-slide">
+                                <img src="images/affiches/image41.webp" alt="" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Indicateurs -->
+                    <div class="carousel-indicators">
+                        <button class="indicator active" data-slide="0"></button>
+                        <button class="indicator" data-slide="1"></button>
+                        <button class="indicator" data-slide="2"></button>
+                        <button class="indicator" data-slide="3"></button>
+                        <button class="indicator" data-slide="4"></button>
+                    </div>
+                    <!-- Boutons de navigation -->
+                    <button class="carousel-btn prev" id="prevBtn">‹</button>
+                    <button class="carousel-btn next" id="nextBtn">›</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Produits -->
+        <section class="products" id="produits">
+            <div class="container">
+                <h2 class="section-title">Notre Catalogue</h2>
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="tous">Tous</button>
+                    <button class="filter-btn" data-category="crocs">Crocs</button>
+                    <button class="filter-btn" data-category="claquettes">Claquettes</button>
+                    <button class="filter-btn" data-category="sacs">Sacs</button>
+                    <button class="filter-btn" data-category="accessoires">Accessoires</button>
+                </div>
+                <div class="products-grid" id="productsGrid">
+                    <div class="product-card" data-category="accessoires">
+                        <div class="product-image">
+                            <img src="images/accessoires/image14.webp" alt="Banane NIKE" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessoires</span>
+                            <h3 class="product-name">Banane NIKE</h3>
+                            <div class="product-price">8 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="accessoires">
+                        <div class="product-image">
+                            <img src="images/accessoires/image21.webp" alt="Portefeuille NIKE" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessoires</span>
+                            <h3 class="product-name">Portefeuille NIKE</h3>
+                            <div class="product-price">3500f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="accessoires">
+                        <div class="product-image">
+                            <img src="images/accessoires/image24.webp" alt="Trousse EASTPAK" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessoires</span>
+                            <h3 class="product-name">Trousse EASTPAK</h3>
+                            <div class="product-price">5 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="accessoires">
+                        <div class="product-image">
+                            <img src="images/accessoires/image45.webp" alt="Cagoule NIKE" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessoires</span>
+                            <h3 class="product-name">Cagoule NIKE</h3>
+                            <div class="product-price">12 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="accessoires">
+                        <div class="product-image">
+                            <img src="images/accessoires/image46.webp" alt="Bonnet NIKE" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessoires</span>
+                            <h3 class="product-name">Bonnet NIKE</h3>
+                            <div class="product-price">10 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="accessoires">
+                        <div class="product-image">
+                            <img src="images/accessoires/image47.webp" alt="Gants NIKE" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessoires</span>
+                            <h3 class="product-name">Gants NIKE</h3>
+                            <div class="product-price">8 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="accessoires">
+                        <div class="product-image">
+                            <img src="images/accessoires/image55.webp" alt="Peluche" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessoires</span>
+                            <h3 class="product-name">Peluche</h3>
+                            <div class="product-price">8 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="accessoires">
+                        <div class="product-image">
+                            <img src="images/accessoires/image56.webp" alt="Peluche" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessoires</span>
+                            <h3 class="product-name">Peluche</h3>
+                            <div class="product-price">8 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="claquettes">
+                        <div class="product-image">
+                            <img src="images/chaussures/claquettes/adidas/image53.webp" alt="Adidas slide" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Claquettes</span>
+                            <h3 class="product-name">Adidas slide</h3>
+                            <div class="product-price">8 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="claquettes">
+                        <div class="product-image">
+                            <img src="images/chaussures/claquettes/jordan/image52.webp" alt="Jordan slide" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Claquettes</span>
+                            <h3 class="product-name">Jordan slide</h3>
+                            <div class="product-price">6 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="claquettes">
+                        <div class="product-image">
+                            <img src="images/chaussures/claquettes/jordan/image57.webp" alt="Jordan slide gris" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Claquettes</span>
+                            <h3 class="product-name">Jordan slide gris</h3>
+                            <div class="product-price">8 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="claquettes">
+                        <div class="product-image">
+                            <img src="images/chaussures/claquettes/jordan/image58.webp" alt="Jordan slide noir" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Claquettes</span>
+                            <h3 class="product-name">Jordan slide noir</h3>
+                            <div class="product-price">8 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="claquettes">
+                        <div class="product-image">
+                            <img src="images/chaussures/claquettes/jordan/image59.webp" alt="Jordan slide rouge" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Claquettes</span>
+                            <h3 class="product-name">Jordan slide rouge</h3>
+                            <div class="product-price">8 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="claquettes">
+                        <div class="product-image">
+                            <img src="images/chaussures/claquettes/jordan/image60.webp" alt="Jordan slide blanc" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Claquettes</span>
+                            <h3 class="product-name">Jordan slide blanc</h3>
+                            <div class="product-price">8 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="claquettes">
+                        <div class="product-image">
+                            <img src="images/chaussures/claquettes/nike/image54.webp" alt="Nike slide" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Claquettes</span>
+                            <h3 class="product-name">Nike slide</h3>
+                            <div class="product-price">8 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="crocs">
+                        <div class="product-image">
+                            <img src="images/chaussures/crocs/image27.webp" alt="Crocs" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Crocs</span>
+                            <h3 class="product-name">Crocs</h3>
+                            <div class="product-price">12 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="crocs">
+                        <div class="product-image">
+                            <img src="images/chaussures/crocs/image28.webp" alt="Crocs" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Crocs</span>
+                            <h3 class="product-name">Crocs</h3>
+                            <div class="product-price">12 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="crocs">
+                        <div class="product-image">
+                            <img src="images/chaussures/crocs/image29.webp" alt="Crocs" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Crocs</span>
+                            <h3 class="product-name">Crocs</h3>
+                            <div class="product-price">12 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="crocs">
+                        <div class="product-image">
+                            <img src="images/chaussures/crocs/image50.webp" alt="Crocs" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Crocs</span>
+                            <h3 class="product-name">Crocs</h3>
+                            <div class="product-price">7 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="crocs">
+                        <div class="product-image">
+                            <img src="images/chaussures/crocs/image51.webp" alt="Crocs" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Crocs</span>
+                            <h3 class="product-name">Crocs</h3>
+                            <div class="product-price">7 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="crocs">
+                        <div class="product-image">
+                            <img src="images/chaussures/crocs/image52.webp" alt="Crocs" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Crocs</span>
+                            <h3 class="product-name">Crocs</h3>
+                            <div class="product-price">7 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/eastpak/image11.webp" alt="Sacs Eastpak" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Eastpak</h3>
+                            <div class="product-price">17 500f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/eastpak/image12.webp" alt="Sacs Eastpak" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Eastpak</h3>
+                            <div class="product-price">17 500f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/eastpak/image19.webp" alt="Sacs Eastpak" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Eastpak</h3>
+                            <div class="product-price">17 500f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/eastpak/image38.webp" alt="Sacs Eastpak" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Eastpak</h3>
+                            <div class="product-price">17 500f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/jansport/image8.webp" alt="Sacs JanSport" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac JanSport</h3>
+                            <div class="product-price">12 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/jordan/image16.webp" alt="Sacs Jordan" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Jordan</h3>
+                            <div class="product-price">12 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/jordan/image20.webp" alt="Sacs Jordan" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Jordan</h3>
+                            <div class="product-price">12 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image10.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image13.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">10 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image15.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image17.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image18.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image3.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image39.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image7.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image6.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image5.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image4.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/puma/image22.webp" alt="Sacs Puma" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Puma</h3>
+                            <div class="product-price">10 000f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/under_armour/image25.webp" alt="Sacs Under Armour" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Under Armour</h3>
+                            <div class="product-price">17 500f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/under_armour/image26.webp" alt="Sacs Under Armour" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Under Armour</h3>
+                            <div class="product-price">17 500f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/under_armour/image48.webp" alt="Sacs Under Armour" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Under Armour</h3>
+                            <div class="product-price">17 500f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/under_armour/image49.webp" alt="Sacs Under Armour" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Under Armour</h3>
+                            <div class="product-price">17 500f</div>
+                            <button class="product-btn">🛒 Commander</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Services -->
+        <section class="services" id="services">
+            <div class="container">
+                <h2 class="section-title">Nos Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">📦</div>
+                        <h3>Livraison</h3>
+                        <p>Service de livraison rapide et sécurisé dans tout Ouagadougou pour votre confort.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🏪</div>
+                        <h3>Achats en Magasin</h3>
+                        <p>Venez découvrir notre large gamme de produits directement dans notre boutique.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔄</div>
+                        <h3>Retrait en Magasin</h3>
+                        <p>Commandez en ligne et récupérez vos articles à votre convenance dans notre magasin.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Informations pratiques -->
+        <section class="info" id="horaires">
+            <div class="container">
+                <h2 class="section-title">Informations Pratiques</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🕒 Horaires d'Ouverture</h3>
+                        <table class="hours-table">
+                            <tr><td>Dimanche</td><td>07:30 - 21:30</td></tr>
+                            <tr><td>Lundi</td><td>07:30 - 21:30</td></tr>
+                            <tr><td>Mardi</td><td>07:30 - 21:30</td></tr>
+                            <tr><td>Mercredi</td><td>07:30 - 21:30</td></tr>
+                            <tr><td>Jeudi</td><td>07:30 - 21:30</td></tr>
+                            <tr><td>Vendredi</td><td>07:30 - 21:30</td></tr>
+                            <tr><td>Samedi</td><td>07:30 - 21:30</td></tr>
+                        </table>
+                    </div>
+                    <div class="info-card">
+                        <h3>📍 Localisation</h3>
+                        <p><strong>Adresse :</strong><br>
+                        Avenue du Capitaine Thomas Sankara<br>
+                        Paspanga, Ouagadougou<br>
+                        Burkina Faso</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>♿ Accessibilité</h3>
+                        <p>✅ Entrée accessible en fauteuil roulant</p>
+                        <p>✅ Parking accessible en fauteuil roulant</p>
+                        <p>✅ Accueil adapté à tous</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🗺️ Carte</h3>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.1585370898424!2d-1.5210024258381885!3d12.37231072773569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2ebf73101ed177%3A0x1b39fa333ead6b10!2sPETIT%20MOINS%20CHERS%20PMC!5e0!3m2!1sen!2sci!4v1754932605762!5m2!1sen!2sci" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Avis Clients -->
+        <section class="reviews">
+            <div class="container">
+                <h2 class="section-title">Avis Clients</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Une boutique super cool avec un accueil chaleureux. Le personnel est très professionnel et les prix sont vraiment abordables."</p>
+                        <div class="reviewer">- Alex Sanon</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Je kiff grave les claquettes Nike ! Excellent choix de produits et qualité au rendez-vous. Je recommande vivement PMC."</p>
+                        <div class="reviewer">- Gilchrist Tonde</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Note moyenne de 4,5 étoiles sur 24 avis - Une boutique de confiance avec des clients satisfaits depuis des années."</p>
+                        <div class="reviewer">- Avis Général</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PMC - Petit Moins Chers</h3>
+                    <p>Votre boutique de cadeaux de confiance à Ouagadougou. Nous vous offrons des produits de qualité à des prix compétitifs.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📞 +226 78 99 76 03</p>
+                    <p>📧 contact@pmc-burkina.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Adresse</h3>
+                    <p>Avenue du Capitaine Thomas Sankara<br>
+                    Paspanga, Ouagadougou<br>
+                    Burkina Faso</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horaires</h3>
+                    <p>Ouvert tous les jours<br>
+                    de 07:30 à 21:30</p>
+                </div>
+            </div>
+            <div class="footer-bottom" style="position: relative;">
+                <p>&copy; 2025 PMC - Petit Moins Chers. Tous droits réservés.</p>
+                <span style="position: absolute; right: 0; bottom: 0; font-size: 0.95rem; color: #e0e0e0; padding: 0.2rem 0.5rem;">
+                    &lt;by YASIN AMICHIA&gt;
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Panier flottant WhatsApp -->
+    <div id="cart-panel" class="cart-panel">
+        <div class="cart-header">
+            🛒 <span>Votre panier</span>
+            <button id="closeCart" class="cart-close-btn">&times;</button>
+        </div>
+        <ul id="cart-list" class="cart-list"></ul>
+        <div class="cart-total" id="cart-total"></div>
+        <button id="cart-whatsapp" class="cart-whatsapp-btn" style="display:none;">Commander via WhatsApp</button>
+    </div>
+    <button id="openCart" class="cart-fab">🛒</button>
+
+    <!-- Bouton flottant WhatsApp -->
+    <a href="https://wa.me/22678997603" class="floating-contact" title="Contactez-nous sur WhatsApp" target="_blank" rel="noopener">💬</a>
+</body>
+</html>
