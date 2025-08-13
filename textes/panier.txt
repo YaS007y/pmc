@@ -1,0 +1,214 @@
+<!-- Panier flottant WhatsApp -->
+<div id="cart-panel" class="cart-panel" role="region" aria-label="Panier">
+    <div class="cart-header">
+        🛒 <span>Votre panier</span>
+        <button id="closeCart" class="cart-close-btn" aria-label="Fermer le panier">&times;</button>
+    </div>
+    <ul id="cart-list" class="cart-list"></ul>
+    <div class="cart-total" id="cart-total"></div>
+    <button id="cart-whatsapp" class="cart-whatsapp-btn" style="display:none;" aria-label="Commander via WhatsApp">Commander via WhatsApp</button>
+</div>
+<button id="openCart" class="cart-fab" aria-label="Ouvrir le panier">🛒</button>
+
+//CSS
+
+/* Panier WhatsApp */
+.cart-panel {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 320px;
+  max-width: 95vw;
+  background: #fff;
+  border: 2px solid #2E5BBA;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(46,91,186,0.12);
+  z-index: 9999;
+  padding: 1rem 1rem 0.5rem 1rem;
+  display: none;
+  flex-direction: column;
+  min-height: 120px;
+}
+.cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.cart-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #2E5BBA;
+  cursor: pointer;
+}
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.cart-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.2rem;
+}
+.cart-remove {
+  background: none;
+  border: none;
+  color: #d32f2f;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.cart-total {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: right;
+}
+.cart-whatsapp-btn {
+  background: #25d366;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7em 1.2em;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s;
+}
+.cart-whatsapp-btn:hover, .cart-whatsapp-btn:focus-visible {
+  background: #1ebe57;
+}
+.cart-fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #2E5BBA;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 16px rgba(46,91,186,0.12);
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive panier */
+@media (max-width: 600px) {
+  .cart-panel {
+    right: 5px;
+    width: 98vw;
+    top: 45px;
+    padding: 0.5rem 0.2rem 0.2rem 0.2rem;
+  }
+  .cart-fab {
+    right: 10px;
+    bottom: 10px;
+  }
+}
+
+
+//JS
+
+// === PANIER WHATSAPP AVEC PERSISTANCE ET QUANTITÉ ===
+try {
+    const cartPanel = document.getElementById('cart-panel');
+    const openCartBtn = document.getElementById('openCart');
+    const closeCartBtn = document.getElementById('closeCart');
+    const cartList = document.getElementById('cart-list');
+    const cartTotal = document.getElementById('cart-total');
+    const cartWhatsappBtn = document.getElementById('cart-whatsapp');
+    // Fallback localStorage
+    function getCart() {
+        try {
+            return JSON.parse(localStorage.getItem('pmc_cart')) || [];
+        } catch { return []; }
+    }
+    function setCart(cart) {
+        try {
+            localStorage.setItem('pmc_cart', JSON.stringify(cart));
+        } catch {}
+    }
+    let cart = getCart();
+
+    // Ouvre/ferme le panier
+    openCartBtn?.addEventListener('click', () => { cartPanel.style.display = 'flex'; });
+    closeCartBtn?.addEventListener('click', () => { cartPanel.style.display = 'none'; });
+
+    // Délégation pour ajout produit
+    document.body.addEventListener('click', function(e) {
+        if (e.target.classList.contains('product-btn')) {
+            e.preventDefault();
+            const card = e.target.closest('.product-card');
+            const name = card.querySelector('.product-name')?.textContent.trim() || '';
+            const price = card.querySelector('.product-price')?.textContent.trim() || '';
+            // Gestion quantité
+            let found = cart.find(item => item.name === name && item.price === price);
+            if (found) found.qty += 1;
+            else cart.push({ name, price, qty: 1 });
+            setCart(cart);
+            updateCart();
+            cartPanel.style.display = 'flex';
+        }
+    });
+
+    // Met à jour l'affichage du panier
+    function updateCart() {
+        cart = getCart();
+        cartList.innerHTML = '';
+        if (cart.length === 0) {
+            cartList.innerHTML = '<li style="text-align:center;color:#888;">Votre panier est vide.</li>';
+            cartTotal.textContent = '';
+            cartWhatsappBtn.style.display = 'none';
+            return;
+        }
+        let total = 0;
+        cart.forEach((item, idx) => {
+            let prixNum = parseInt(item.price.replace(/[^\d]/g, '')) || 0;
+            total += prixNum * item.qty;
+            const li = document.createElement('li');
+            li.innerHTML = `<span>${item.name} <span style="color:#2E5BBA;">${item.price}</span> x${item.qty}</span>
+                <button class="cart-remove" title="Retirer" data-idx="${idx}">&times;</button>`;
+            cartList.appendChild(li);
+        });
+        cartTotal.textContent = `Total : ${total.toLocaleString()} F`;
+        cartWhatsappBtn.style.display = 'block';
+    }
+
+    // Délégation pour retirer un produit
+    cartList.addEventListener('click', function(e) {
+        if (e.target.classList.contains('cart-remove')) {
+            const idx = parseInt(e.target.getAttribute('data-idx'));
+            if (cart[idx].qty > 1) cart[idx].qty -= 1;
+            else cart.splice(idx, 1);
+            setCart(cart);
+            updateCart();
+        }
+    });
+
+    // Commander via WhatsApp
+    cartWhatsappBtn.addEventListener('click', function() {
+        if (cart.length === 0) return;
+        let message = "Bonjour, je souhaite commander :\n";
+        cart.forEach(item => {
+            message += `- ${item.name} ${item.price} x${item.qty}\n`;
+        });
+        message += "\nMerci de me confirmer la disponibilité.";
+        const whatsappURL = `https://wa.me/22678997603?text=${encodeURIComponent(message)}`;
+        window.open(whatsappURL, '_blank');
+    });
+
+    updateCart();
+} catch (e) { console.error('Erreur panier WhatsApp:', e); }
