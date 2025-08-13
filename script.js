@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     // === MENU MOBILE ===
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
     if (menuToggle && navLinks) {
         menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+            navLinks.classList.toggle('open');
         });
         navLinks.addEventListener('click', (e) => {
-            if (e.target.tagName === 'A') navLinks.classList.remove('active');
+            if (e.target.tagName === 'A') navLinks.classList.remove('open');
         });
     }
 
@@ -61,8 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.product-card, .service-card, .info-card, .review-card')
             .forEach(el => observer.observe(el));
     }
-
-    
 
     // === CAROUSEL AUTOMATIQUE ===
     function initCarousel() {
