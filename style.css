@@ -28,7 +28,7 @@ header {
   width: 100%;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Ombre légèrement plus visible */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 nav {
   display: flex;
@@ -490,18 +490,6 @@ footer {
   margin-top: 0.5rem;
 }
 
-@media (max-width: 768px) {
-  .footer-bottom {
-    padding-top: 1.5rem;
-    margin-top: 2rem;
-    gap: 1rem;
-  }
-  .footer-credits {
-    font-size: 0.85rem;
-    margin-top: 1rem;
-  }
-}
-
 /* Panier */
 .cart-panel {
   position: fixed;
@@ -595,9 +583,147 @@ footer {
   justify-content: center;
 }
 
-/* Corrections pour mobile - à ajouter/modifier dans ton CSS */
+/* Contact flottant */
+.floating-contact {
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  background: #25d366;
+  color: #fff;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.3);
+  z-index: 9998;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+.floating-contact:hover {
+  transform: scale(1.1);
+}
 
-/* Menu mobile corrigé */
+/* Zoom image produit - Modal */
+.image-zoom-modal {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20000;
+  cursor: zoom-out;
+  animation: fadeIn 0.2s;
+}
+.image-zoom-modal img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  background: #fff;
+  padding: 0.5rem;
+  object-fit: contain;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Effets modernes sobres */
+a:focus-visible, button:focus-visible, .product-btn:focus-visible, .cart-close-btn:focus-visible, .cart-whatsapp-btn:focus-visible, .filter-btn:focus-visible, .carousel-btn:focus-visible, .indicator:focus-visible {
+  outline: 2px solid #FF6B35;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(255,107,53,0.15);
+  transition: box-shadow 0.2s;
+}
+
+.product-card, .service-card, .review-card, .info-card {
+  transition: box-shadow 0.25s cubic-bezier(.4,2,.6,1), transform 0.18s;
+}
+.product-card:hover, .product-card:focus-within,
+.service-card:hover, .service-card:focus-within,
+.review-card:hover, .review-card:focus-within,
+.info-card:hover, .info-card:focus-within {
+  box-shadow: 0 8px 32px rgba(46,91,186,0.13), 0 3px 12px rgba(0,0,0,0.07);
+  transform: translateY(-4px) scale(1.015);
+}
+
+.product-image img, .carousel-slide img, .carousel-slide video {
+  transition: transform 0.35s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+}
+.product-card:hover .product-image img,
+.carousel-slide.active:hover img,
+.carousel-slide.active:focus-within img {
+  transform: scale(1.04);
+  box-shadow: 0 4px 24px rgba(46,91,186,0.10);
+}
+
+.cta-button, .product-btn, .cart-whatsapp-btn, .filter-btn, .carousel-btn {
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+}
+.cta-button:hover, .product-btn:hover, .cart-whatsapp-btn:hover, .filter-btn:hover, .carousel-btn:hover {
+  box-shadow: 0 4px 16px rgba(255,107,53,0.10);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.carousel-slide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(.4,2,.6,1);
+  position: absolute;
+  left: 0; top: 0; width: 100%; height: 100%;
+}
+.carousel-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+  z-index: 1;
+  transition-delay: 0s;
+}
+
+.indicator {
+  transition: background 0.2s, transform 0.2s;
+}
+.indicator.active {
+  transform: scale(1.2);
+  box-shadow: 0 2px 8px rgba(255,107,53,0.10);
+}
+
+.cart-panel {
+  transition: box-shadow 0.25s, transform 0.25s, opacity 0.25s;
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  pointer-events: none;
+}
+.cart-panel[style*="display: flex"] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.cart-fab {
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.cart-fab:hover, .cart-fab:focus-visible {
+  box-shadow: 0 8px 24px rgba(46,91,186,0.18);
+  transform: scale(1.08);
+}
+
+.footer-section {
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.footer-section:hover, .footer-section:focus-within {
+  box-shadow: 0 4px 16px rgba(46,91,186,0.08);
+  transform: translateY(-2px) scale(1.01);
+}
+
+/* RESPONSIVITÉ MOBILE */
+
+/* Header mobile */
 @media (max-width: 900px) {
   .nav-links {
     position: fixed;
@@ -639,15 +765,11 @@ footer {
   .menu-toggle:hover {
     transform: scale(1.1);
   }
-}
-
-/* Header mobile - responsivité améliorée */
-@media (max-width: 900px) {
   nav {
-    padding: 0.5rem 1rem; /* Padding réduit sur mobile */
+    padding: 0.5rem 1rem;
   }
   .logo {
-    font-size: 1.3rem; /* Taille réduite sur tablette */
+    font-size: 1.3rem;
   }
   .logo img {
     width: 35px;
@@ -656,43 +778,25 @@ footer {
 }
 
 @media (max-width: 768px) {
+  /* Header */
   nav {
-    padding: 0.4rem 0.8rem; /* Encore plus compact sur mobile */
+    padding: 0.4rem 0.8rem;
   }
   .logo {
-    font-size: 1.1rem; /* Plus petit sur mobile */
+    font-size: 1.1rem;
   }
   .logo img {
     width: 30px;
     height: 30px;
   }
   .menu-toggle {
-    font-size: 1.4rem; /* Bouton menu plus petit */
+    font-size: 1.4rem;
     padding: 0.2rem;
   }
-}
 
-@media (max-width: 480px) {
-  nav {
-    padding: 0.3rem 0.5rem; /* Très compact sur petits écrans */
-  }
-  .logo {
-    font-size: 1rem;
-    gap: 0.5rem;
-  }
-  .logo img {
-    width: 28px;
-    height: 28px;
-  }
-  .menu-toggle {
-    font-size: 1.3rem;
-  }
-}
-
-/* Hero - ajustement avec le nouveau header */
-@media (max-width: 768px) {
+  /* Hero */
   .hero {
-    padding: 70px 0 40px; /* Réduit le padding-top */
+    padding: 70px 0 40px;
   }
   .hero h1 {
     font-size: 1.8rem;
@@ -706,11 +810,247 @@ footer {
     padding: 12px 24px;
     font-size: 1rem;
   }
+
+  /* Container */
+  .container {
+    padding: 0 0.8rem;
+  }
+  .about, .products, .services, .actualites, .info, .reviews {
+    padding: 40px 0;
+  }
+
+  /* Grilles produits - 3 colonnes sur mobile */
+  .products-grid {
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 0.6rem;
+  }
+  
+  /* Services et autres grilles restent en 1 colonne */
+  .services-grid, .reviews-grid, .info-grid, .footer-content {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  /* About section */
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  .about-text {
+    font-size: 0.95rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .about-image {
+    flex: 0 0 220px;
+    width: 220px;
+    height: 140px;
+    font-size: 3.5rem;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(255,107,53,0.2);
+  }
+
+  /* Cards produits compactes pour 3 colonnes */
+  .product-card {
+    height: auto;
+    min-height: 250px;
+  }
+  .product-image {
+    height: 100px;
+  }
+  .product-info {
+    padding: 0.5rem;
+  }
+  .product-name {
+    font-size: 0.85rem;
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+  }
+  .product-price {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+  .product-btn {
+    padding: 0.4rem;
+    font-size: 0.75rem;
+  }
+  .product-category {
+    font-size: 0.65rem;
+    padding: 0.1rem 0.4rem;
+    margin-bottom: 0.2rem;
+  }
+
+  /* Carousel mobile - taille augmentée */
+  .carousel-container {
+    margin: 0 -0.5rem;
+    border-radius: 8px;
+    max-width: none;
+  }
+  .carousel-wrapper {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .carousel-slide {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+  .carousel-slide.active {
+    display: flex;
+  }
+  .carousel-slide img, .carousel-slide video {
+    max-height: 280px;
+    max-width: 95%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 8px;
+    margin: 0 auto;
+  }
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  .carousel-btn.prev { left: 10px; }
+  .carousel-btn.next { right: 10px; }
+  .carousel-indicators {
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+  }
+  .indicator {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* Section titles */
+  .section-title {
+    margin: 2rem 0 1.5rem 0;
+  }
+
+  /* Panier mobile - version flottante */
+  .cart-panel {
+    top: 80px;
+    right: 10px;
+    left: auto;
+    width: 340px;
+    max-width: calc(100vw - 20px);
+    height: auto;
+    max-height: 70vh;
+    border-radius: 10px;
+    border: 2px solid #2E5BBA;
+    padding: 1rem;
+    box-shadow: 0 8px 32px rgba(46,91,186,0.2);
+  }
+  .cart-header {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  .cart-list {
+    max-height: 40vh;
+    overflow-y: auto;
+  }
+  .cart-fab {
+    right: 15px;
+    bottom: 20px;
+    width: 55px;
+    height: 55px;
+    font-size: 1.4rem;
+    box-shadow: 0 6px 20px rgba(46,91,186,0.25);
+  }
+
+  /* Contact flottant mobile */
+  .floating-contact {
+    bottom: 90px;
+    right: 15px;
+  }
+
+  /* Category filters mobile */
+  .category-filters {
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0;
+    justify-content: center;
+  }
+  .filter-btn {
+    padding: 0.5em 1em;
+    font-size: 0.85rem;
+    border-radius: 20px;
+  }
+
+  /* Footer mobile */
+  .footer-bottom {
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+  .footer-credits {
+    font-size: 0.85rem;
+    margin-top: 1rem;
+  }
+
+  /* Map mobile */
+  .map-container {
+    margin: 1rem -0.5rem 0 -0.5rem;
+    border-radius: 0;
+  }
+  .map-container iframe {
+    height: 200px;
+  }
+
+  /* Info cards mobile */
+  .info-card, .review-card, .service-card {
+    padding: 1rem;
+    text-align: left;
+  }
+  .service-card {
+    text-align: center;
+  }
+  .service-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+
+  /* Zoom modal mobile */
+  .image-zoom-modal img {
+    max-width: 95vw;
+    max-height: 95vh;
+    border-radius: 8px;
+  }
 }
 
 @media (max-width: 480px) {
+  /* Header très petits écrans */
+  nav {
+    padding: 0.3rem 0.5rem;
+  }
+  .logo {
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+  .logo img {
+    width: 28px;
+    height: 28px;
+  }
+  .menu-toggle {
+    font-size: 1.3rem;
+  }
+
+  /* Hero très petits écrans */
   .hero {
-    padding: 60px 0 30px; /* Encore plus compact sur petits écrans */
+    padding: 60px 0 30px;
   }
   .hero h1 {
     font-size: 1.5rem;
@@ -722,117 +1062,18 @@ footer {
     padding: 10px 20px;
     font-size: 0.9rem;
   }
-}
 
-/* Container mobile - ajustement avec la nouvelle box */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 0.8rem; /* Augmenté de 0.5rem à 0.8rem */
-  }
-  .about, .products, .services, .actualites, .info, .reviews {
-    padding: 40px 0; /* Espacement uniforme */
-  }
-}
-
-/* Grilles mobile - force 1 colonne sur petits écrans */
-@media (max-width: 768px) {
-  .products-grid, .services-grid, .reviews-grid, .info-grid, .footer-content {
-    grid-template-columns: 1fr !important;
-    gap: 1rem;
-  }
-  
-  /* About section mobile */
-  .about-content {
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
-  }
-  .about-text {
-    font-size: 0.95rem;
-  }
+  /* About image très petits écrans */
   .about-image {
+    flex: 0 0 200px;
+    width: 200px;
     height: 120px;
-    font-size: 2.5rem;
-    margin: 0 auto;
+    font-size: 3rem;
   }
-}
 
-/* Cards mobile - hauteur auto et padding réduit */
-@media (max-width: 768px) {
-  .product-card {
-    height: auto;
-    min-height: 300px;
-  }
-  .product-image {
-    height: 140px;
-  }
-  .product-info {
-    padding: 0.8rem;
-  }
-  .product-name {
-    font-size: 1rem;
-  }
-  .product-price {
-    font-size: 0.9rem;
-  }
-  .product-btn {
-    padding: 0.6rem;
-    font-size: 0.9rem;
-  }
-}
-
-/* AMÉLIORATIONS RESPONSIVITÉ MOBILE */
-
-/* Grilles produits mobile - 3 colonnes sur mobile */
-@media (max-width: 768px) {
+  /* Produits - garde 3 colonnes mais ajuste les tailles */
   .products-grid {
-    grid-template-columns: 1fr 1fr 1fr !important; /* 3 colonnes au lieu de 2 */
-    gap: 0.6rem; /* Gap réduit pour plus d'espace */
-  }
-  
-  /* Services et autres grilles restent en 1 colonne */
-  .services-grid, .reviews-grid, .info-grid {
-    grid-template-columns: 1fr !important;
-    gap: 1rem;
-  }
-}
-
-/* Produits mobile - cards plus compactes pour 3 colonnes */
-@media (max-width: 768px) {
-  .product-card {
-    height: auto;
-    min-height: 250px; /* Réduit pour 3 colonnes */
-  }
-  .product-image {
-    height: 100px; /* Réduit pour 3 colonnes */
-  }
-  .product-info {
-    padding: 0.5rem; /* Padding réduit */
-  }
-  .product-name {
-    font-size: 0.85rem; /* Texte plus petit */
-    line-height: 1.2;
-    margin-bottom: 0.2rem;
-  }
-  .product-price {
-    font-size: 0.8rem; /* Prix plus petit */
-    margin-bottom: 0.4rem;
-  }
-  .product-btn {
-    padding: 0.4rem;
-    font-size: 0.75rem; /* Bouton plus petit */
-  }
-  .product-category {
-    font-size: 0.65rem; /* Catégorie plus petite */
-    padding: 0.1rem 0.4rem;
-    margin-bottom: 0.2rem;
-  }
-}
-
-/* Très petits écrans - garde 3 colonnes mais ajuste les tailles */
-@media (max-width: 480px) {
-  .products-grid {
-    grid-template-columns: 1fr 1fr 1fr !important; /* Garde 3 colonnes */
+    grid-template-columns: 1fr 1fr 1fr !important;
     gap: 0.4rem;
   }
   .product-card {
@@ -854,12 +1095,54 @@ footer {
     padding: 0.3rem;
     font-size: 0.7rem;
   }
+
+  /* Carousel très petits écrans */
+  .carousel-wrapper {
+    min-height: 250px;
+  }
+  .carousel-slide img, .carousel-slide video {
+    max-height: 230px;
+    max-width: 90%;
+  }
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  .carousel-btn.prev { left: 8px; }
+  .carousel-btn.next { right: 8px; }
+
+  /* Panier très petits écrans */
+  .cart-panel {
+    width: 320px;
+    max-width: calc(100vw - 10px);
+    right: 5px;
+    top: 70px;
+  }
+  .cart-fab {
+    right: 10px;
+    bottom: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+
+  /* Contact flottant très petits écrans */
+  .floating-contact {
+    bottom: 90px;
+    right: 10px;
+  }
+
+  /* Section titles très petits écrans */
+  .section-title {
+    font-size: 1.3rem;
+  }
 }
 
 /* Très très petits écrans (320px et moins) - passe en 2 colonnes */
 @media (max-width: 350px) {
   .products-grid {
-    grid-template-columns: 1fr 1fr !important; /* 2 colonnes pour très petits écrans */
+    grid-template-columns: 1fr 1fr !important;
     gap: 0.5rem;
   }
   .product-card {
@@ -881,60 +1164,41 @@ footer {
     padding: 0.4rem;
     font-size: 0.75rem;
   }
-}
-
-/* Header - amélioration du z-index et positionnement */
-header {
-  background: #2E5BBA;
-  color: #fff;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Ombre légèrement plus visible */
-}
-
-/* Box 🎁 mobile - largeur augmentée */
-@media (max-width: 768px) {
   .about-image {
-    flex: 0 0 220px; /* Augmenté de 160px à 220px */
-    width: 220px; /* Largeur fixe plus grande */
-    height: 140px;
-    font-size: 3.5rem;
-    margin: 0 auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(255,107,53,0.2);
-  }
-}
-
-@media (max-width: 480px) {
-  .about-image {
-    flex: 0 0 200px; /* Légèrement réduit pour très petits écrans */
-    width: 200px;
-    height: 120px;
-    font-size: 3rem;
-  }
-}
-
-@media (max-width: 350px) {
-  .about-image {
-    flex: 0 0 180px; /* Pour très très petits écrans */
+    flex: 0 0 180px;
     width: 180px;
     height: 110px;
     font-size: 2.8rem;
   }
 }
 
-/* About section mobile - meilleur espacement avec la nouvelle largeur */
-@media (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
-    gap: 2rem; /* Augmenté pour la nouvelle taille de la box */
-    text-align: center;
+/* Mode paysage mobile */
+@media (max-width: 900px) and (orientation: landscape) {
+  .hero {
+    padding: 60px 0 30px;
   }
-  .about-text {
-    font-size: 0.95rem;
-    max-width: 600px; /* Limite la largeur du texte */
-    margin: 0 auto;
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  .carousel-wrapper {
+    min-height: 200px;
+  }
+  .carousel-slide img, .carousel-slide video {
+    max-height: 180px;
+    max-width: 90%;
+  }
+  .about, .products, .services, .actualites, .info, .reviews {
+    padding: 20px 0;
+  }
+  .about-image {
+    height: 100px;
+    font-size: 2.5rem;
+  }
+  .cart-panel {
+    max-height: 60vh;
+    top: 70px;
+  }
+  .cart-list {
+    max-height: 30vh;
   }
 }

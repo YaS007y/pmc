@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     menuToggle.focus();
                 }
             });
-            // Délégation : fermer menu au clic sur un lien
+            // Délégation : fermer menu au clic sur un lien
             navLinks.addEventListener('click', (e) => {
                 if (e.target.tagName === 'A') {
                     navLinks.classList.remove('open');
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-    } catch (e) { console.error('Erreur menu mobile :', e); }
+    } catch (e) { console.error('Erreur menu mobile :', e); }
 
     // === DÉFILEMENT FLUIDE ===
     try {
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
-    } catch (e) { console.error('Erreur scroll fluide :', e); }
+    } catch (e) { console.error('Erreur scroll fluide :', e); }
 
     // === CHANGEMENT COULEUR HEADER (avec debounce) ===
     try {
@@ -73,13 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
             clearTimeout(scrollTimeout);
             scrollTimeout = setTimeout(onScroll, 50);
         });
-    } catch (e) { console.error('Erreur header sticky :', e); }
+    } catch (e) { console.error('Erreur header sticky :', e); }
 
     // === FILTRAGE PRODUITS (délégation) ===
     try {
         const filterContainer = document.querySelector('.category-filters');
         const productCards = document.querySelectorAll('.product-card');
-        if (filterContainer) {
+        if (filterContainer && productCards.length > 0) {
             filterContainer.addEventListener('click', (e) => {
                 if (e.target.classList.contains('filter-btn')) {
                     filterContainer.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
@@ -92,22 +92,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-    } catch (e) { console.error('Erreur filtres produits :', e); }
+    } catch (e) { console.error('Erreur filtres produits :', e); }
 
     // === ANIMATIONS AVEC INTERSECTION OBSERVER + Fallback ===
     try {
         const animatedEls = document.querySelectorAll('.product-card, .service-card, .info-card, .review-card');
-        if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) entry.target.classList.add('animate');
-                });
-            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-            animatedEls.forEach(el => observer.observe(el));
-        } else {
-            animatedEls.forEach(el => el.classList.add('animate'));
+        if (animatedEls.length > 0) {
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) entry.target.classList.add('animate');
+                    });
+                }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+                animatedEls.forEach(el => observer.observe(el));
+            } else {
+                animatedEls.forEach(el => el.classList.add('animate'));
+            }
         }
-    } catch (e) { console.error('Erreur animations :', e); }
+    } catch (e) { console.error('Erreur animations :', e); }
 
     // === CAROUSEL AVEC SWIPE, PAUSE SUR FOCUS/SURVOL, ACCESSIBILITÉ ===
     try {
@@ -116,63 +118,135 @@ document.addEventListener('DOMContentLoaded', () => {
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
         const slidesContainer = document.getElementById('carouselSlides');
-        let current = 0, interval, isPaused = false;
+        
+        if (slides.length > 0 && indicators.length > 0) {
+            let current = 0, interval, isPaused = false;
 
-        function showSlide(index) {
-            slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
-            indicators.forEach((ind, i) => ind.classList.toggle('active', i === index));
-            current = index;
-        }
-        function nextSlide() { showSlide((current + 1) % slides.length); }
-        function prevSlide() { showSlide((current - 1 + slides.length) % slides.length); }
-        function startAuto() {
-            if (interval) clearInterval(interval);
-            if (!isPaused) interval = setInterval(nextSlide, 2500);
-        }
-        function stopAuto() { if (interval) clearInterval(interval); }
-
-        // Pause sur survol/focus
-        if (slidesContainer) {
-            slidesContainer.addEventListener('mouseenter', () => { isPaused = true; stopAuto(); });
-            slidesContainer.addEventListener('mouseleave', () => { isPaused = false; startAuto(); });
-            slidesContainer.addEventListener('focusin', () => { isPaused = true; stopAuto(); });
-            slidesContainer.addEventListener('focusout', () => { isPaused = false; startAuto(); });
-        }
-
-        // Touch swipe
-        let startX = null;
-        if (slidesContainer) {
-            slidesContainer.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
-            slidesContainer.addEventListener('touchend', e => {
-                if (startX === null) return;
-                let dx = e.changedTouches[0].clientX - startX;
-                if (Math.abs(dx) > 40) {
-                    if (dx < 0) nextSlide();
-                    else prevSlide();
+            function showSlide(index) {
+                // Validation de l'index
+                if (index < 0 || index >= slides.length) return;
+                
+                slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+                indicators.forEach((ind, i) => ind.classList.toggle('active', i === index));
+                current = index;
+            }
+            
+            function nextSlide() { 
+                showSlide((current + 1) % slides.length); 
+            }
+            
+            function prevSlide() { 
+                showSlide((current - 1 + slides.length) % slides.length); 
+            }
+            
+            function startAuto() {
+                if (interval) clearInterval(interval);
+                if (!isPaused) interval = setInterval(nextSlide, 3000);
+            }
+            
+            function stopAuto() { 
+                if (interval) {
+                    clearInterval(interval);
+                    interval = null;
                 }
-                startX = null;
+            }
+
+            // Pause sur survol/focus
+            if (slidesContainer) {
+                slidesContainer.addEventListener('mouseenter', () => { 
+                    isPaused = true; 
+                    stopAuto(); 
+                });
+                slidesContainer.addEventListener('mouseleave', () => { 
+                    isPaused = false; 
+                    startAuto(); 
+                });
+                slidesContainer.addEventListener('focusin', () => { 
+                    isPaused = true; 
+                    stopAuto(); 
+                });
+                slidesContainer.addEventListener('focusout', () => { 
+                    isPaused = false; 
+                    startAuto(); 
+                });
+            }
+
+            // Touch swipe
+            let startX = null;
+            if (slidesContainer) {
+                slidesContainer.addEventListener('touchstart', e => { 
+                    startX = e.touches[0].clientX; 
+                }, { passive: true });
+                
+                slidesContainer.addEventListener('touchend', e => {
+                    if (startX === null) return;
+                    let dx = e.changedTouches[0].clientX - startX;
+                    if (Math.abs(dx) > 50) {
+                        if (dx < 0) nextSlide();
+                        else prevSlide();
+                        stopAuto();
+                        startAuto();
+                    }
+                    startX = null;
+                }, { passive: true });
+            }
+
+            // Indicateurs et boutons
+            indicators.forEach((ind, i) => {
+                ind.addEventListener('click', () => { 
+                    showSlide(i); 
+                    stopAuto(); 
+                    startAuto(); 
+                });
             });
-        }
+            
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => { 
+                    nextSlide(); 
+                    stopAuto(); 
+                    startAuto(); 
+                });
+            }
+            
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => { 
+                    prevSlide(); 
+                    stopAuto(); 
+                    startAuto(); 
+                });
+            }
 
-        // Indicateurs et boutons
-        indicators.forEach((ind, i) => ind.addEventListener('click', () => { showSlide(i); stopAuto(); startAuto(); }));
-        if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); stopAuto(); startAuto(); });
-        if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); stopAuto(); startAuto(); });
+            // Navigation clavier
+            if (slidesContainer) {
+                slidesContainer.setAttribute('tabindex', '0');
+                slidesContainer.setAttribute('role', 'region');
+                slidesContainer.setAttribute('aria-label', 'Carrousel d\'actualités');
+                slidesContainer.addEventListener('keydown', e => {
+                    if (e.key === 'ArrowRight') { 
+                        e.preventDefault();
+                        nextSlide(); 
+                        stopAuto(); 
+                        startAuto(); 
+                    }
+                    if (e.key === 'ArrowLeft') { 
+                        e.preventDefault();
+                        prevSlide(); 
+                        stopAuto(); 
+                        startAuto(); 
+                    }
+                });
+            }
 
-        // Navigation clavier
-        if (slidesContainer) {
-            slidesContainer.setAttribute('tabindex', '0');
-            slidesContainer.addEventListener('keydown', e => {
-                if (e.key === 'ArrowRight') { nextSlide(); stopAuto(); startAuto(); }
-                if (e.key === 'ArrowLeft') { prevSlide(); stopAuto(); startAuto(); }
-            });
-        }
-
-        if (slides.length > 0) {
+            // Initialisation
             showSlide(0);
             startAuto();
+            
+            // Nettoyage avant déchargement de la page
+            window.addEventListener('beforeunload', () => {
+                stopAuto();
+            });
         }
-    } catch (e) { console.error('Erreur carousel :', e); }
+    } catch (e) { console.error('Erreur carousel :', e); }
 
     // === PANIER WHATSAPP AVEC PERSISTANCE ET QUANTITÉ ===
     try {
@@ -182,133 +256,259 @@ document.addEventListener('DOMContentLoaded', () => {
         const cartList = document.getElementById('cart-list');
         const cartTotal = document.getElementById('cart-total');
         const cartWhatsappBtn = document.getElementById('cart-whatsapp');
-        // Fallback localStorage
-        function getCart() {
-            try {
-                return JSON.parse(localStorage.getItem('pmc_cart')) || [];
-            } catch { return []; }
-        }
-        function setCart(cart) {
-            try {
-                localStorage.setItem('pmc_cart', JSON.stringify(cart));
-            } catch {}
-        }
-        let cart = getCart();
-
-        // Ouvre/ferme le panier
-        openCartBtn?.addEventListener('click', () => { cartPanel.style.display = 'flex'; });
-        closeCartBtn?.addEventListener('click', () => { cartPanel.style.display = 'none'; });
-
-        // Délégation pour ajout produit
-        document.body.addEventListener('click', function(e) {
-            if (e.target.classList.contains('product-btn')) {
-                e.preventDefault();
-                const card = e.target.closest('.product-card');
-                const name = card.querySelector('.product-name')?.textContent.trim() || '';
-                const price = card.querySelector('.product-price')?.textContent.trim() || '';
-                // Gestion quantité
-                let found = cart.find(item => item.name === name && item.price === price);
-                if (found) found.qty += 1;
-                else cart.push({ name, price, qty: 1 });
-                setCart(cart);
-                updateCart();
-                cartPanel.style.display = 'flex';
+        
+        if (cartPanel && openCartBtn && closeCartBtn && cartList && cartTotal && cartWhatsappBtn) {
+            // Fallback localStorage
+            function getCart() {
+                try {
+                    const cartData = localStorage.getItem('pmc_cart');
+                    return cartData ? JSON.parse(cartData) : [];
+                } catch (e) { 
+                    console.warn('Erreur lecture localStorage :', e);
+                    return []; 
+                }
             }
-        });
-
-        // Met à jour l'affichage du panier
-        function updateCart() {
-            cart = getCart();
-            cartList.innerHTML = '';
-            if (cart.length === 0) {
-                cartList.innerHTML = '<li style="text-align:center;color:#888;">Votre panier est vide.</li>';
-                cartTotal.textContent = '';
-                cartWhatsappBtn.style.display = 'none';
-                return;
+            
+            function setCart(cart) {
+                try {
+                    localStorage.setItem('pmc_cart', JSON.stringify(cart));
+                } catch (e) {
+                    console.warn('Erreur sauvegarde localStorage :', e);
+                }
             }
-            let total = 0;
-            cart.forEach((item, idx) => {
-                let prixNum = parseInt(item.price.replace(/[^\d]/g, '')) || 0;
-                total += prixNum * item.qty;
-                const li = document.createElement('li');
-                li.innerHTML = `<span>${item.name} <span style="color:#2E5BBA;">${item.price}</span> x${item.qty}</span>
-                    <button class="cart-remove" title="Retirer" data-idx="${idx}">&times;</button>`;
-                cartList.appendChild(li);
-            });
-            cartTotal.textContent = `Total : ${total.toLocaleString()} F`;
-            cartWhatsappBtn.style.display = 'block';
-        }
+            
+            let cart = getCart();
 
-        // Délégation pour retirer un produit
-        cartList.addEventListener('click', function(e) {
-            if (e.target.classList.contains('cart-remove')) {
-                const idx = parseInt(e.target.getAttribute('data-idx'));
-                if (cart[idx].qty > 1) cart[idx].qty -= 1;
-                else cart.splice(idx, 1);
-                setCart(cart);
-                updateCart();
+            // Ouvre/ferme le panier
+            openCartBtn.addEventListener('click', () => { 
+                cartPanel.style.display = 'flex'; 
+                cartPanel.setAttribute('aria-hidden', 'false');
+            });
+            
+            closeCartBtn.addEventListener('click', () => { 
+                cartPanel.style.display = 'none'; 
+                cartPanel.setAttribute('aria-hidden', 'true');
+            });
+
+            // Fermer le panier en cliquant en dehors
+            cartPanel.addEventListener('click', (e) => {
+                if (e.target === cartPanel) {
+                    cartPanel.style.display = 'none';
+                    cartPanel.setAttribute('aria-hidden', 'true');
+                }
+            });
+
+            // Délégation pour ajout produit
+            document.body.addEventListener('click', function(e) {
+                if (e.target.classList.contains('product-btn')) {
+                    e.preventDefault();
+                    const card = e.target.closest('.product-card');
+                    if (card) {
+                        const name = card.querySelector('.product-name')?.textContent.trim() || '';
+                        const price = card.querySelector('.product-price')?.textContent.trim() || '';
+                        
+                        if (name && price) {
+                            // Gestion quantité
+                            let found = cart.find(item => item.name === name && item.price === price);
+                            if (found) {
+                                found.qty += 1;
+                            } else {
+                                cart.push({ name, price, qty: 1 });
+                            }
+                            setCart(cart);
+                            updateCart();
+                            cartPanel.style.display = 'flex';
+                            cartPanel.setAttribute('aria-hidden', 'false');
+                        }
+                    }
+                }
+            });
+
+            // Met à jour l'affichage du panier
+            function updateCart() {
+                cart = getCart();
+                cartList.innerHTML = '';
+                
+                if (cart.length === 0) {
+                    cartList.innerHTML = '<li style="text-align:center;color:#888;">Votre panier est vide.</li>';
+                    cartTotal.textContent = '';
+                    cartWhatsappBtn.style.display = 'none';
+                    return;
+                }
+                
+                let total = 0;
+                cart.forEach((item, idx) => {
+                    let prixNum = parseInt(item.price.replace(/[^\d]/g, '')) || 0;
+                    total += prixNum * item.qty;
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <span>${item.name} <span style="color:#2E5BBA;">${item.price}</span> x${item.qty}</span>
+                        <button class="cart-remove" title="Retirer ${item.name}" data-idx="${idx}" aria-label="Retirer ${item.name}">&times;</button>
+                    `;
+                    cartList.appendChild(li);
+                });
+                
+                cartTotal.textContent = `Total : ${total.toLocaleString()} F`;
+                cartWhatsappBtn.style.display = 'block';
             }
-        });
 
-        // Commander via WhatsApp
-        cartWhatsappBtn.addEventListener('click', function() {
-            if (cart.length === 0) return;
-            let message = "Bonjour, je souhaite commander :\n";
-            cart.forEach(item => {
-                message += `- ${item.name} ${item.price} x${item.qty}\n`;
+            // Délégation pour retirer un produit
+            cartList.addEventListener('click', function(e) {
+                if (e.target.classList.contains('cart-remove')) {
+                    const idx = parseInt(e.target.getAttribute('data-idx'));
+                    if (!isNaN(idx) && cart[idx]) {
+                        if (cart[idx].qty > 1) {
+                            cart[idx].qty -= 1;
+                        } else {
+                            cart.splice(idx, 1);
+                        }
+                        setCart(cart);
+                        updateCart();
+                    }
+                }
             });
-            message += "\nMerci de me confirmer la disponibilité.";
-            const whatsappURL = `https://wa.me/22678997603?text=${encodeURIComponent(message)}`;
-            window.open(whatsappURL, '_blank');
-        });
 
-        updateCart();
-    } catch (e) { console.error('Erreur panier WhatsApp :', e); }
-
-    // === LAZY LOADING IMAGES (fallback) ===
-    try {
-        if ('loading' in HTMLImageElement.prototype) {
-            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-                img.loading = 'lazy';
+            // Commander via WhatsApp
+            cartWhatsappBtn.addEventListener('click', function() {
+                if (cart.length === 0) return;
+                
+                let message = "Bonjour, je souhaite commander :\n\n";
+                cart.forEach(item => {
+                    message += `- ${item.name} ${item.price} x${item.qty}\n`;
+                });
+                message += "\nMerci de me confirmer la disponibilité et le prix total.";
+                
+                const whatsappURL = `https://wa.me/22678997603?text=${encodeURIComponent(message)}`;
+                window.open(whatsappURL, '_blank', 'noopener,noreferrer');
             });
-        } else {
-            // Fallback : charger lazysizes.js si besoin
-            // (à ajouter dans le HTML si tu veux un vrai fallback)
+
+            // Initialisation
+            updateCart();
+            cartPanel.setAttribute('aria-hidden', 'true');
         }
-    } catch (e) { console.error('Erreur lazy loading :', e); }
-
-    // === SERVICE WORKER POUR OFFLINE ===
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js').catch(() => {});
-    }
+    } catch (e) { console.error('Erreur panier WhatsApp :', e); }
 
     // === ZOOM IMAGE PRODUIT AU CLIC ===
     try {
         const modal = document.getElementById('image-zoom-modal');
         const zoomedImg = document.getElementById('zoomed-image');
-        document.body.addEventListener('click', function(e) {
-            // Clic sur une image produit
-            if (e.target.closest('.product-image img')) {
-                const img = e.target.closest('.product-image img');
-                zoomedImg.src = img.src;
-                zoomedImg.alt = img.alt || 'Aperçu du produit';
+        
+        if (modal && zoomedImg) {
+            // Fonction pour ouvrir le zoom
+            function openZoom(imgSrc, imgAlt) {
+                zoomedImg.src = imgSrc;
+                zoomedImg.alt = imgAlt || 'Aperçu du produit';
                 modal.style.display = 'flex';
+                modal.setAttribute('aria-hidden', 'false');
                 document.body.style.overflow = 'hidden';
+                modal.focus();
             }
-            // Clic pour fermer le modal
-            if (e.target === modal) {
+            
+            // Fonction pour fermer le zoom
+            function closeZoom() {
                 modal.style.display = 'none';
+                modal.setAttribute('aria-hidden', 'true');
                 zoomedImg.src = '';
                 document.body.style.overflow = '';
             }
-        });
-        // Fermer avec Echap
-        document.addEventListener('keydown', function(e) {
-            if (modal.style.display === 'flex' && e.key === 'Escape') {
-                modal.style.display = 'none';
-                zoomedImg.src = '';
-                document.body.style.overflow = '';
+
+            document.body.addEventListener('click', function(e) {
+                // Clic sur une image produit
+                if (e.target.closest('.product-image img')) {
+                    const img = e.target.closest('.product-image img');
+                    if (img.src) {
+                        openZoom(img.src, img.alt);
+                    }
+                }
+                // Clic pour fermer le modal (sur le fond)
+                if (e.target === modal) {
+                    closeZoom();
+                }
+            });
+            
+            // Fermer avec Echap
+            document.addEventListener('keydown', function(e) {
+                if (modal.style.display === 'flex' && e.key === 'Escape') {
+                    closeZoom();
+                }
+            });
+
+            // Initialisation
+            modal.setAttribute('aria-hidden', 'true');
+            modal.setAttribute('role', 'dialog');
+            modal.setAttribute('aria-label', 'Image agrandie');
+        }
+    } catch (e) { console.error('Erreur zoom image produit :', e); }
+
+    // === LAZY LOADING IMAGES (fallback) ===
+    try {
+        if ('loading' in HTMLImageElement.prototype) {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            lazyImages.forEach(img => {
+                img.loading = 'lazy';
+            });
+        } else {
+            // Fallback pour navigateurs non compatibles
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            if (lazyImages.length > 0 && 'IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            if (img.dataset.src) {
+                                img.src = img.dataset.src;
+                                img.removeAttribute('data-src');
+                            }
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                });
+                lazyImages.forEach(img => imageObserver.observe(img));
             }
+        }
+    } catch (e) { console.error('Erreur lazy loading :', e); }
+
+    // === SERVICE WORKER POUR OFFLINE ===
+    try {
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(registration => {
+                        console.log('SW enregistré avec succès:', registration.scope);
+                    })
+                    .catch(registrationError => {
+                        console.log('Échec enregistrement SW:', registrationError);
+                    });
+            });
+        }
+    } catch (e) { console.error('Erreur service worker :', e); }
+
+    // === PERFORMANCE ET OPTIMISATIONS ===
+    try {
+        // Préchargement des images importantes
+        const criticalImages = [
+            'images/infos/logo.webp'
+        ];
+        
+        criticalImages.forEach(src => {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'image';
+            link.href = src;
+            document.head.appendChild(link);
         });
-    } catch (e) { console.error('Erreur zoom image produit :', e); }
+
+        // Debounce pour le redimensionnement
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                // Actions de redimensionnement si nécessaire
+                console.log('Fenêtre redimensionnée');
+            }, 250);
+        });
+
+    } catch (e) { console.error('Erreur optimisations :', e); }
+
+    console.log('PMC - Site initialisé avec succès');
 });

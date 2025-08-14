@@ -32,7 +32,7 @@
                 <img src="images/infos/logo.webp" alt="Logo de PMC - Petit Moins Chers">
                 <span>PMC - Petit Moins Chers</span>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#apropos">À Propos</a></li>
                 <li><a href="#actualites">Actualités</a></li>
@@ -128,6 +128,7 @@
                 <div class="category-filters" role="group" aria-label="Filtrer les produits par catégorie">
                     <button class="filter-btn active" data-category="tous">Tous</button>
                     <button class="filter-btn" data-category="crocs">Crocs</button>
+                    <button class="filter-btn" data-category="peluches">Peluche</button>
                     <button class="filter-btn" data-category="claquettes">Claquettes</button>
                     <button class="filter-btn" data-category="sacs">Sacs</button>
                     <button class="filter-btn" data-category="accessoires">Accessoires</button>
@@ -152,7 +153,7 @@
                             <span class="product-category">Accessoires</span>
                             <h3 class="product-name">Portefeuille NIKE</h3>
                             <div class="product-price">3500f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Portefeuille NIKE">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="accessoires">
@@ -163,7 +164,7 @@
                             <span class="product-category">Accessoires</span>
                             <h3 class="product-name">Trousse EASTPAK</h3>
                             <div class="product-price">5 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Trousse EASTPAK">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="accessoires">
@@ -174,7 +175,7 @@
                             <span class="product-category">Accessoires</span>
                             <h3 class="product-name">Cagoule NIKE</h3>
                             <div class="product-price">12 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Cagoule NIKE">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="accessoires">
@@ -185,7 +186,7 @@
                             <span class="product-category">Accessoires</span>
                             <h3 class="product-name">Bonnet NIKE</h3>
                             <div class="product-price">10 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Bonnet NIKE">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="accessoires">
@@ -196,29 +197,29 @@
                             <span class="product-category">Accessoires</span>
                             <h3 class="product-name">Gants NIKE</h3>
                             <div class="product-price">8 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Gants NIKE">🛒 Commander</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="accessoires">
+                    <div class="product-card" data-category="peluches">
                         <div class="product-image">
                             <img src="images/accessoires/image55.webp" alt="Peluche" loading="lazy">
                         </div>
                         <div class="product-info">
-                            <span class="product-category">Accessoires</span>
+                            <span class="product-category">Peluches</span>
                             <h3 class="product-name">Peluche</h3>
                             <div class="product-price">8 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Peluche">🛒 Commander</button>
                         </div>
                     </div>
-                    <div class="product-card" data-category="accessoires">
+                    <div class="product-card" data-category="peluches">
                         <div class="product-image">
                             <img src="images/accessoires/image56.webp" alt="Peluche" loading="lazy">
                         </div>
                         <div class="product-info">
-                            <span class="product-category">Accessoires</span>
+                            <span class="product-category">Peluches</span>
                             <h3 class="product-name">Peluche</h3>
                             <div class="product-price">8 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Peluche">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="claquettes">
@@ -229,7 +230,7 @@
                             <span class="product-category">Claquettes</span>
                             <h3 class="product-name">Adidas slide</h3>
                             <div class="product-price">8 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Adidas slide">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="claquettes">
@@ -240,7 +241,7 @@
                             <span class="product-category">Claquettes</span>
                             <h3 class="product-name">Jordan slide</h3>
                             <div class="product-price">6 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Jordan slide">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="claquettes">
@@ -251,7 +252,7 @@
                             <span class="product-category">Claquettes</span>
                             <h3 class="product-name">Jordan slide gris</h3>
                             <div class="product-price">8 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Jordan slide gris">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="claquettes">
@@ -262,7 +263,7 @@
                             <span class="product-category">Claquettes</span>
                             <h3 class="product-name">Jordan slide noir</h3>
                             <div class="product-price">8 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Jordan slide noir">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="claquettes">
@@ -273,7 +274,7 @@
                             <span class="product-category">Claquettes</span>
                             <h3 class="product-name">Jordan slide rouge</h3>
                             <div class="product-price">8 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Jordan slide rouge">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="claquettes">
@@ -284,7 +285,7 @@
                             <span class="product-category">Claquettes</span>
                             <h3 class="product-name">Jordan slide blanc</h3>
                             <div class="product-price">8 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Jordan slide blanc">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="claquettes">
@@ -295,7 +296,7 @@
                             <span class="product-category">Claquettes</span>
                             <h3 class="product-name">Nike slide</h3>
                             <div class="product-price">8 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Nike slide">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="crocs">
@@ -306,7 +307,7 @@
                             <span class="product-category">Crocs</span>
                             <h3 class="product-name">Crocs</h3>
                             <div class="product-price">12 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Crocs">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="crocs">
@@ -317,7 +318,7 @@
                             <span class="product-category">Crocs</span>
                             <h3 class="product-name">Crocs</h3>
                             <div class="product-price">12 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Crocs">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="crocs">
@@ -328,7 +329,7 @@
                             <span class="product-category">Crocs</span>
                             <h3 class="product-name">Crocs</h3>
                             <div class="product-price">12 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Crocs">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="crocs">
@@ -339,7 +340,7 @@
                             <span class="product-category">Crocs</span>
                             <h3 class="product-name">Crocs</h3>
                             <div class="product-price">7 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Crocs">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="crocs">
@@ -350,7 +351,7 @@
                             <span class="product-category">Crocs</span>
                             <h3 class="product-name">Crocs</h3>
                             <div class="product-price">7 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Crocs">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="crocs">
@@ -361,7 +362,7 @@
                             <span class="product-category">Crocs</span>
                             <h3 class="product-name">Crocs</h3>
                             <div class="product-price">7 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Crocs">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -372,7 +373,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Eastpak</h3>
                             <div class="product-price">17 500f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Eastpak">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -383,7 +384,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Eastpak</h3>
                             <div class="product-price">17 500f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Eastpak">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -394,7 +395,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Eastpak</h3>
                             <div class="product-price">17 500f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Eastpak">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -405,7 +406,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Eastpak</h3>
                             <div class="product-price">17 500f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Eastpak">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -416,7 +417,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac JanSport</h3>
                             <div class="product-price">12 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac JanSport">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -427,7 +428,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Jordan</h3>
                             <div class="product-price">12 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Jordan">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -438,7 +439,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Jordan</h3>
                             <div class="product-price">12 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Jordan">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -449,7 +450,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Nike</h3>
                             <div class="product-price">12 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -460,7 +461,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Nike</h3>
                             <div class="product-price">10 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -471,7 +472,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Nike</h3>
                             <div class="product-price">12 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -482,7 +483,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Nike</h3>
                             <div class="product-price">12 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -493,7 +494,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Nike</h3>
                             <div class="product-price">12 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -504,7 +505,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Nike</h3>
                             <div class="product-price">12 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -515,7 +516,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Nike</h3>
                             <div class="product-price">12 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -526,7 +527,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Nike</h3>
                             <div class="product-price">12 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -537,7 +538,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Nike</h3>
                             <div class="product-price">12 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -548,7 +549,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Nike</h3>
                             <div class="product-price">12 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -559,7 +560,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Nike</h3>
                             <div class="product-price">12 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -570,7 +571,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Puma</h3>
                             <div class="product-price">10 000f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Puma">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -581,7 +582,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Under Armour</h3>
                             <div class="product-price">17 500f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Under Armour">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -592,7 +593,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Under Armour</h3>
                             <div class="product-price">17 500f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Under Armour">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -603,7 +604,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Under Armour</h3>
                             <div class="product-price">17 500f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Under Armour">🛒 Commander</button>
                         </div>
                     </div>
                     <div class="product-card" data-category="sacs">
@@ -614,7 +615,7 @@
                             <span class="product-category">Sacs</span>
                             <h3 class="product-name">Sac Under Armour</h3>
                             <div class="product-price">17 500f</div>
-                            <button class="product-btn">🛒 Commander</button>
+                            <button class="product-btn" aria-label="Commander Sac Under Armour">🛒 Commander</button>
                         </div>
                     </div>
                 </div>
@@ -762,7 +763,7 @@
     <noscript>
         <div style="background:#ffefc1;color:#333;padding:1rem;text-align:center;">
             Certaines fonctionnalités du site nécessitent JavaScript pour fonctionner correctement.<br>
-            Veuillez l’activer dans votre navigateur pour une expérience optimale.
+            Veuillez l'activer dans votre navigateur pour une expérience optimale.
         </div>
     </noscript>
 
