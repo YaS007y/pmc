@@ -716,6 +716,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (imageObserver && imageObserver.disconnect) imageObserver.disconnect();
   });
 });
+
 try {
   const dropdownBtn = document.getElementById("dropdownMenuBtn");
   const dropdownContainer = dropdownBtn?.parentElement;

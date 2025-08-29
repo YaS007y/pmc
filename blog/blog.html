@@ -64,6 +64,8 @@
       height: 100%;
       object-fit: cover;
       border-bottom: 1px solid #eee;
+      max-width: 100%;
+      max-height: 100%;
     }
     .blog-content {
       padding: 1.2rem;
@@ -104,43 +106,121 @@
     .blog-link:focus-visible {
       background: #e55a2b;
     }
-    /* Blog : grille 2 colonnes sur mobile */
-@media (max-width: 900px) {
-  .blog-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-}
-@media (max-width: 600px) {
-  .blog-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.7rem;
-  }
-  .blog-media {
-    height: 120px;
-  }
-}
-@media (max-width: 400px) {
-  .blog-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* Grille blog : 2 colonnes sur mobile/tablette, 1 colonne sur très petit écran */
-@media (max-width: 900px) {
-  .blog-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-}
-@media (max-width: 500px) {
-  .blog-grid {
-    grid-template-columns: 1fr;
-    gap: 0.7rem;
-  }
-  .blog-media {
-    height: 120px;
-  }
-}
+    /* Blog : grille responsive toujours 2 colonnes sur mobile/tablette, 1 colonne sur très petit écran */
+    @media (max-width: 900px) {
+      .blog-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+    }
+    @media (max-width: 600px) {
+      .blog-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+      }
+      .blog-media {
+        height: 120px;
+      }
+    }
+    @media (max-width: 400px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Images et vidéos responsives dans le blog */
+    .blog-media img,
+    .blog-media video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* Responsive header/footer/nav (exemple, adapte selon ta structure) */
+    header, nav, .footer-content {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .nav-links li {
+      margin: 0;
+    }
+    @media (max-width: 700px) {
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.2rem;
+      }
+      .logo {
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    /* Responsive footer sections */
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .footer-section {
+      min-width: 180px;
+      flex: 1 1 220px;
+    }
+    @media (max-width: 700px) {
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      .footer-section {
+        width: 100%;
+        min-width: 0;
+        text-align: center;
+      }
+    }
+
+    /* Responsive blog header */
+    .blog-header {
+      padding: 40px 0 20px;
+    }
+    .blog-header h1 {
+      font-size: 1.4rem;
+    }
+    @media (min-width: 601px) {
+      .blog-header {
+        padding: 60px 0 30px;
+      }
+      .blog-header h1 {
+        font-size: 2.2rem;
+      }
+    }
+
+    /* Responsive container */
+    .blog-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3rem 1rem;
+      box-sizing: border-box;
+    }
+    @media (max-width: 600px) {
+      .blog-container {
+        padding: 1rem 0.2rem 2rem 0.2rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -157,14 +237,14 @@
         <li><a href="../index.html#produits">Catalogue</a></li>
         <li><a href="../index.html#services">Services</a></li>
         <li><a href="../index.html#contact">Contact</a></li>
-        <li><a href="blog/blog.html" class="active" style="background:#ff6b35;color:#fff;">Blog</a></li>
+        <li><a href="blog.html" class="active" style="background:#ff6b35;color:#fff;">Blog</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="blog-header">
     <h1>Le Blog de PMC</h1>
-    <p>Inspiration, nouveautés, conseils et vie de la boutique en images et vidéos.</p>
+    <p>Inspiration, nouveautés, la boutique en images et en vidéos.</p>
   </section>
 
   <main class="blog-container">
@@ -214,97 +294,99 @@
         </div>
       </article>
       <!-- Article 7 : Image -->
-        <article class="blog-card">
-            <div class="blog-media">
-              <img src="images/image123.webp" alt="Nouvelle collection PMC">
-            </div>
-        </article>
-        <!-- Article 8 : Vidéo -->
-        <article class="blog-card">
-            <div class="blog-media">
-              <video controls>
-                <source src="videos/video15.mp4" type="video/mp4">
-              </video>
-            </div>
-        </article>
-        <!-- Article 9 : Image -->
-        <article class="blog-card">
-            <div class="blog-media">
-              <img src="images/image122.webp" alt="Nouvelle collection PMC">
-            </div>
-        </article>
-        <!-- Article 10 : Image -->
-        <article class="blog-card">
-            <div class="blog-media">
-              <img src="images/image121.webp" alt="Nouvelle collection PMC">
-            </div>
-        </article>
-        <!-- Article 10 : Video -->
-        <article class="blog-card">
-            <div class="blog-media">
-              <video controls>
-                <source src="videos/video21.mp4" type="video/mp4">
-              </video>
-            </div>
-        </article>
-  </div>
+      <article class="blog-card">
+        <div class="blog-media">
+          <img src="images/image123.webp" alt="Nouvelle collection PMC">
+        </div>
+      </article>
+      <!-- Article 8 : Vidéo -->
+      <article class="blog-card">
+        <div class="blog-media">
+          <video controls>
+            <source src="videos/video15.mp4" type="video/mp4">
+          </video>
+        </div>
+      </article>
+      <!-- Article 9 : Image -->
+      <article class="blog-card">
+        <div class="blog-media">
+          <img src="images/image122.webp" alt="Nouvelle collection PMC">
+        </div>
+      </article>
+      <!-- Article 10 : Image -->
+      <article class="blog-card">
+        <div class="blog-media">
+          <img src="images/image121.webp" alt="Nouvelle collection PMC">
+        </div>
+      </article>
+      <!-- Article 11 : Video -->
+      <article class="blog-card">
+        <div class="blog-media">
+          <video controls>
+            <source src="videos/video21.mp4" type="video/mp4">
+          </video>
+        </div>
+      </article>
+    </div>
   </main>
 
   <!-- Lightbox Zoom Modal -->
-<div id="blog-lightbox" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(30,40,60,0.92);align-items:center;justify-content:center;">
-  <span id="blog-lightbox-close" style="position:absolute;top:24px;right:36px;font-size:2.5rem;color:#fff;cursor:pointer;z-index:10001;">&times;</span>
-  <div id="blog-lightbox-content" style="max-width:90vw;max-height:90vh;display:flex;align-items:center;justify-content:center;"></div>
-</div>
+  <div id="blog-lightbox" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(30,40,60,0.92);align-items:center;justify-content:center;">
+    <span id="blog-lightbox-close" style="position:absolute;top:24px;right:36px;font-size:2.5rem;color:#fff;cursor:pointer;z-index:10001;">&times;</span>
+    <div id="blog-lightbox-content" style="max-width:90vw;max-height:90vh;display:flex;align-items:center;justify-content:center;"></div>
+  </div>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const lightbox = document.getElementById('blog-lightbox');
-  const lightboxContent = document.getElementById('blog-lightbox-content');
-  const closeBtn = document.getElementById('blog-lightbox-close');
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const lightbox = document.getElementById('blog-lightbox');
+    const lightboxContent = document.getElementById('blog-lightbox-content');
+    const closeBtn = document.getElementById('blog-lightbox-close');
 
-  // Ouvre le lightbox sur click image/video
-  document.querySelectorAll('.blog-media img, .blog-media video').forEach(el => {
-    el.style.cursor = "zoom-in";
-    el.addEventListener('click', function(e) {
+    // Ouvre le lightbox sur click image/video
+    document.querySelectorAll('.blog-media img, .blog-media video').forEach(el => {
+      el.style.cursor = "zoom-in";
+      el.addEventListener('click', function(e) {
+        lightboxContent.innerHTML = "";
+        if (el.tagName === "IMG") {
+          const img = document.createElement('img');
+          img.src = el.src;
+          img.alt = el.alt || "";
+          img.style.maxWidth = "90vw";
+          img.style.maxHeight = "90vh";
+          img.style.borderRadius = "10px";
+          lightboxContent.appendChild(img);
+        } else if (el.tagName === "VIDEO") {
+          const video = document.createElement('video');
+          // Correction : récupère la source vidéo correctement
+          const source = el.querySelector('source');
+          video.src = source ? source.src : el.src;
+          video.controls = true;
+          video.autoplay = true;
+          video.style.maxWidth = "90vw";
+          video.style.maxHeight = "90vh";
+          video.style.borderRadius = "10px";
+          lightboxContent.appendChild(video);
+        }
+        lightbox.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      });
+    });
+
+    // Ferme le lightbox
+    function closeLightbox() {
+      lightbox.style.display = "none";
       lightboxContent.innerHTML = "";
-      if (el.tagName === "IMG") {
-        const img = document.createElement('img');
-        img.src = el.src;
-        img.alt = el.alt || "";
-        img.style.maxWidth = "90vw";
-        img.style.maxHeight = "90vh";
-        img.style.borderRadius = "10px";
-        lightboxContent.appendChild(img);
-      } else if (el.tagName === "VIDEO") {
-        const video = document.createElement('video');
-        video.src = el.querySelector('source') ? el.querySelector('source').src : el.src;
-        video.controls = true;
-        video.autoplay = true;
-        video.style.maxWidth = "90vw";
-        video.style.maxHeight = "90vh";
-        video.style.borderRadius = "10px";
-        lightboxContent.appendChild(video);
-      }
-      lightbox.style.display = "flex";
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = "";
+    }
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (lightbox.style.display === "flex" && (e.key === "Escape" || e.key === "Esc")) closeLightbox();
     });
   });
-
-  // Ferme le lightbox
-  function closeLightbox() {
-    lightbox.style.display = "none";
-    lightboxContent.innerHTML = "";
-    document.body.style.overflow = "";
-  }
-  closeBtn.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', function(e) {
-    if (e.target === lightbox) closeLightbox();
-  });
-  document.addEventListener('keydown', function(e) {
-    if (lightbox.style.display === "flex" && (e.key === "Escape" || e.key === "Esc")) closeLightbox();
-  });
-});
-</script>
+  </script>
 
   <footer>
     <div class="footer-content">
