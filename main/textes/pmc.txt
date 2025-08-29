@@ -1,0 +1,2785 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PMC - Petit Moins Chers : Boutique de cadeaux à Ouagadougou. Articles de qualité à prix abordables.">
+    <meta name="keywords" content="PMC, Petit Moins Chers, cadeaux, Ouagadougou, boutique, accessoires, sacs, montres, chaussures">
+    <meta property="og:title" content="PMC - Petit Moins Chers | Boutique de Cadeaux à Ouagadougou">
+    <meta property="og:description" content="PMC - Petit Moins Chers : Boutique de cadeaux à Ouagadougou. Articles de qualité à prix abordables.">
+    <meta property="og:image" content="images/infos/logo.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tonsite.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PMC - Petit Moins Chers">
+    <meta name="twitter:description" content="Boutique de cadeaux à Ouagadougou. Articles de qualité à prix abordables.">
+    <meta name="twitter:image" content="images/infos/logo.webp">
+    <title>PMC - Petit Moins Chers | Boutique de Cadeaux à Ouagadougou</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preload" href="images/infos/logo.webp" as="image">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+</head>
+<body>
+    <!-- Lien d'accès rapide pour l'accessibilité -->
+    <a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Aller au contenu principal</a>
+
+    <!-- En-tête -->
+    <header id="header">
+        <nav role="navigation" aria-label="Menu principal">
+            <div class="logo">
+                <img src="images/infos/logo.webp" alt="Logo de PMC - Petit Moins Chers">
+                <span>PMC - Petit Moins Chers</span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À Propos</a></li>
+                <li><a href="#actualites">Actualités</a></li>
+                <li><a href="#produits">Produits</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <!-- bouton de navigation de l'en-tête (attribut type ajouté) -->
+            <button type="button" class="menu-toggle" aria-label="Ouvrir le menu" aria-controls="nav-links" aria-expanded="false">☰</button>
+        </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <main id="main" role="main">
+        <!-- Section Hero -->
+        <section class="hero" id="accueil">
+            <div class="hero-content">
+                <h1>PMC - Petit Moins Chers</h1>
+                <p>Votre boutique de confiance à Ouagadougou<br>
+                Des articles de qualité à prix abordables</p>
+                <a href="#contact" class="cta-button">Nous Contacter</a>
+            </div>
+        </section>
+
+        <!-- Section À propos -->
+        <section class="about" id="apropos">
+            <div class="container">
+                <h2 class="section-title">À Propos de PMC</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>PMC (Petit Moins Chers) est votre espace shopping de confiance situé en plein cœur de Ouagadougou. Nous sommes spécialisés dans la vente d'articles de qualité à des prix accessibles, pensés pour tous les budgets.</p>
+                        <p>Avec une note moyenne de 4,5 étoiles et de nombreux clients satisfaits, nous mettons un point d'honneur à vous accueillir avec chaleur, écoute et professionnalisme. Notre équipe est toujours disponible pour vous orienter et vous aider à faire le meilleur choix.</p>
+                        <p>Que vous recherchiez des produits de marque comme Nike, des accessoires tendances ou des idées originales pour faire plaisir, PMC est là pour vous servir avec le sourire.</p>
+                    </div>
+                    <div class="about-image" aria-label="Cadeau">
+                        🎁
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Actualités -->
+        <section class="actualites" id="actualites" aria-label="Actualités et nouveautés">
+            <div class="container">
+                <h2 class="section-title">Nos Actualités</h2>
+                <div class="carousel-container" role="region" aria-label="Carrousel d'actualités">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-slides" id="carouselSlides">
+                            <!-- Diapositive 1 -->
+                            <div class="carousel-slide active" role="group" aria-roledescription="slide" aria-label="1 sur 5">
+                                <img src="images/affiches/image35.webp" alt="Nouveauté : Affiche promotionnelle 1" loading="lazy">
+                            </div>
+                            <!-- Diapositive 2 -->
+                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 sur 5">
+                                <img src="images/affiches/image36.webp" alt="Nouveauté : Affiche promotionnelle 2" loading="lazy">
+                            </div>
+                            <!-- Diapositive 3 -->
+                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 sur 5">
+                                <img src="images/affiches/image37.webp" alt="Nouveauté : Affiche promotionnelle 3" loading="lazy">
+                            </div>
+                            <!-- Diapositive 4 - Vidéo -->
+                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="4 sur 5">
+                                <video autoplay muted loop playsinline loading="lazy" title="Présentation PMC">
+                                    <source src="images/affiches/video1.webm" type="video/webm">
+                                    <source src="images/affiches/video1.mp4" type="video/mp4">
+                                    Votre navigateur ne supporte pas la vidéo.
+                                </video>
+                            </div>
+                            <!-- Diapositive 5 -->
+                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="5 sur 5">
+                                <img src="images/affiches/image41.webp" alt="Nouveauté : Affiche promotionnelle 4" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Indicateurs -->
+                    <div class="carousel-indicators" aria-label="Navigation du carrousel">
+                        <button type="button" class="indicator active" data-slide="0" aria-label="Aller à la diapositive 1"></button>
+                        <button type="button" class="indicator" data-slide="1" aria-label="Aller à la diapositive 2"></button>
+                        <button type="button" class="indicator" data-slide="2" aria-label="Aller à la diapositive 3"></button>
+                        <button type="button" class="indicator" data-slide="3" aria-label="Aller à la diapositive 4"></button>
+                        <button type="button" class="indicator" data-slide="4" aria-label="Aller à la diapositive 5"></button>
+                    </div>
+                    <!-- Boutons de navigation -->
+                    <button type="button" class="carousel-btn prev" id="prevBtn" aria-label="Diapositive précédente">‹</button>
+                    <button type="button" class="carousel-btn next" id="nextBtn" aria-label="Diapositive suivante">›</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Produits -->
+        <section class="products" id="produits">
+            <div class="container">
+                <h2 class="section-title">Notre Catalogue</h2>
+                <div class="category-filters" role="group" aria-label="Filtrer les produits par catégorie">
+                    <button class="filter-btn active" data-category="tous">Tous</button>
+                    <button class="filter-btn" data-category="crocs">Crocs</button>
+                    <button class="filter-btn" data-category="peluches">Peluche</button>
+                    <button class="filter-btn" data-category="claquettes">Claquettes</button>
+                    <button class="filter-btn" data-category="sacs">Sacs</button>
+                    <button class="filter-btn" data-category="accessoires">Accessoires</button>
+                </div>
+                <div class="products-grid" id="productsGrid">
+                    <div class="product-card" data-category="accessoires">
+                        <div class="product-image">
+                            <img src="images/accessoires/image14.webp" alt="Banane NIKE noire et blanche" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessoires</span>
+                            <h3 class="product-name">Banane NIKE</h3>
+                            <div class="product-price">8 000f</div>
+                            <!-- Boutons produit : type explicite pour éviter une soumission de formulaire accidentelle -->
+                            <button type="button" class="product-btn" aria-label="Commander Banane NIKE">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="accessoires">
+                        <div class="product-image">
+                            <img src="images/accessoires/image21.webp" alt="Portefeuille NIKE" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessoires</span>
+                            <h3 class="product-name">Portefeuille NIKE</h3>
+                            <div class="product-price">3500f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Portefeuille NIKE">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="accessoires">
+                        <div class="product-image">
+                            <img src="images/accessoires/image24.webp" alt="Trousse EASTPAK" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessoires</span>
+                            <h3 class="product-name">Trousse EASTPAK</h3>
+                            <div class="product-price">5 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Trousse EASTPAK">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="accessoires">
+                        <div class="product-image">
+                            <img src="images/accessoires/image45.webp" alt="Cagoule NIKE" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessoires</span>
+                            <h3 class="product-name">Cagoule NIKE</h3>
+                            <div class="product-price">12 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Cagoule NIKE">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="accessoires">
+                        <div class="product-image">
+                            <img src="images/accessoires/image46.webp" alt="Bonnet NIKE" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessoires</span>
+                            <h3 class="product-name">Bonnet NIKE</h3>
+                            <div class="product-price">10 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Bonnet NIKE">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="accessoires">
+                        <div class="product-image">
+                            <img src="images/accessoires/image47.webp" alt="Gants NIKE" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Accessoires</span>
+                            <h3 class="product-name">Gants NIKE</h3>
+                            <div class="product-price">8 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Gants NIKE">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="peluches">
+                        <div class="product-image">
+                            <img src="images/accessoires/image55.webp" alt="Peluche" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Peluches</span>
+                            <h3 class="product-name">Peluche</h3>
+                            <div class="product-price">8 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Peluche">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="peluches">
+                        <div class="product-image">
+                            <img src="images/accessoires/image56.webp" alt="Peluche" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Peluches</span>
+                            <h3 class="product-name">Peluche</h3>
+                            <div class="product-price">8 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Peluche">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="claquettes">
+                        <div class="product-image">
+                            <img src="images/chaussures/claquettes/adidas/image53.webp" alt="Adidas slide" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Claquettes</span>
+                            <h3 class="product-name">Adidas slide</h3>
+                            <div class="product-price">8 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Adidas slide">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="claquettes">
+                        <div class="product-image">
+                            <img src="images/chaussures/claquettes/jordan/image52.webp" alt="Jordan slide" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Claquettes</span>
+                            <h3 class="product-name">Jordan slide</h3>
+                            <div class="product-price">6 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Jordan slide">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="claquettes">
+                        <div class="product-image">
+                            <img src="images/chaussures/claquettes/jordan/image57.webp" alt="Jordan slide gris" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Claquettes</span>
+                            <h3 class="product-name">Jordan slide gris</h3>
+                            <div class="product-price">8 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Jordan slide gris">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="claquettes">
+                        <div class="product-image">
+                            <img src="images/chaussures/claquettes/jordan/image58.webp" alt="Jordan slide noir" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Claquettes</span>
+                            <h3 class="product-name">Jordan slide noir</h3>
+                            <div class="product-price">8 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Jordan slide noir">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="claquettes">
+                        <div class="product-image">
+                            <img src="images/chaussures/claquettes/jordan/image59.webp" alt="Jordan slide rouge" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Claquettes</span>
+                            <h3 class="product-name">Jordan slide rouge</h3>
+                            <div class="product-price">8 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Jordan slide rouge">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="claquettes">
+                        <div class="product-image">
+                            <img src="images/chaussures/claquettes/jordan/image60.webp" alt="Jordan slide blanc" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Claquettes</span>
+                            <h3 class="product-name">Jordan slide blanc</h3>
+                            <div class="product-price">8 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Jordan slide blanc">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="claquettes">
+                        <div class="product-image">
+                            <img src="images/chaussures/claquettes/nike/image54.webp" alt="Nike slide" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Claquettes</span>
+                            <h3 class="product-name">Nike slide</h3>
+                            <div class="product-price">8 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Nike slide">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="crocs">
+                        <div class="product-image">
+                            <img src="images/chaussures/crocs/image27.webp" alt="Crocs" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Crocs</span>
+                            <h3 class="product-name">Crocs</h3>
+                            <div class="product-price">12 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Crocs">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="crocs">
+                        <div class="product-image">
+                            <img src="images/chaussures/crocs/image28.webp" alt="Crocs" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Crocs</span>
+                            <h3 class="product-name">Crocs</h3>
+                            <div class="product-price">12 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Crocs">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="crocs">
+                        <div class="product-image">
+                            <img src="images/chaussures/crocs/image29.webp" alt="Crocs" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Crocs</span>
+                            <h3 class="product-name">Crocs</h3>
+                            <div class="product-price">12 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Crocs">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="crocs">
+                        <div class="product-image">
+                            <img src="images/chaussures/crocs/image50.webp" alt="Crocs" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Crocs</span>
+                            <h3 class="product-name">Crocs</h3>
+                            <div class="product-price">7 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Crocs">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="crocs">
+                        <div class="product-image">
+                            <img src="images/chaussures/crocs/image51.webp" alt="Crocs" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Crocs</span>
+                            <h3 class="product-name">Crocs</h3>
+                            <div class="product-price">7 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Crocs">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="crocs">
+                        <div class="product-image">
+                            <img src="images/chaussures/crocs/image52.webp" alt="Crocs" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Crocs</span>
+                            <h3 class="product-name">Crocs</h3>
+                            <div class="product-price">7 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Crocs">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/eastpak/image11.webp" alt="Sacs Eastpak" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Eastpak</h3>
+                            <div class="product-price">17 500f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Eastpak">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/eastpak/image12.webp" alt="Sacs Eastpak" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Eastpak</h3>
+                            <div class="product-price">17 500f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Eastpak">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/eastpak/image19.webp" alt="Sacs Eastpak" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Eastpak</h3>
+                            <div class="product-price">17 500f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Eastpak">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/eastpak/image38.webp" alt="Sacs Eastpak" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Eastpak</h3>
+                            <div class="product-price">17 500f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Eastpak">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/jansport/image8.webp" alt="Sacs JanSport" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac JanSport</h3>
+                            <div class="product-price">12 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac JanSport">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/jordan/image16.webp" alt="Sacs Jordan" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Jordan</h3>
+                            <div class="product-price">12 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Jordan">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/jordan/image20.webp" alt="Sacs Jordan" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Jordan</h3>
+                            <div class="product-price">12 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Jordan">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image10.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image13.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">10 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image15.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image17.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image18.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image3.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image39.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image7.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image6.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image5.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/nike/image4.webp" alt="Sacs Nike" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Nike</h3>
+                            <div class="product-price">12 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Nike">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/puma/image22.webp" alt="Sacs Puma" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Puma</h3>
+                            <div class="product-price">10 000f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Puma">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/under_armour/image25.webp" alt="Sacs Under Armour" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Under Armour</h3>
+                            <div class="product-price">17 500f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Under Armour">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/under_armour/image26.webp" alt="Sacs Under Armour" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Under Armour</h3>
+                            <div class="product-price">17 500f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Under Armour">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/under_armour/image48.webp" alt="Sacs Under Armour" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Under Armour</h3>
+                            <div class="product-price">17 500f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Under Armour">🛒 Commander</button>
+                        </div>
+                    </div>
+                    <div class="product-card" data-category="sacs">
+                        <div class="product-image">
+                            <img src="images/sacs/under_armour/image49.webp" alt="Sacs Under Armour" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Sacs</span>
+                            <h3 class="product-name">Sac Under Armour</h3>
+                            <div class="product-price">17 500f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Sac Under Armour">🛒 Commander</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Services -->
+        <section class="services" id="services">
+            <div class="container">
+                <h2 class="section-title">Nos Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon" aria-label="Livraison">📦</div>
+                        <h3>Livraison</h3>
+                        <p>Service de livraison rapide et sécurisé dans tout Ouagadougou pour votre confort.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon" aria-label="Achats en magasin">🏪</div>
+                        <h3>Achats en Magasin</h3>
+                        <p>Venez découvrir notre large gamme de produits directement dans notre boutique.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon" aria-label="Retrait en magasin">🔄</div>
+                        <h3>Retrait en Magasin</h3>
+                        <p>Commandez en ligne et récupérez vos articles à votre convenance dans notre magasin.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Informations pratiques -->
+        <section class="info" id="horaires">
+            <div class="container">
+                <h2 class="section-title">Informations Pratiques</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🕒 Horaires d'Ouverture</h3>
+                        <table class="hours-table">
+                            <tr><td>Dimanche</td><td>07:30 - 20:40</td></tr>
+                            <tr><td>Lundi</td><td>07:30 - 20:40</td></tr>
+                            <tr><td>Mardi</td><td>07:30 - 20:40</td></tr>
+                            <tr><td>Mercredi</td><td>07:30 - 20:40</td></tr>
+                            <tr><td>Jeudi</td><td>07:30 - 20:40</td></tr>
+                            <tr><td>Vendredi</td><td>07:30 - 20:40</td></tr>
+                            <tr><td>Samedi</td><td>07:30 - 20:40</td></tr>
+                        </table>
+                    </div>
+                    <div class="info-card">
+                        <h3>📍 Localisation</h3>
+                        <p><strong>Adresse :</strong><br>
+                        Avenue du Capitaine Thomas Sankara<br>
+                        Paspanga, Ouagadougou<br>
+                        Burkina Faso</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>♿ Accessibilité</h3>
+                        <p>✅ Entrée accessible en fauteuil roulant</p>
+                        <p>✅ Parking accessible en fauteuil roulant</p>
+                        <p>✅ Accueil adapté à tous</p>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <!-- Iframe : largeur à 100% (évite overflow horizontal) et sandbox retiré pour permettre le fonctionnement de Google Maps -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3897.1585370898424!2d-1.5210024258381885!3d12.37231072773569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2ebf73101ed177%3A0x1b39fa333ead6b10!2sPETIT%20MOINS%20CHERS%20PMC!5e0!3m2!1sen!2sci!4v1754932605762!5m2!1sen!2sci"
+                        width="100%" height="450" style="border:0;" allowfullscreen loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Localisation de PMC sur Google Maps"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Avis Clients -->
+        <section class="reviews" aria-label="Avis clients">
+            <div class="container">
+                <h2 class="section-title">Avis Clients</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="stars" aria-label="5 étoiles">⭐⭐⭐⭐⭐</div>
+                        <p>"Une boutique super cool avec un accueil chaleureux. Le personnel est très professionnel et les prix sont vraiment abordables."</p>
+                        <div class="reviewer">- Alex Sanon</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars" aria-label="5 étoiles">⭐⭐⭐⭐⭐</div>
+                        <p>"Je kiff grave les claquettes Nike ! Excellent choix de produits et qualité au rendez-vous. Je recommande vivement PMC."</p>
+                        <div class="reviewer">- Gilchrist Tonde</div>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars" aria-label="5 étoiles">⭐⭐⭐⭐⭐</div>
+                        <p>"Note moyenne de 4,5 étoiles sur 24 avis - Une boutique de confiance avec des clients satisfaits depuis des années."</p>
+                        <div class="reviewer">- Avis Général</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PMC - Petit Moins Chers</h3>
+                    <p>Votre boutique de cadeaux de confiance à Ouagadougou. Nous vous offrons des produits de qualité à des prix compétitifs.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📞 <a href="tel:+22678997603">+226 78 99 76 03</a></p>
+                    <p>📧 <a href="mailto:contact@pmc-burkina.com">contact@pmc-burkina.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Adresse</h3>
+                    <p>Avenue du Capitaine Thomas Sankara<br>
+                    Paspanga, Ouagadougou<br>
+                    Burkina Faso</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horaires</h3>
+                    <p>Ouvert tous les jours<br>
+                    de 07:30 à 21:30</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2025 PMC - Petit Moins Chers. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Panier flottant WhatsApp -->
+    <div id="cart-panel" class="cart-panel" role="region" aria-label="Panier">
+        <div class="cart-header">
+            🛒 <span>Votre panier</span>
+            <!-- Panier / boutons flottants : attributs type explicites -->
+            <button type="button" id="closeCart" class="cart-close-btn" aria-label="Fermer le panier">&times;</button>
+        </div>
+        <ul id="cart-list" class="cart-list"></ul>
+        <div class="cart-total" id="cart-total"></div>
+        <button type="button" id="cart-whatsapp" class="cart-whatsapp-btn" style="display:none;" aria-label="Commander via WhatsApp">Commander via WhatsApp</button>
+    </div>
+    <button type="button" id="openCart" class="cart-fab" aria-label="Ouvrir le panier">🛒</button>
+
+    <!-- Bouton flottant WhatsApp -->
+    <a href="https://wa.me/22678997603" class="floating-contact" title="Contactez-nous sur WhatsApp" target="_blank" rel="noopener">💬</a>
+
+    <!-- Fallback noscript -->
+    <noscript>
+        <div style="background:#ffefc1;color:#333;padding:1rem;text-align:center;">
+            Certaines fonctionnalités du site nécessitent JavaScript pour fonctionner correctement.<br>
+            Veuillez l'activer dans votre navigateur pour une expérience optimale.
+        </div>
+    </noscript>
+
+    <!-- Modal de zoom image produit -->
+    <div id="image-zoom-modal" class="image-zoom-modal" tabindex="-1" role="dialog" aria-hidden="true" aria-label="Image agrandie">
+      <img id="zoomed-image" src="/placeholder.svg" alt="Aperçu du produit">
+    </div>
+</body>
+</html>
+
+
+
+CSS
+
+/* Réinitialisation */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f9fa;
+  color: #222;
+  line-height: 1.6;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* En-tête */
+header {
+  background: #2e5bba;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.7rem 1.2rem;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 2px;
+  object-fit: contain;
+}
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+}
+.nav-links a {
+  color: #fff;
+  font-weight: 500;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+}
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* Section Héro */
+.hero {
+  background: #2e5bba;
+  color: #fff;
+  padding: 100px 0 60px;
+  text-align: center;
+}
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
+}
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+}
+.cta-button {
+  display: inline-block;
+  background: #ff6b35;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.cta-button:hover,
+.cta-button:focus-visible {
+  background: #e55a2b;
+}
+
+/* Conteneur */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* Titres de section */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2.5rem 0 2rem 0;
+  color: #2e5bba;
+  font-weight: 700;
+}
+
+/* À propos */
+.about {
+  padding: 50px 0;
+  background: #fff;
+}
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.about-text {
+  flex: 1 1 300px;
+  font-size: 1rem;
+}
+.about-image {
+  flex: 0 0 160px;
+  height: 160px;
+  background: #ff6b35;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 3rem;
+}
+
+/* Grilles */
+.products-grid,
+.services-grid,
+.reviews-grid,
+.info-grid,
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+
+/* Carte produit */
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  height: 370px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.product-card:hover,
+.product-card:focus-within {
+  box-shadow: 0 8px 24px rgba(46, 91, 186, 0.1);
+}
+.product-image {
+  width: 100%;
+  height: 160px;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.product-info {
+  flex: 1 1 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.product-category {
+  background: #ff6b35;
+  color: #fff;
+  padding: 0.18rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+.product-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+.product-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2e5bba;
+  margin-bottom: 0.7rem;
+}
+.product-btn {
+  width: 100%;
+  background: #2e5bba;
+  color: #fff;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.product-btn:hover,
+.product-btn:focus-visible {
+  background: #1e3a8a;
+}
+
+/* Filtres de catégorie */
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.filter-btn {
+  background: #eee;
+  color: #333;
+  border: none;
+  border-radius: 16px;
+  padding: 0.5em 1.2em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.filter-btn.active,
+.filter-btn:hover,
+.filter-btn:focus-visible {
+  background: #ff6b35;
+  color: #fff;
+}
+
+/* Services */
+.service-card {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+.service-card:hover,
+.service-card:focus-within {
+  box-shadow: 0 8px 24px rgba(46, 91, 186, 0.1);
+}
+.service-icon {
+  width: 56px;
+  height: 56px;
+  background: #ff6b35;
+  border-radius: 50%;
+  margin: 0 auto 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.service-card h3 {
+  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+  color: #2e5bba;
+}
+
+/* ---------- Carousel (unifié, évite définitions contradictoires) ---------- */
+.carousel-container {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 160px;
+  overflow: hidden;
+}
+.carousel-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.carousel-slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.4, 2, 0.6, 1);
+}
+.carousel-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+  z-index: 1;
+}
+.carousel-slide img,
+.carousel-slide video {
+  max-width: 100%;
+  max-height: 220px;
+  margin: 0 auto;
+  border-radius: 8px;
+  object-fit: contain;
+}
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  background: none;
+  padding: 0;
+}
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  border: none;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.indicator.active {
+  background: #ff6b35;
+  opacity: 1;
+}
+.carousel-btn {
+  background: #fff;
+  border: 1px solid #eee;
+  color: #2e5bba;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+}
+.carousel-btn.prev {
+  left: 8px;
+}
+.carousel-btn.next {
+  right: 8px;
+}
+
+/* Informations */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.info-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+.hours-table td {
+  padding: 0.3rem 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 1rem;
+}
+.hours-table tr:last-child td {
+  border-bottom: none;
+}
+.map-container {
+  max-width: 500px;
+  margin: 2rem auto 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.map-container iframe {
+  width: 100%;
+  height: 220px;
+  border: 0;
+  display: block;
+}
+
+/* Avis */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+.review-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.stars {
+  color: #ffd700;
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+}
+.review-card p {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+  font-style: italic;
+}
+.reviewer {
+  font-weight: 600;
+  color: #2e5bba;
+  font-size: 1rem;
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+/* Pied de page */
+footer {
+  background: #2e5bba;
+  color: #fff;
+  padding: 2rem 0 1rem;
+}
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+}
+.footer-section h3 {
+  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+  color: #ff6b35;
+  letter-spacing: 1px;
+}
+.footer-section p {
+  font-size: 1rem;
+  color: #f8f9fa;
+  margin-bottom: 0.5rem;
+}
+.footer-bottom {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1rem;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer-credits {
+  font-size: 0.8rem;
+  color: #ff6b35;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: 0.5rem;
+}
+
+/* Panier */
+.cart-panel {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 320px;
+  max-width: 95vw;
+  background: #fff;
+  border: 2px solid #2e5bba;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(46, 91, 186, 0.12);
+  z-index: 9999;
+  padding: 1rem 1rem 0.5rem 1rem;
+  display: none;
+  flex-direction: column;
+  min-height: 120px;
+  transition: box-shadow 0.25s, transform 0.25s, opacity 0.25s;
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  pointer-events: none;
+}
+/* Le JS doit basculer la classe .open pour afficher/masquer le panneau */
+.cart-panel.open {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+.cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.cart-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #2e5bba;
+  cursor: pointer;
+}
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.cart-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.2rem;
+}
+.cart-remove {
+  background: none;
+  border: none;
+  color: #d32f2f;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.cart-total {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: right;
+}
+.cart-whatsapp-btn {
+  background: #25d366;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7em 1.2em;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s;
+}
+.cart-whatsapp-btn:hover,
+.cart-whatsapp-btn:focus-visible {
+  background: #1ebe57;
+}
+.cart-fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #2e5bba;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 16px rgba(46, 91, 186, 0.12);
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contact flottant */
+.floating-contact {
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+  background: #25d366;
+  color: #fff;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+  z-index: 9998;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+.floating-contact:hover {
+  transform: scale(1.1);
+}
+
+/* Modal de zoom image produit */
+.image-zoom-modal {
+  position: fixed;
+  inset: 0; /* remplace top/left/width/height 100vw/100vh */
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20000;
+  cursor: zoom-out;
+  animation: fadeIn 0.2s;
+  display: none; /* caché par défaut */
+}
+.image-zoom-modal.open {
+  display: flex;
+}
+.image-zoom-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  background: #fff;
+  padding: 0.5rem;
+  object-fit: contain;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Effets modernes sobres */
+a:focus-visible,
+button:focus-visible,
+.product-btn:focus-visible,
+.cart-close-btn:focus-visible,
+.cart-whatsapp-btn:focus-visible,
+.filter-btn:focus-visible,
+.carousel-btn:focus-visible,
+.indicator:focus-visible {
+  outline: 2px solid #ff6b35;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.15);
+  transition: box-shadow 0.2s;
+}
+
+.product-card,
+.service-card,
+.review-card,
+.info-card {
+  transition: box-shadow 0.25s cubic-bezier(0.4, 2, 0.6, 1), transform 0.18s;
+}
+.product-card:hover,
+.product-card:focus-within,
+.service-card:hover,
+.service-card:focus-within,
+.review-card:hover,
+.review-card:focus-within,
+.info-card:hover,
+.info-card:focus-within {
+  box-shadow: 0 8px 32px rgba(46, 91, 186, 0.13), 0 3px 12px rgba(0, 0, 0, 0.07);
+  transform: translateY(-4px) scale(1.015);
+}
+
+.product-image img,
+.carousel-slide img,
+.carousel-slide video {
+  transition: transform 0.35s cubic-bezier(0.4, 2, 0.6, 1), box-shadow 0.2s;
+}
+.product-card:hover .product-image img,
+.carousel-slide.active:hover img,
+.carousel-slide.active:focus-within img {
+  transform: scale(1.04);
+  box-shadow: 0 4px 24px rgba(46, 91, 186, 0.1);
+}
+
+.cta-button,
+.product-btn,
+.cart-whatsapp-btn,
+.filter-btn,
+.carousel-btn {
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+}
+.cta-button:hover,
+.product-btn:hover,
+.cart-whatsapp-btn:hover,
+.filter-btn:hover,
+.carousel-btn:hover {
+  box-shadow: 0 4px 16px rgba(255, 107, 53, 0.1);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.carousel-slide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.4, 2, 0.6, 1);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.carousel-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+  z-index: 1;
+  transition-delay: 0s;
+}
+
+.indicator {
+  transition: background 0.2s, transform 0.2s;
+}
+.indicator.active {
+  transform: scale(1.2);
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.1);
+}
+
+.cart-fab {
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.cart-fab:hover,
+.cart-fab:focus-visible {
+  box-shadow: 0 8px 24px rgba(46, 91, 186, 0.18);
+  transform: scale(1.08);
+}
+
+.footer-section {
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.footer-section:hover,
+.footer-section:focus-within {
+  box-shadow: 0 4px 16px rgba(46, 91, 186, 0.08);
+  transform: translateY(-2px) scale(1.01);
+}
+
+/* RESPONSIVITÉ MOBILE */
+
+/* En-tête mobile */
+@media (max-width: 900px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* changé de 100vw -> 100% pour éviter un débordement horizontal */
+    height: 100vh;
+    background: #2e5bba;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: flex;
+    padding: 0;
+  }
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-links a {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+  .nav-links a:hover,
+  .nav-links a:focus-visible {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  .menu-toggle {
+    display: block;
+    z-index: 1002;
+    position: relative;
+    transition: transform 0.2s;
+  }
+  .menu-toggle:hover {
+    transform: scale(1.1);
+  }
+  nav {
+    padding: 0.5rem 1rem;
+  }
+  .logo {
+    font-size: 1.3rem;
+  }
+  .logo img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* En-tête */
+  nav {
+    padding: 0.4rem 0.8rem;
+  }
+  .logo {
+    font-size: 1.1rem;
+  }
+  .logo img {
+    width: 30px;
+    height: 30px;
+  }
+  .menu-toggle {
+    font-size: 1.4rem;
+    padding: 0.2rem;
+  }
+
+  /* Héro */
+  .hero {
+    padding: 70px 0 40px;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  /* Conteneur */
+  .container {
+    padding: 0 0.8rem;
+  }
+  .about,
+  .products,
+  .services,
+  .actualites,
+  .info,
+  .reviews {
+    padding: 40px 0;
+  }
+
+  /* Grilles produits - 3 colonnes sur petits écrans (sans !important) */
+  .products-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.6rem;
+  }
+
+  /* Services et autres grilles en colonne unique (sans !important) */
+  .services-grid,
+  .reviews-grid,
+  .info-grid,
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Section À propos */
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  .about-text {
+    font-size: 0.95rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .about-image {
+    flex: 0 0 220px;
+    width: 220px;
+    height: 140px;
+    font-size: 3.5rem;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(255, 107, 53, 0.2);
+  }
+
+  /* Cartes produits compactes pour 3 colonnes */
+  .product-card {
+    height: auto;
+    min-height: 250px;
+  }
+  .product-image {
+    height: 100px;
+  }
+  .product-info {
+    padding: 0.5rem;
+  }
+  .product-name {
+    font-size: 0.85rem;
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+  }
+  .product-price {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+  .product-btn {
+    padding: 0.4rem;
+    font-size: 0.75rem;
+  }
+  .product-category {
+    font-size: 0.65rem;
+    padding: 0.1rem 0.4rem;
+    margin-bottom: 0.2rem;
+  }
+
+  /* Carousel mobile - taille augmentée */
+  .carousel-container {
+    margin: 0 -0.5rem;
+    border-radius: 8px;
+    max-width: none;
+  }
+  .carousel-wrapper {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .carousel-slide {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+  .carousel-slide.active {
+    display: flex;
+  }
+  .carousel-slide img,
+  .carousel-slide video {
+    max-height: 280px;
+    max-width: 95%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 8px;
+    margin: 0 auto;
+  }
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  .carousel-btn.prev {
+    left: 10px;
+  }
+  .carousel-btn.next {
+    right: 10px;
+  }
+  .carousel-indicators {
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+  }
+  .indicator {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* Titres de section */
+  .section-title {
+    margin: 2rem 0 1.5rem 0;
+  }
+
+  /* Panier mobile - version flottante */
+  .cart-panel {
+    top: 80px;
+    right: 10px;
+    left: auto;
+    width: 340px;
+    max-width: calc(100vw - 20px);
+    height: auto;
+    max-height: 70vh;
+    border-radius: 10px;
+    border: 2px solid #2e5bba;
+    padding: 1rem;
+    box-shadow: 0 8px 32px rgba(46, 91, 186, 0.2);
+  }
+  .cart-header {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  .cart-list {
+    max-height: 40vh;
+    overflow-y: auto;
+  }
+  .cart-fab {
+    right: 15px;
+    bottom: 20px;
+    width: 55px;
+    height: 55px;
+    font-size: 1.4rem;
+    box-shadow: 0 6px 20px rgba(46, 91, 186, 0.25);
+  }
+
+  /* Contact flottant mobile */
+  .floating-contact {
+    bottom: 90px;
+    right: 15px;
+  }
+
+  /* Filtres de catégorie mobile */
+  .category-filters {
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0;
+    justify-content: center;
+  }
+  .filter-btn {
+    padding: 0.5em 1em;
+    font-size: 0.85rem;
+    border-radius: 20px;
+  }
+
+  /* Pied de page mobile */
+  .footer-bottom {
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+  .footer-credits {
+    font-size: 0.85rem;
+    margin-top: 1rem;
+  }
+
+  /* Carte mobile */
+  .map-container {
+    margin: 1rem -0.5rem 0 -0.5rem;
+    border-radius: 0;
+  }
+  .map-container iframe {
+    height: 200px;
+  }
+
+  /* Cartes d'information mobile */
+  .info-card,
+  .review-card,
+  .service-card {
+    padding: 1rem;
+    text-align: left;
+  }
+  .service-card {
+    text-align: center;
+  }
+  .service-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+
+  /* Modal zoom mobile */
+  .image-zoom-modal img {
+    max-width: 95vw;
+    max-height: 95vh;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* En-tête très petits écrans */
+  nav {
+    padding: 0.3rem 0.5rem;
+  }
+  .logo {
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+  .logo img {
+    width: 28px;
+    height: 28px;
+  }
+  .menu-toggle {
+    font-size: 1.3rem;
+  }
+
+  /* Héro très petits écrans */
+  .hero {
+    padding: 60px 0 30px;
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Image À propos très petits écrans */
+  .about-image {
+    flex: 0 0 200px;
+    width: 200px;
+    height: 120px;
+    font-size: 3rem;
+  }
+
+  /* Produits - garde 3 colonnes mais ajuste les tailles */
+  .products-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.4rem;
+  }
+  .product-card {
+    min-height: 220px;
+  }
+  .product-image {
+    height: 90px;
+  }
+  .product-info {
+    padding: 0.4rem;
+  }
+  .product-name {
+    font-size: 0.8rem;
+  }
+  .product-price {
+    font-size: 0.75rem;
+  }
+  .product-btn {
+    padding: 0.3rem;
+    font-size: 0.7rem;
+  }
+
+  /* Carousel très petits écrans */
+  .carousel-wrapper {
+    min-height: 250px;
+  }
+  .carousel-slide img,
+  .carousel-slide video {
+    max-height: 230px;
+    max-width: 90%;
+  }
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  .carousel-btn.prev {
+    left: 8px;
+  }
+  .carousel-btn.next {
+    right: 8px;
+  }
+
+  /* Panier très petits écrans */
+  .cart-panel {
+    width: 320px;
+    max-width: calc(100vw - 10px);
+    right: 5px;
+    top: 70px;
+  }
+  .cart-fab {
+    right: 10px;
+    bottom: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+
+  /* Contact flottant très petits écrans */
+  .floating-contact {
+    bottom: 90px;
+    right: 10px;
+  }
+
+  /* Titres de section très petits écrans */
+  .section-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Très très petits écrans (320px et moins) - passe en 2 colonnes */
+@media (max-width: 350px) {
+  .products-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .product-card {
+    min-height: 240px;
+  }
+  .product-image {
+    height: 100px;
+  }
+  .product-info {
+    padding: 0.5rem;
+  }
+  .product-name {
+    font-size: 0.85rem;
+  }
+  .product-price {
+    font-size: 0.8rem;
+  }
+  .product-btn {
+    padding: 0.4rem;
+    font-size: 0.75rem;
+  }
+  .about-image {
+    flex: 0 0 180px;
+    width: 180px;
+    height: 110px;
+    font-size: 2.8rem;
+  }
+}
+
+/* Mode paysage mobile */
+@media (max-width: 900px) and (orientation: landscape) {
+  .hero {
+    padding: 60px 0 30px;
+  }
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  .carousel-wrapper {
+    min-height: 200px;
+  }
+  .carousel-slide img,
+  .carousel-slide video {
+    max-height: 180px;
+    max-width: 90%;
+  }
+  .about,
+  .products,
+  .services,
+  .actualites,
+  .info,
+  .reviews {
+    padding: 20px 0;
+  }
+  .about-image {
+    height: 100px;
+    font-size: 2.5rem;
+  }
+  .cart-panel {
+    max-height: 60vh;
+    top: 70px;
+  }
+  .cart-list {
+    max-height: 30vh;
+  }
+}
+
+
+JS
+
+// Polyfill IntersectionObserver (amélioration du fallback — n'appelle pas observe immédiatement)
+;(() => {
+  if (!("IntersectionObserver" in window)) {
+    function throttle(fn, wait) {
+      let last = 0,
+        timer = null
+      return function (...args) {
+        const now = Date.now()
+        const remaining = wait - (now - last)
+        if (remaining <= 0) {
+          if (timer) {
+            clearTimeout(timer)
+            timer = null
+          }
+          last = now
+          fn.apply(this, args)
+        } else if (!timer) {
+          timer = setTimeout(() => {
+            last = Date.now()
+            timer = null
+            fn.apply(this, args)
+          }, remaining)
+        }
+      }
+    }
+
+    window.IntersectionObserver = function (callback, options) {
+      this._callback = callback
+      this._targets = new Set()
+      const check = () => {
+        if (!this._targets.size) return
+        const entries = []
+        this._targets.forEach((el) => {
+          try {
+            const rect = el.getBoundingClientRect()
+            const vw = window.innerWidth || document.documentElement.clientWidth
+            const vh = window.innerHeight || document.documentElement.clientHeight
+            const isIntersecting = rect.top < vh && rect.bottom > 0 && rect.left < vw && rect.right > 0
+            entries.push({
+              target: el,
+              isIntersecting: !!isIntersecting,
+              intersectionRatio: isIntersecting ? 1 : 0,
+            })
+          } catch (e) {
+            // l'élément peut être détaché — ignorer
+          }
+        })
+        if (entries.length) {
+          try {
+            this._callback(entries, this)
+          } catch (e) {
+            /* noop */
+          }
+        }
+      }
+
+      const throttledCheck = throttle(check, 150)
+      window.addEventListener("scroll", throttledCheck, { passive: true })
+      window.addEventListener("resize", throttledCheck)
+
+      this.observe = (el) => {
+        if (!el) return
+        this._targets.add(el)
+        // Faire un contrôle immédiat (sans appeler le callback si la liste est vide)
+        throttledCheck()
+      }
+      this.unobserve = (el) => {
+        this._targets.delete(el)
+      }
+      this.disconnect = () => {
+        this._targets.clear()
+        window.removeEventListener("scroll", throttledCheck)
+        window.removeEventListener("resize", throttledCheck)
+      }
+    }
+  }
+})()
+
+document.addEventListener("DOMContentLoaded", () => {
+  // === MENU MOBILE AVEC ARIA & NAVIGATION CLAVIER ===
+  try {
+    const menuToggle = document.querySelector(".menu-toggle")
+    const navLinks = document.querySelector(".nav-links")
+    if (menuToggle && navLinks) {
+      menuToggle.setAttribute("aria-expanded", "false")
+      menuToggle.setAttribute("aria-controls", "nav-links")
+      menuToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open")
+        menuToggle.classList.toggle("open")
+        document.body.classList.toggle("menu-open", isOpen)
+        menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false")
+        if (isOpen) navLinks.querySelector("a")?.focus()
+      })
+      // Navigation clavier (fermer menu avec ESC)
+      document.addEventListener("keydown", (e) => {
+        if (navLinks.classList.contains("open") && e.key === "Escape") {
+          navLinks.classList.remove("open")
+          menuToggle.classList.remove("open")
+          document.body.classList.remove("menu-open")
+          menuToggle.setAttribute("aria-expanded", "false")
+          menuToggle.focus()
+        }
+      })
+      // Délégation : fermer menu au clic sur un lien
+      navLinks.addEventListener("click", (e) => {
+        const link = e.target.closest("a")
+        if (link) {
+          navLinks.classList.remove("open")
+          menuToggle.classList.remove("open")
+          document.body.classList.remove("menu-open")
+          menuToggle.setAttribute("aria-expanded", "false")
+        }
+      })
+    }
+  } catch (e) {
+    console.error("Erreur menu mobile :", e)
+  }
+
+  // === DÉFILEMENT FLUIDE ===
+  try {
+    document.body.addEventListener("click", (e) => {
+      const anchor = e.target.closest('a[href^="#"]')
+      if (anchor) {
+        const href = anchor.getAttribute("href")
+        if (!href || href === "#") return
+        const target = document.querySelector(href)
+        if (target) {
+          e.preventDefault()
+          target.scrollIntoView({ behavior: "smooth", block: "start" })
+        }
+      }
+    })
+  } catch (e) {
+    console.error("Erreur scroll fluide :", e)
+  }
+
+  // === CHANGEMENT COULEUR HEADER (avec debounce) ===
+  try {
+    const header = document.getElementById("header")
+    let scrollTimeout
+    function onScroll() {
+      if (!header) return
+      header.style.background = window.scrollY > 100 ? "rgba(46, 91, 186, 0.95)" : "#2E5BBA"
+    }
+    window.addEventListener("scroll", () => {
+      clearTimeout(scrollTimeout)
+      scrollTimeout = setTimeout(onScroll, 50)
+    })
+  } catch (e) {
+    console.error("Erreur header sticky :", e)
+  }
+
+  // === FILTRAGE PRODUITS (délégation) ===
+  try {
+    const filterContainer = document.querySelector(".category-filters")
+    if (filterContainer) {
+      filterContainer.addEventListener("click", (e) => {
+        const btn = e.target.closest(".filter-btn")
+        if (btn) {
+          filterContainer.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("active"))
+          btn.classList.add("active")
+          const category = btn.getAttribute("data-category")
+          // Re-requête des cartes produit à chaque fois pour tenir compte des changements dynamiques
+          const productCards = document.querySelectorAll(".product-card")
+          productCards.forEach((card) => {
+            const matches = category === "tous" || card.getAttribute("data-category") === category
+            // Ne pas forcer display:flex (conserver le flux CSS), renseigner '' pour afficher
+            card.style.display = matches ? "" : "none"
+          })
+        }
+      })
+    }
+  } catch (e) {
+    console.error("Erreur filtres produits :", e)
+  }
+
+  // === ANIMATIONS AVEC INTERSECTION OBSERVER + FALLBACK ===
+  try {
+    const animatedEls = document.querySelectorAll(".product-card, .service-card, .info-card, .review-card")
+    if (animatedEls.length > 0) {
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) entry.target.classList.add("animate")
+            })
+          },
+          { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
+        )
+        animatedEls.forEach((el) => observer.observe(el))
+      } else {
+        animatedEls.forEach((el) => el.classList.add("animate"))
+      }
+    }
+  } catch (e) {
+    console.error("Erreur animations :", e)
+  }
+
+  // === CARROUSEL AVEC GLISSEMENT, PAUSE SUR FOCUS/SURVOL, ACCESSIBILITÉ ===
+  try {
+    const slides = document.querySelectorAll(".carousel-slide")
+    const indicators = document.querySelectorAll(".indicator")
+    const prevBtn = document.getElementById("prevBtn")
+    const nextBtn = document.getElementById("nextBtn")
+    const slidesContainer = document.getElementById("carouselSlides")
+
+    if (slides.length > 0 && indicators.length > 0) {
+      let current = 0,
+        interval,
+        isPaused = false
+
+      function showSlide(index) {
+        // Validation de l'index
+        if (index < 0 || index >= slides.length) return
+
+        slides.forEach((slide, i) => slide.classList.toggle("active", i === index))
+        indicators.forEach((ind, i) => ind.classList.toggle("active", i === index))
+        current = index
+      }
+
+      function nextSlide() {
+        showSlide((current + 1) % slides.length)
+      }
+
+      function prevSlide() {
+        showSlide((current - 1 + slides.length) % slides.length)
+      }
+
+      function startAuto() {
+        if (interval) clearInterval(interval)
+        if (!isPaused) interval = setInterval(nextSlide, 3000)
+      }
+
+      function stopAuto() {
+        if (interval) {
+          clearInterval(interval)
+          interval = null
+        }
+      }
+
+      // Pause sur survol/focus
+      if (slidesContainer) {
+        slidesContainer.addEventListener("mouseenter", () => {
+          isPaused = true
+          stopAuto()
+        })
+        slidesContainer.addEventListener("mouseleave", () => {
+          isPaused = false
+          startAuto()
+        })
+        slidesContainer.addEventListener("focusin", () => {
+          isPaused = true
+          stopAuto()
+        })
+        slidesContainer.addEventListener("focusout", () => {
+          isPaused = false
+          startAuto()
+        })
+      }
+
+      // Glissement tactile
+      let startX = null
+      if (slidesContainer) {
+        slidesContainer.addEventListener(
+          "touchstart",
+          (e) => {
+            startX = e.touches[0].clientX
+          },
+          { passive: true },
+        )
+
+        slidesContainer.addEventListener(
+          "touchend",
+          (e) => {
+            if (startX === null) return
+            const dx = e.changedTouches[0].clientX - startX
+            if (Math.abs(dx) > 50) {
+              if (dx < 0) nextSlide()
+              else prevSlide()
+              stopAuto()
+              startAuto()
+            }
+            startX = null
+          },
+          { passive: true },
+        )
+      }
+
+      // Indicateurs et boutons
+      indicators.forEach((ind, i) => {
+        ind.addEventListener("click", () => {
+          showSlide(i)
+          stopAuto()
+          startAuto()
+        })
+      })
+
+      if (nextBtn) {
+        nextBtn.addEventListener("click", () => {
+          nextSlide()
+          stopAuto()
+          startAuto()
+        })
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener("click", () => {
+          prevSlide()
+          stopAuto()
+          startAuto()
+        })
+      }
+
+      // Navigation clavier
+      if (slidesContainer) {
+        slidesContainer.setAttribute("tabindex", "0")
+        slidesContainer.setAttribute("role", "region")
+        slidesContainer.setAttribute("aria-label", "Carrousel d'actualités")
+        slidesContainer.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowRight") {
+            e.preventDefault()
+            nextSlide()
+            stopAuto()
+            startAuto()
+          }
+          if (e.key === "ArrowLeft") {
+            e.preventDefault()
+            prevSlide()
+            stopAuto()
+            startAuto()
+          }
+        })
+      }
+
+      // Initialisation
+      showSlide(0)
+      startAuto()
+
+      // Nettoyage avant déchargement de la page
+      window.addEventListener("beforeunload", () => {
+        stopAuto()
+      })
+    }
+  } catch (e) {
+    console.error("Erreur carousel :", e)
+  }
+
+  // === PANIER WHATSAPP AVEC PERSISTANCE ET QUANTITÉ ===
+  try {
+    const cartPanel = document.getElementById("cart-panel")
+    const openCartBtn = document.getElementById("openCart")
+    const closeCartBtn = document.getElementById("closeCart")
+    const cartList = document.getElementById("cart-list")
+    const cartTotal = document.getElementById("cart-total")
+    const cartWhatsappBtn = document.getElementById("cart-whatsapp")
+
+    if (cartPanel && openCartBtn && closeCartBtn && cartList && cartTotal && cartWhatsappBtn) {
+      // Fallback localStorage
+      function getCart() {
+        try {
+          const cartData = localStorage.getItem("pmc_cart")
+          return cartData ? JSON.parse(cartData) : []
+        } catch (e) {
+          console.warn("Erreur lecture localStorage :", e)
+          return []
+        }
+      }
+
+      function setCart(cart) {
+        try {
+          localStorage.setItem("pmc_cart", JSON.stringify(cart))
+        } catch (e) {
+          console.warn("Erreur sauvegarde localStorage :", e)
+        }
+      }
+
+      let cart = getCart()
+
+      // Ouvre/ferme le panier (utilise la classe .open pour être cohérent avec le CSS)
+      openCartBtn.addEventListener("click", () => {
+        cartPanel.classList.add("open")
+        cartPanel.setAttribute("aria-hidden", "false")
+      })
+
+      closeCartBtn.addEventListener("click", () => {
+        cartPanel.classList.remove("open")
+        cartPanel.setAttribute("aria-hidden", "true")
+      })
+
+      // Fermer le panier en cliquant en dehors
+      cartPanel.addEventListener("click", (e) => {
+        if (e.target === cartPanel) {
+          cartPanel.classList.remove("open")
+          cartPanel.setAttribute("aria-hidden", "true")
+        }
+      })
+
+      // Délégation pour ajout produit
+      document.body.addEventListener("click", (e) => {
+        const prodBtn = e.target.closest(".product-btn")
+        if (prodBtn) {
+          e.preventDefault()
+          const card = prodBtn.closest(".product-card")
+          if (card) {
+            const name = card.querySelector(".product-name")?.textContent.trim() || ""
+            const price = card.querySelector(".product-price")?.textContent.trim() || ""
+
+            if (name && price) {
+              // Gestion quantité
+              const found = cart.find((item) => item.name === name && item.price === price)
+              if (found) {
+                found.qty += 1
+              } else {
+                cart.push({ name, price, qty: 1 })
+              }
+              setCart(cart)
+              updateCart()
+              cartPanel.classList.add("open")
+              cartPanel.setAttribute("aria-hidden", "false")
+            }
+          }
+        }
+      })
+
+      // Met à jour l'affichage du panier
+      function updateCart() {
+        cart = getCart()
+        // reconstruction sécurisée du DOM (évite innerHTML avec contenu non échappé)
+        while (cartList.firstChild) cartList.removeChild(cartList.firstChild)
+
+        if (cart.length === 0) {
+          const emptyLi = document.createElement("li")
+          emptyLi.style.textAlign = "center"
+          emptyLi.style.color = "#888"
+          emptyLi.textContent = "Votre panier est vide."
+          cartList.appendChild(emptyLi)
+          cartTotal.textContent = ""
+          cartWhatsappBtn.style.display = "none"
+          return
+        }
+
+        let total = 0
+        cart.forEach((item, idx) => {
+          const prixNum = Number.parseInt((item.price || "").replace(/[^\d]/g, "")) || 0
+          total += prixNum * item.qty
+
+          const li = document.createElement("li")
+
+          const textSpan = document.createElement("span")
+          textSpan.textContent = `${item.name} `
+
+          const priceSpan = document.createElement("span")
+          priceSpan.style.color = "#2E5BBA"
+          priceSpan.textContent = `${item.price}`
+
+          textSpan.appendChild(priceSpan)
+          textSpan.appendChild(document.createTextNode(` x${item.qty}`))
+
+          const remBtn = document.createElement("button")
+          remBtn.className = "cart-remove"
+          remBtn.type = "button"
+          remBtn.setAttribute("title", `Retirer ${item.name}`)
+          remBtn.setAttribute("data-idx", String(idx))
+          remBtn.setAttribute("aria-label", `Retirer ${item.name}`)
+          remBtn.textContent = "×"
+
+          li.appendChild(textSpan)
+          li.appendChild(remBtn)
+          cartList.appendChild(li)
+        })
+
+        cartTotal.textContent = `Total : ${total.toLocaleString()} F`
+        cartWhatsappBtn.style.display = "block"
+      }
+
+      // Délégation pour retirer un produit
+      cartList.addEventListener("click", (e) => {
+        const rem = e.target.closest(".cart-remove")
+        if (rem) {
+          const idx = Number.parseInt(rem.getAttribute("data-idx"))
+          if (!isNaN(idx) && cart[idx]) {
+            if (cart[idx].qty > 1) {
+              cart[idx].qty -= 1
+            } else {
+              cart.splice(idx, 1)
+            }
+            setCart(cart)
+            updateCart()
+          }
+        }
+      })
+
+      // Commander via WhatsApp
+      cartWhatsappBtn.addEventListener("click", () => {
+        if (cart.length === 0) return
+
+        let message = "Bonjour, je souhaite commander :\n\n"
+        cart.forEach((item) => {
+          message += `- ${item.name} ${item.price} x${item.qty}\n`
+        })
+        message += "\nMerci de me confirmer la disponibilité et le prix total."
+
+        const whatsappURL = `https://wa.me/22678997603?text=${encodeURIComponent(message)}`
+        window.open(whatsappURL, "_blank", "noopener,noreferrer")
+      })
+
+      // Initialisation
+      updateCart()
+      cartPanel.setAttribute("aria-hidden", "true")
+      cartPanel.classList.remove("open")
+    }
+  } catch (e) {
+    console.error("Erreur panier WhatsApp :", e)
+  }
+
+  // === CHARGEMENT PAISIBLE DES IMAGES (FALLBACK ROBUSTE) ===
+  try {
+    // sélectionner les images prévues pour le lazy loading
+    const lazySelector = 'img[loading="lazy"], img[data-src], img[data-srcset]'
+    const lazyImages = document.querySelectorAll(lazySelector)
+
+    if ("loading" in HTMLImageElement.prototype) {
+      // support natif : s'assurer que l'attribut est défini
+      lazyImages.forEach((img) => {
+        img.loading = "lazy"
+      })
+    } else {
+      if (lazyImages.length > 0 && "IntersectionObserver" in window) {
+        const imageObserver = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const img = entry.target
+                if (img.dataset.src) {
+                  img.src = img.dataset.src
+                  img.removeAttribute("data-src")
+                }
+                if (img.dataset.srcset) {
+                  img.srcset = img.dataset.srcset
+                  img.removeAttribute("data-srcset")
+                }
+                obs.unobserve(img)
+              }
+            })
+          },
+          { rootMargin: "100px 0px" },
+        )
+
+        lazyImages.forEach((img) => imageObserver.observe(img))
+      } else {
+        // fallback : charger immédiatement les éléments qui fournissent data-src / data-srcset
+        lazyImages.forEach((img) => {
+          if (img.dataset.src) {
+            img.src = img.dataset.src
+            img.removeAttribute("data-src")
+          }
+          if (img.dataset.srcset) {
+            img.srcset = img.dataset.srcset
+            img.removeAttribute("data-srcset")
+          }
+        })
+      }
+    }
+  } catch (e) {
+    console.error("Erreur lazy loading :", e)
+  }
+
+  // === ZOOM IMAGE PRODUIT AU CLIC (piège de focus léger + nettoyage) ===
+  try {
+    const modal = document.getElementById("image-zoom-modal")
+    const zoomedImg = document.getElementById("zoomed-image")
+    let _lastFocusBeforeZoom = null
+    let _trapHandler = null
+
+    if (modal && zoomedImg) {
+      // s'assurer que le modal est focalisable et possède role / label ARIA
+      if (!modal.hasAttribute("tabindex")) modal.setAttribute("tabindex", "-1")
+      if (!modal.getAttribute("role")) modal.setAttribute("role", "dialog")
+      if (!modal.getAttribute("aria-label")) modal.setAttribute("aria-label", "Image agrandie")
+
+      // utilitaire : obtenir les éléments focalisables visibles à l'intérieur du modal
+      const focusableSelector =
+        'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, [tabindex]:not([tabindex="-1"])'
+      const getFocusable = () => {
+        return Array.from(modal.querySelectorAll(focusableSelector)).filter(
+          (el) => el.offsetWidth > 0 || el.offsetHeight > 0 || el.getClientRects().length,
+        )
+      }
+
+      function trapFocus(e) {
+        if (e.key !== "Tab") return
+        const focusable = getFocusable()
+        if (focusable.length === 0) {
+          e.preventDefault()
+          return
+        }
+        const first = focusable[0]
+        const last = focusable[focusable.length - 1]
+        const active = document.activeElement
+        if (e.shiftKey) {
+          if (active === first || active === modal) {
+            e.preventDefault()
+            last.focus()
+          }
+        } else {
+          if (active === last) {
+            e.preventDefault()
+            first.focus()
+          }
+        }
+      }
+
+      function openZoom(imgSrc, imgAlt) {
+        try {
+          _lastFocusBeforeZoom = document.activeElement
+        } catch (e) {
+          _lastFocusBeforeZoom = null
+        }
+        zoomedImg.src = imgSrc
+        zoomedImg.alt = imgAlt || "Aperçu du produit"
+        modal.classList.add("open")
+        modal.setAttribute("aria-hidden", "false")
+        document.body.style.overflow = "hidden"
+        try {
+          modal.focus()
+        } catch (e) {
+          /* noop */
+        }
+
+        // attacher le piège de focus
+        _trapHandler = trapFocus
+        document.addEventListener("keydown", _trapHandler)
+      }
+
+      function closeZoom() {
+        modal.classList.remove("open")
+        modal.setAttribute("aria-hidden", "true")
+        zoomedImg.src = ""
+        document.body.style.overflow = ""
+        try {
+          if (_lastFocusBeforeZoom && typeof _lastFocusBeforeZoom.focus === "function") _lastFocusBeforeZoom.focus()
+        } catch (e) {
+          /* noop */
+        }
+
+        // détacher le piège de focus
+        if (_trapHandler) {
+          document.removeEventListener("keydown", _trapHandler)
+          _trapHandler = null
+        }
+      }
+
+      document.body.addEventListener("click", (e) => {
+        // trouver l'image cliquée à l'intérieur de .product-image
+        let imgEl = null
+        const clicked = e.target
+        if (
+          clicked &&
+          clicked.tagName &&
+          clicked.tagName.toLowerCase() === "img" &&
+          clicked.closest(".product-image")
+        ) {
+          imgEl = clicked
+        } else {
+          const container = e.target.closest && e.target.closest(".product-image")
+          if (container) imgEl = container.querySelector("img")
+        }
+
+        if (imgEl) {
+          if (imgEl.src) openZoom(imgEl.src, imgEl.alt)
+        }
+        // Clic sur fond modal -> fermer
+        if (e.target === modal) closeZoom()
+      })
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("open")) {
+          closeZoom()
+        }
+      })
+
+      // initialiser l'état ARIA
+      modal.setAttribute("aria-hidden", "true")
+    }
+  } catch (e) {
+    console.error("Erreur zoom image produit :", e)
+  }
+
+  // === SERVICE WORKER POUR L'HORS-LIGNE (échec silencieux) ===
+  try {
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("sw.js").catch(() => {
+          /* échouer silencieusement */
+        })
+      })
+    }
+  } catch (e) {
+    console.error("Erreur service worker :", e)
+  }
+})

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | PMC - Petit Moins Chers</title>
+  <meta name="description" content="Blog de PMC - Petit Moins Chers : actualités, conseils, nouveautés et inspirations en images et vidéos.">
+  <link rel="stylesheet" href="../main/style.css">
+  <style>
+    body {
+      background: #f8f9fa;
+    }
+    .blog-header {
+      background: #2e5bba;
+      color: #fff;
+      padding: 60px 0 30px;
+      text-align: center;
+    }
+    .blog-header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .blog-header p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+    .blog-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3rem 1rem;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .blog-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(46,91,186,0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s, transform 0.18s;
+    }
+    .blog-card:hover,
+    .blog-card:focus-within {
+      box-shadow: 0 8px 32px rgba(46,91,186,0.13), 0 3px 12px rgba(0,0,0,0.07);
+      transform: translateY(-4px) scale(1.015);
+    }
+    .blog-media {
+      width: 100%;
+      height: 220px;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .blog-media img,
+    .blog-media video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+    }
+    .blog-content {
+      padding: 1.2rem;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .blog-title {
+      color: #2e5bba;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .blog-meta {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 0.7rem;
+    }
+    .blog-desc {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 1rem;
+      flex: 1 1 auto;
+    }
+    .blog-link {
+      align-self: flex-start;
+      background: #ff6b35;
+      color: #fff;
+      padding: 0.5em 1.2em;
+      border-radius: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s;
+      font-size: 1rem;
+    }
+    .blog-link:hover,
+    .blog-link:focus-visible {
+      background: #e55a2b;
+    }
+    @media (max-width: 600px) {
+      .blog-header {
+        padding: 40px 0 20px;
+      }
+      .blog-header h1 {
+        font-size: 1.4rem;
+      }
+      .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+      .blog-media {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="../main/images/infos/logo.webp" alt="Logo PMC" style="width:40px;height:40px;border-radius:50%;background:#fff;padding:2px;">
+        PMC
+      </div>
+      <ul class="nav-links">
+        <li><a href="../main/index.html#accueil">Accueil</a></li>
+        <li><a href="../main/index.html#apropos">À Propos</a></li>
+        <li><a href="../main/index.html#actualites">Actualités</a></li>
+        <li><a href="../main/index.html#produits">Catalogue</a></li>
+        <li><a href="../main/index.html#services">Services</a></li>
+        <li><a href="../main/index.html#contact">Contact</a></li>
+        <li><a href="blog.html" class="active" style="background:#ff6b35;color:#fff;">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="blog-header">
+    <h1>Le Blog de PMC</h1>
+    <p>Inspiration, nouveautés, conseils et vie de la boutique en images et vidéos.</p>
+  </section>
+
+  <main class="blog-container">
+    <div class="blog-grid">
+      <!-- Article 1 : Image -->
+      <article class="blog-card">
+        <div class="blog-media">
+          <img src="images/image70.webp" alt="Astuce cadeau PMC">
+        </div>
+      </article>
+      <!-- Article 2 : Vidéo -->
+      <article class="blog-card">
+        <div class="blog-media">
+          <video controls>
+            <source src="videos/video7.mp4" type="video/mp4">
+          </video>
+        </div>
+      </article>
+      <!-- Article 3 : Image -->
+      <article class="blog-card">
+        <div class="blog-media">
+          <img src="images/image76.webp" alt="Arrivage Nike PMC">
+        </div>
+      </article>
+      <!-- Article 4 : Vidéo -->
+      <article class="blog-card">
+        <div class="blog-media">
+          <video controls>
+            <source src="videos/video9.mp4" type="video/mp4">
+          </video>
+        </div>
+      </article>
+      <!-- Article 5 : Vidéo -->
+      <article class="blog-card">
+        <div class="blog-media">
+          <video controls>
+            <source src="videos/video13.mp4" type="video/mp4">
+          </video>
+        </div>
+      </article>
+      <!-- Article 6 : Vidéo -->
+      <article class="blog-card">
+        <div class="blog-media">
+          <video controls>
+            <source src="videos/video14.mp4" type="video/mp4">
+          </video>
+        </div>
+      </article>
+      <!-- Article 7 : Image -->
+        <article class="blog-card">
+            <div class="blog-media">
+              <img src="images/image123.webp" alt="Nouvelle collection PMC">
+            </div>
+        </article>
+        <!-- Article 8 : Vidéo -->
+        <article class="blog-card">
+            <div class="blog-media">
+              <video controls>
+                <source src="videos/video15.mp4" type="video/mp4">
+              </video>
+            </div>
+        </article>
+        <!-- Article 9 : Image -->
+        <article class="blog-card">
+            <div class="blog-media">
+              <img src="images/image122.webp" alt="Nouvelle collection PMC">
+            </div>
+        </article>
+        <!-- Article 10 : Image -->
+        <article class="blog-card">
+            <div class="blog-media">
+              <img src="images/image121.webp" alt="Nouvelle collection PMC">
+            </div>
+        </article>
+        <!-- Article 10 : Video -->
+        <article class="blog-card">
+            <div class="blog-media">
+              <video controls>
+                <source src="videos/video21.mp4" type="video/mp4">
+              </video>
+            </div>
+        </article>
+  </main>
+
+  <!-- Lightbox Zoom Modal -->
+<div id="blog-lightbox" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(30,40,60,0.92);align-items:center;justify-content:center;">
+  <span id="blog-lightbox-close" style="position:absolute;top:24px;right:36px;font-size:2.5rem;color:#fff;cursor:pointer;z-index:10001;">&times;</span>
+  <div id="blog-lightbox-content" style="max-width:90vw;max-height:90vh;display:flex;align-items:center;justify-content:center;"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const lightbox = document.getElementById('blog-lightbox');
+  const lightboxContent = document.getElementById('blog-lightbox-content');
+  const closeBtn = document.getElementById('blog-lightbox-close');
+
+  // Ouvre le lightbox sur click image/video
+  document.querySelectorAll('.blog-media img, .blog-media video').forEach(el => {
+    el.style.cursor = "zoom-in";
+    el.addEventListener('click', function(e) {
+      lightboxContent.innerHTML = "";
+      if (el.tagName === "IMG") {
+        const img = document.createElement('img');
+        img.src = el.src;
+        img.alt = el.alt || "";
+        img.style.maxWidth = "90vw";
+        img.style.maxHeight = "90vh";
+        img.style.borderRadius = "10px";
+        lightboxContent.appendChild(img);
+      } else if (el.tagName === "VIDEO") {
+        const video = document.createElement('video');
+        video.src = el.querySelector('source') ? el.querySelector('source').src : el.src;
+        video.controls = true;
+        video.autoplay = true;
+        video.style.maxWidth = "90vw";
+        video.style.maxHeight = "90vh";
+        video.style.borderRadius = "10px";
+        lightboxContent.appendChild(video);
+      }
+      lightbox.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  // Ferme le lightbox
+  function closeLightbox() {
+    lightbox.style.display = "none";
+    lightboxContent.innerHTML = "";
+    document.body.style.overflow = "";
+  }
+  closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (lightbox.style.display === "flex" && (e.key === "Escape" || e.key === "Esc")) closeLightbox();
+  });
+});
+</script>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>PMC - Petit Moins Chers</h3>
+        <p>Votre boutique de cadeaux de confiance à Ouagadougou. Nous vous offrons des produits de qualité à des prix compétitifs.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>📞 <a href="tel:+22678997603" style="color:#fff;">+226 78 99 76 03</a></p>
+        <p>📧 <a href="mailto:contact@pmc-burkina.com" style="color:#fff;">contact@pmc-burkina.com</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Adresse</h3>
+        <p>Avenue du Capitaine Thomas Sankara<br>
+        Paspanga, Ouagadougou<br>
+        Burkina Faso</p>
+      </div>
+      <div class="footer-section">
+        <h3>Horaires</h3>
+        <p>Ouvert tous les jours<br>
+        de 07:30 à 21:30</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 PMC - Petit Moins Chers. Tous droits réservés.</p>
+    </div>
+  </footer>
+</body>
+</html>
