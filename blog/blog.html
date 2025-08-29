@@ -6,6 +6,7 @@
   <title>Blog | PMC - Petit Moins Chers</title>
   <meta name="description" content="Blog de PMC - Petit Moins Chers : actualités, conseils, nouveautés et inspirations en images et vidéos.">
   <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../images/infos/logo.webp" type="image/webp">
   <style>
     body {
       background: #f8f9fa;
@@ -106,7 +107,6 @@
     .blog-link:focus-visible {
       background: #e55a2b;
     }
-    /* Blog : grille responsive toujours 2 colonnes sur mobile/tablette, 1 colonne sur très petit écran */
     @media (max-width: 900px) {
       .blog-grid {
         grid-template-columns: 1fr 1fr;
@@ -127,8 +127,6 @@
         grid-template-columns: 1fr;
       }
     }
-
-    /* Images et vidéos responsives dans le blog */
     .blog-media img,
     .blog-media video {
       width: 100%;
@@ -138,8 +136,6 @@
       max-width: 100%;
       max-height: 100%;
     }
-
-    /* Responsive header/footer/nav (exemple, adapte selon ta structure) */
     header, nav, .footer-content {
       width: 100%;
       box-sizing: border-box;
@@ -167,8 +163,6 @@
         margin-bottom: 0.5rem;
       }
     }
-
-    /* Responsive footer sections */
     .footer-content {
       display: flex;
       flex-wrap: wrap;
@@ -192,8 +186,6 @@
         text-align: center;
       }
     }
-
-    /* Responsive blog header */
     .blog-header {
       padding: 40px 0 20px;
     }
@@ -208,8 +200,6 @@
         font-size: 2.2rem;
       }
     }
-
-    /* Responsive container */
     .blog-container {
       max-width: 1100px;
       margin: 0 auto;
@@ -357,7 +347,6 @@
           lightboxContent.appendChild(img);
         } else if (el.tagName === "VIDEO") {
           const video = document.createElement('video');
-          // Correction : récupère la source vidéo correctement
           const source = el.querySelector('source');
           video.src = source ? source.src : el.src;
           video.controls = true;
