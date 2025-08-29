@@ -104,21 +104,27 @@
     .blog-link:focus-visible {
       background: #e55a2b;
     }
-    @media (max-width: 600px) {
-      .blog-header {
-        padding: 40px 0 20px;
-      }
-      .blog-header h1 {
-        font-size: 1.4rem;
-      }
-      .blog-grid {
-        grid-template-columns: 1fr;
-        gap: 1.2rem;
-      }
-      .blog-media {
-        height: 180px;
-      }
-    }
+    /* Blog : grille 2 colonnes sur mobile */
+@media (max-width: 900px) {
+  .blog-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .blog-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+  }
+  .blog-media {
+    height: 120px;
+  }
+}
+@media (max-width: 400px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
 <body>
