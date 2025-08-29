@@ -125,6 +125,22 @@
     grid-template-columns: 1fr;
   }
 }
+/* Grille blog : 2 colonnes sur mobile/tablette, 1 colonne sur très petit écran */
+@media (max-width: 900px) {
+  .blog-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+  .blog-media {
+    height: 120px;
+  }
+}
   </style>
 </head>
 <body>
@@ -231,6 +247,7 @@
               </video>
             </div>
         </article>
+  </div>
   </main>
 
   <!-- Lightbox Zoom Modal -->
