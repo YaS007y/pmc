@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
   try {
     const cartPanel = document.getElementById("cart-panel");
     const openCartBtn = document.getElementById("openCart");
-    const closeCartBtn = document.getElementById("closeCart");
+    // const closeCartBtn = document.getElementById("closeCart"); // Suppression ici
     const cartList = document.getElementById("cart-list");
     const cartTotal = document.getElementById("cart-total");
     const cartWhatsappBtn = document.getElementById("cart-whatsapp");
@@ -271,12 +271,12 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Fermer le panier
-    if (closeCartBtn && cartPanel) {
-      closeCartBtn.addEventListener("click", () => {
-        cartPanel.classList.remove("open");
-      });
-    }
+    // Suppression de la fonction pour fermer le panier
+    // if (closeCartBtn && cartPanel) {
+    //   closeCartBtn.addEventListener("click", () => {
+    //     cartPanel.classList.remove("open");
+    //   });
+    // }
 
     // Supprimer un article du panier
     document.body.addEventListener("click", (e) => {
