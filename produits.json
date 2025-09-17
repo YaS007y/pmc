@@ -1,0 +1,506 @@
+[
+  {
+    "categorie": "baskets",
+    "nom": "Nike TN",
+    "prix": "15 000f",
+    "image": "images/chaussures/baskets/nike/image1.webp"
+  },
+  {
+    "categorie": "bonnets",
+    "nom": "Bonnet NIKE",
+    "prix": "10 000f",
+    "image": "images/accessoires/bonnet/image1.webp"
+  },
+  {
+    "categorie": "boucles_d_oreilles",
+    "nom": "Boucles simple",
+    "prix": "500f",
+    "image": "images/accessoires/boucles_d'oreille/image1.webp"
+  },
+  {
+    "categorie": "boucles_d_oreilles",
+    "nom": "Boucles aimantees",
+    "prix": "500f",
+    "image": "images/accessoires/boucles_d'oreille/image2.webp"
+  },
+  {
+    "categorie": "bracelets",
+    "nom": "Bracelets en metal",
+    "prix": "1 000f",
+    "image": "images/accessoires/bracelets/image1.webp"
+  },
+  {
+    "categorie": "bracelets",
+    "nom": "Bracelets VAN CLEEF",
+    "prix": "1 500f",
+    "image": "images/accessoires/bracelets/image2.webp"
+  },
+  {
+    "categorie": "cagoules",
+    "nom": "Cagoule NIKE",
+    "prix": "12 000f",
+    "image": "images/accessoires/cagoule/image1.webp"
+  },
+  {
+    "categorie": "chaines",
+    "nom": "Chaine en metal argentee",
+    "prix": "1 500f",
+    "image": "images/accessoires/chaines/image1.webp"
+  },
+  {
+    "categorie": "chaines",
+    "nom": "Chaine en metal argentee",
+    "prix": "1 500f",
+    "image": "images/accessoires/chaines/image2.webp"
+  },
+  {
+    "categorie": "chaines",
+    "nom": "Croix doree",
+    "prix": "1 000f",
+    "image": "images/accessoires/chaines/image3.webp"
+  },
+  {
+    "categorie": "chaines",
+    "nom": "Chaines doree avec medaillon",
+    "prix": "3 000f",
+    "image": "images/accessoires/chaines/image4.webp"
+  },
+  {
+    "categorie": "chaines",
+    "nom": "Chaines argentées",
+    "prix": "2 000f",
+    "image": "images/accessoires/chaines/image5.webp"
+  },
+  {
+    "categorie": "chaines",
+    "nom": "Chaines argentées",
+    "prix": "3 000f",
+    "image": "images/accessoires/chaines/image6.webp"
+  },
+  {
+    "categorie": "chaines",
+    "nom": "Chaines avec medaillon",
+    "prix": "2 000f",
+    "image": "images/accessoires/chaines/image7.webp"
+  },
+  {
+    "categorie": "claquettes",
+    "nom": "Adidas slide",
+    "prix": "8 000f",
+    "image": "images/chaussures/claquettes/adidas/image1.webp"
+  },
+  {
+    "categorie": "claquettes",
+    "nom": "Jordan slide",
+    "prix": "6 000f",
+    "image": "images/chaussures/claquettes/jordan/image1.webp"
+  },
+  {
+    "categorie": "claquettes",
+    "nom": "Jordan slide gris",
+    "prix": "8 000f",
+    "image": "images/chaussures/claquettes/jordan/image2.webp"
+  },
+  {
+    "categorie": "claquettes",
+    "nom": "Jordan slide noir",
+    "prix": "8 000f",
+    "image": "images/chaussures/claquettes/jordan/image3.webp"
+  },
+  {
+    "categorie": "claquettes",
+    "nom": "Jordan slide rouge",
+    "prix": "8 000f",
+    "image": "images/chaussures/claquettes/jordan/image4.webp"
+  },
+  {
+    "categorie": "claquettes",
+    "nom": "Jordan slide blanc",
+    "prix": "8 000f",
+    "image": "images/chaussures/claquettes/jordan/image5.webp"
+  },
+  {
+    "categorie": "claquettes",
+    "nom": "Nike slide",
+    "prix": "8 000f",
+    "image": "images/chaussures/claquettes/nike/image1.webp"
+  },
+  {
+    "categorie": "claquettes",
+    "nom": "Nike slide",
+    "prix": "10 000f",
+    "image": "images/chaussures/claquettes/nike/image2.webp"
+  },
+  {
+    "categorie": "claquettes",
+    "nom": "Nike slide",
+    "prix": "10 000f",
+    "image": "images/chaussures/claquettes/nike/image3.webp"
+  },
+  {
+    "categorie": "crocs",
+    "nom": "Crocs",
+    "prix": "12 000f",
+    "image": "images/chaussures/crocs/image1.webp"
+  },
+  {
+    "categorie": "crocs",
+    "nom": "Crocs",
+    "prix": "8 000f",
+    "image": "images/chaussures/crocs/image2.webp"
+  },
+  {
+    "categorie": "crocs",
+    "nom": "Crocs",
+    "prix": "12 000f",
+    "image": "images/chaussures/crocs/image3.webp"
+  },
+  {
+    "categorie": "crocs",
+    "nom": "Crocs",
+    "prix": "12 000f",
+    "image": "images/chaussures/crocs/image4.webp"
+  },
+  {
+    "categorie": "crocs",
+    "nom": "Crocs",
+    "prix": "12 000f",
+    "image": "images/chaussures/crocs/image5.webp"
+  },
+  {
+    "categorie": "crocs",
+    "nom": "Crocs",
+    "prix": "12 000f",
+    "image": "images/chaussures/crocs/image6.webp"
+  },
+  {
+    "categorie": "crocs",
+    "nom": "Crocs",
+    "prix": "12 000f",
+    "image": "images/chaussures/crocs/image7.webp"
+  },
+  {
+    "categorie": "crocs",
+    "nom": "Crocs",
+    "prix": "7 000f",
+    "image": "images/chaussures/crocs/image8.webp"
+  },
+  {
+    "categorie": "crocs",
+    "nom": "Crocs",
+    "prix": "7 000f",
+    "image": "images/chaussures/crocs/image9.webp"
+  },
+  {
+    "categorie": "crocs",
+    "nom": "Crocs",
+    "prix": "7 000f",
+    "image": "images/chaussures/crocs/image10.webp"
+  },
+  {
+    "categorie": "gants",
+    "nom": "Gants NIKE",
+    "prix": "8 000f",
+    "image": "images/accessoires/gants/image1.webp"
+  },
+  {
+    "categorie": "gourdes",
+    "nom": "Gourdes en plastique",
+    "prix": "17 500f",
+    "image": "images/accessoires/gourdes/image1.webp"
+  },
+  {
+    "categorie": "gourdes",
+    "nom": "Gourdes en plastique",
+    "prix": "17 500f",
+    "image": "images/accessoires/gourdes/image2.webp"
+  },
+  {
+    "categorie": "maroquinerie",
+    "nom": "Banane NIKE",
+    "prix": "8 000f",
+    "image": "images/accessoires/maroquinerie/image1.webp"
+  },
+  {
+    "categorie": "maroquinerie",
+    "nom": "Porte-monnaie NIKE",
+    "prix": "3 500f",
+    "image": "images/accessoires/maroquinerie/image2.webp"
+  },
+  {
+    "categorie": "maroquinerie",
+    "nom": "Trousse EASTPAK",
+    "prix": "5 000f",
+    "image": "images/accessoires/maroquinerie/image3.webp"
+  },
+  {
+    "categorie": "montres",
+    "nom": "Montre Casio",
+    "prix": "10 000f",
+    "image": "images/montres/casio/image1.webp"
+  },
+  {
+    "categorie": "montres",
+    "nom": "Montre Casio",
+    "prix": "6 000f",
+    "image": "images/montres/casio/image2.webp"
+  },
+  {
+    "categorie": "montres",
+    "nom": "Montre Casio",
+    "prix": "3 000f",
+    "image": "images/montres/casio/image3.webp"
+  },
+  {
+    "categorie": "montres",
+    "nom": "Montre Casio",
+    "prix": "8 000f",
+    "image": "images/montres/casio/image4.webp"
+  },
+  {
+    "categorie": "montres",
+    "nom": "Montre Casio",
+    "prix": "8 000f",
+    "image": "images/montres/casio/image5.webp"
+  },
+  {
+    "categorie": "montres",
+    "nom": "Montre Casio",
+    "prix": "8 000f",
+    "image": "images/montres/casio/image6.webp"
+  },
+  {
+    "categorie": "montres",
+    "nom": "Montre Casio",
+    "prix": "8 000f",
+    "image": "images/montres/casio/image7.webp"
+  },
+  {
+    "categorie": "montres",
+    "nom": "Montre Casio",
+    "prix": "8 000f",
+    "image": "images/montres/casio/image8.webp"
+  },
+  {
+    "categorie": "montres",
+    "nom": "Montre Casio",
+    "prix": "8 000f",
+    "image": "images/montres/casio/image9.webp"
+  },
+  {
+    "categorie": "montres",
+    "nom": "Montre Casio",
+    "prix": "8 000f",
+    "image": "images/montres/casio/image10.webp"
+  },
+  {
+    "categorie": "montres",
+    "nom": "Montre Casio",
+    "prix": "8 000f",
+    "image": "images/montres/casio/image11.webp"
+  },
+  {
+    "categorie": "montres",
+    "nom": "Montre Casio",
+    "prix": "8 000f",
+    "image": "images/montres/casio/image12.webp"
+  },
+  {
+    "categorie": "montres",
+    "nom": "Montre Rolex",
+    "prix": "8 000f",
+    "image": "images/montres/rolex/image1.webp"
+  },
+  {
+    "categorie": "peluches",
+    "nom": "Ours en peluche",
+    "prix": "8 000f",
+    "image": "images/accessoires/peluche/image1.webp"
+  },
+  {
+    "categorie": "peluches",
+    "nom": "Ours en peluche",
+    "prix": "8 000f",
+    "image": "images/accessoires/peluche/image2.webp"
+  },
+  {
+    "categorie": "peluches",
+    "nom": "Ours en peluche",
+    "prix": "5 000f",
+    "image": "images/accessoires/peluche/image3.webp"
+  },
+  {
+    "categorie": "peluches",
+    "nom": "Ours en peluche",
+    "prix": "5 000f",
+    "image": "images/accessoires/peluche/image4.webp"
+  },
+  {
+    "categorie": "peluches",
+    "nom": "Ours en peluche",
+    "prix": "25 000f",
+    "image": "images/accessoires/peluche/image5.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Eastpak",
+    "prix": "17 500f",
+    "image": "images/sacs/eastpak/image1.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Eastpak",
+    "prix": "17 500f",
+    "image": "images/sacs/eastpak/image2.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Eastpak",
+    "prix": "17 500f",
+    "image": "images/sacs/eastpak/image3.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Eastpak",
+    "prix": "17 500f",
+    "image": "images/sacs/eastpak/image4.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac JanSport",
+    "prix": "12 000f",
+    "image": "images/sacs/jansport/image1.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Jordan",
+    "prix": "12 000f",
+    "image": "images/sacs/jordan/image1.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Jordan",
+    "prix": "12 000f",
+    "image": "images/sacs/jordan/image2.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Nike",
+    "prix": "12 000f",
+    "image": "images/sacs/nike/image1.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Nike",
+    "prix": "10 000f",
+    "image": "images/sacs/nike/image2.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Nike",
+    "prix": "12 000f",
+    "image": "images/sacs/nike/image3.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Nike",
+    "prix": "12 000f",
+    "image": "images/sacs/nike/image4.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Nike",
+    "prix": "12 000f",
+    "image": "images/sacs/nike/image5.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Nike",
+    "prix": "12 000f",
+    "image": "images/sacs/nike/image6.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Nike",
+    "prix": "12 000f",
+    "image": "images/sacs/nike/image7.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Nike",
+    "prix": "12 000f",
+    "image": "images/sacs/nike/image8.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Nike",
+    "prix": "12 000f",
+    "image": "images/sacs/nike/image9.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Nike",
+    "prix": "12 000f",
+    "image": "images/sacs/nike/image10.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Nike",
+    "prix": "12 000f",
+    "image": "images/sacs/nike/image11.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Puma",
+    "prix": "10 000f",
+    "image": "images/sacs/puma/image1.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Under Armour",
+    "prix": "17 500f",
+    "image": "images/sacs/under_armour/image1.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Under Armour",
+    "prix": "17 500f",
+    "image": "images/sacs/under_armour/image2.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Under Armour",
+    "prix": "17 500f",
+    "image": "images/sacs/under_armour/image3.webp"
+  },
+  {
+    "categorie": "sacs",
+    "nom": "Sac Under Armour",
+    "prix": "17 500f",
+    "image": "images/sacs/under_armour/image4.webp"
+  },
+  {
+    "categorie": "sous_vetements",
+    "nom": "Boxers UNDER ARMOUR",
+    "prix": "3 000f",
+    "image": "images/sous_vetements/boxers/image1.webp"
+  },
+  {
+    "categorie": "sous_vetements",
+    "nom": "Boxers ADIDAS",
+    "prix": "3 000f",
+    "image": "images/sous_vetements/boxers/image2.webp"
+  },
+  {
+    "categorie": "sous_vetements",
+    "nom": "Boxers HUGO BOSS",
+    "prix": "3 000f",
+    "image": "images/sous_vetements/boxers/image3.webp"
+  },
+  {
+    "categorie": "sous_vetements",
+    "nom": "Boxers LACOSTE",
+    "prix": "3 000f",
+    "image": "images/sous_vetements/boxers/image4.webp"
+  }
+]

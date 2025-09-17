@@ -1,36 +1,5 @@
-<section class="products" id="produits">
-            <div class="container">
-                <h2 class="section-title">Notre Catalogue</h2>
-                <div class="category-filters" role="group" aria-label="Filtrer les produits par catégorie">
-                    <!-- Modified filter buttons to show 5 categories with dropdown -->
-                    <div class="filter-dropdown-container">
-                        <button class="filter-btn active" data-category="tous" id="all-categories-btn">
-                            Autres produits
-                            <span class="dropdown-arrow">▼</span>
-                        </button>
-                        <div class="filter-dropdown" id="categories-dropdown">
-                            <button class="dropdown-item" data-category="tous">Tous les produits</button>
-                            <button class="dropdown-item" data-category="bonnets">Bonnets</button>
-                            <button class="dropdown-item" data-category="boucles_d_oreilles">Boucles d'oreilles</button>
-                            <button class="dropdown-item" data-category="bracelets">Bracelets</button>
-                            <button class="dropdown-item" data-category="cagoules">Cagoules</button>
-                            <button class="dropdown-item" data-category="casquettes">Casquettes</button>
-                            <button class="dropdown-item" data-category="chaines">Chaînes</button>
-                            <button class="dropdown-item" data-category="gants">Gants</button>
-                            <button class="dropdown-item" data-category="gourdes">Gourdes</button>
-                            <button class="dropdown-item" data-category="maroquinerie">Maroquinerie</button>
-                            <button class="dropdown-item" data-category="montres">Montres</button>
-                            <button class="dropdown-item" data-category="peluches">Peluches</button>
-                            <button class="dropdown-item" data-category="sous_vetements">Sous-vêtements</button>
-                        </div>
-                    </div>
-                    <button class="filter-btn" data-category="baskets">Baskets</button>
-                    <button class="filter-btn" data-category="crocs">Crocs</button>
-                    <button class="filter-btn" data-category="claquettes">Claquettes</button>
-                    <button class="filter-btn" data-category="sacs">Sacs</button>
-                </div>
-                <!--baskets-->
-                <div class="products-grid">
+<div class="products-grid">
+                    <!-- baskets -->
                     <div class="product-card" data-category="baskets">
                         <div class="product-image">
                             <img src="images/chaussures/baskets/nike/image108.webp" alt="Nike TN" loading="lazy">
@@ -42,12 +11,10 @@
                             <button type="button" class="product-btn" aria-label="Commander  Nike TN">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <!--bonnets-->
-                <div class="products-grid">
+                    <!-- bonnets -->
                     <div class="product-card" data-category="bonnets">
                         <div class="product-image">
-                            <img src="images/accessoires/bonnets/image14.webp" alt="Bonnet NIKE" loading="lazy">
+                            <img src="images/accessoires/bonnet/image46.webp" alt="Bonnet NIKE" loading="lazy">
                         </div>
                         <div class="product-info">
                             <span class="product-category">Bonnets</span>
@@ -56,12 +23,10 @@
                             <button type="button" class="product-btn" aria-label="Commander Bonnet NIKE">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <!--boucles d'oreilles-->
-                <div class="products-grid">
+                    <!-- boucles d'oreilles -->
                     <div class="product-card" data-category="boucles_d_oreilles">
                         <div class="product-image">
-                            <img src="images/accessoires/boucles_d'oreilles/image71.webp" alt="Boucles d'oreilles" loading="lazy">
+                            <img src="images/accessoires/boucles_d'oreille/image71.webp" alt="Boucles d'oreilles" loading="lazy">
                         </div>
                         <div class="product-info">
                             <span class="product-category">Boucles d'oreilles</span>
@@ -70,11 +35,9 @@
                             <button type="button" class="product-btn" aria-label="Commander Boucles simple">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid">
                     <div class="product-card" data-category="boucles_d_oreilles">
                         <div class="product-image">
-                            <img src="images/accessoires/boucles_d_oreilles/image72.webp" alt="Boucles d'oreilles" loading="lazy">
+                            <img src="images/accessoires/boucles_d'oreille/image72.webp" alt="Boucles d'oreilles" loading="lazy">
                         </div>
                         <div class="product-info">
                             <span class="product-category">Boucles d'oreilles</span>
@@ -83,9 +46,7 @@
                             <button type="button" class="product-btn" aria-label="Commander Boucles aimantees">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <!--bracelets-->
-                <div class="products-grid">
+                    <!-- bracelets -->
                     <div class="product-card" data-category="bracelets">
                         <div class="product-image">
                             <img src="images/accessoires/bracelets/image103.webp" alt="Bracelets" loading="lazy">
@@ -97,25 +58,21 @@
                             <button type="button" class="product-btn" aria-label="Commander Bracelets en metal">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid">
                     <div class="product-card" data-category="bracelets">
                         <div class="product-image">
                             <img src="images/accessoires/bracelets/image120.webp" alt="Bracelets" loading="lazy">
                         </div>
                         <div class="product-info">
                             <span class="product-category">Bracelets</span>
-                            <h3 class="product-name">Bracelets en metal</h3>
-                            <div class="product-price">1 000f</div>
-                            <button type="button" class="product-btn" aria-label="Commander Bracelets en metal">🛒 Commander</button>
+                            <h3 class="product-name">Bracelets VAN CLEEF</h3>
+                            <div class="product-price">1 500f</div>
+                            <button type="button" class="product-btn" aria-label="Commander Bracelets VAN CLEEF">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <!--cagoules-->
-                <div class="products-grid">
+                    <!-- cagoules -->
                     <div class="product-card" data-category="cagoules">
                         <div class="product-image">
-                            <img src="images/accessoires/cagoules/image104.webp" alt="Cagoules" loading="lazy">
+                            <img src="images/accessoires/cagoule/image45.webp" alt="Cagoules" loading="lazy">
                         </div>
                         <div class="product-info">
                             <span class="product-category">Cagoules</span>
@@ -124,10 +81,7 @@
                             <button type="button" class="product-btn" aria-label="Commander Cagoule NIKE">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <!--casquettes-->
-                <!--chaines-->
-                <div class="products-grid">
+                    <!-- chaines -->
                     <div class="product-card" data-category="chaines">
                         <div class="product-image">
                             <img src="images/accessoires/chaines/image95.webp" alt="Chaines" loading="lazy">
@@ -139,8 +93,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Chaine en metal argentee">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid">
                     <div class="product-card" data-category="chaines">
                         <div class="product-image">
                             <img src="images/accessoires/chaines/image96.webp" alt="Chaines" loading="lazy">
@@ -152,8 +104,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Chaine en metal argentee">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid">
                     <div class="product-card" data-category="chaines">
                         <div class="product-image">
                             <img src="images/accessoires/chaines/image97.webp" alt="Chaines" loading="lazy">
@@ -165,8 +115,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Croix doree">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid">
                     <div class="product-card" data-category="chaines">
                         <div class="product-image">
                             <img src="images/accessoires/chaines/image100.webp" alt="Chaines" loading="lazy">
@@ -178,21 +126,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Chaines doree avec medaillon">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid">
-                    <div class="product-card" data-category="chaines">
-                        <div class="product-image">
-                            <img src="images/accessoires/chaines/image.webp" alt="Chaines" loading="lazy">
-                        </div>
-                        <div class="product-info">
-                            <span class="product-category">Chaines</span>
-                            <h3 class="product-name">Chaines avec medaillon</h3>
-                            <div class="product-price">2 000f</div>
-                            <button type="button" class="product-btn" aria-label="Commander Chaines avec medaillon">🛒 Commander</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="products-grid">
                     <div class="product-card" data-category="chaines">
                         <div class="product-image">
                             <img src="images/accessoires/chaines/image101.webp" alt="Chaines" loading="lazy">
@@ -204,8 +137,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Chaines argentées">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid">
                     <div class="product-card" data-category="chaines">
                         <div class="product-image">
                             <img src="images/accessoires/chaines/image102.webp" alt="Chaines" loading="lazy">
@@ -217,8 +148,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Chaines argentées">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid">
                     <div class="product-card" data-category="chaines">
                         <div class="product-image">
                             <img src="images/accessoires/chaines/image115.webp" alt="Chaines" loading="lazy">
@@ -230,9 +159,8 @@
                             <button type="button" class="product-btn" aria-label="Commander Chaines avec medaillon">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <!--claquettes-->
-                <div class="product-card" data-category="claquettes">
+                    <!-- claquettes -->
+                    <div class="product-card" data-category="claquettes">
                         <div class="product-image">
                             <img src="images/chaussures/claquettes/adidas/image53.webp" alt="Adidas slide" loading="lazy">
                         </div>
@@ -331,8 +259,8 @@
                             <button type="button" class="product-btn" aria-label="Commander Nike slide">🛒 Commander</button>
                         </div>
                     </div>
-                <!--crocs-->
-                <div class="product-card" data-category="crocs">
+                    <!-- crocs -->
+                    <div class="product-card" data-category="crocs">
                         <div class="product-image">
                             <img src="images/chaussures/crocs/image119.webp" alt="Crocs" loading="lazy">
                         </div>
@@ -343,7 +271,7 @@
                             <button type="button" class="product-btn" aria-label="Commander Crocs">🛒 Commander</button>
                         </div>
                     </div>
-                <div class="product-card" data-category="crocs">
+                    <div class="product-card" data-category="crocs">
                         <div class="product-image">
                             <img src="images/chaussures/crocs/image113.webp" alt="Crocs" loading="lazy">
                         </div>
@@ -354,7 +282,7 @@
                             <button type="button" class="product-btn" aria-label="Commander Crocs">🛒 Commander</button>
                         </div>
                     </div>
-                <div class="product-card" data-category="crocs">
+                    <div class="product-card" data-category="crocs">
                         <div class="product-image">
                             <img src="images/chaussures/crocs/image66.webp" alt="Crocs" loading="lazy">
                         </div>
@@ -365,7 +293,7 @@
                             <button type="button" class="product-btn" aria-label="Commander Crocs">🛒 Commander</button>
                         </div>
                     </div>
-                <div class="product-card" data-category="crocs">
+                    <div class="product-card" data-category="crocs">
                         <div class="product-image">
                             <img src="images/chaussures/crocs/image67.webp" alt="Crocs" loading="lazy">
                         </div>
@@ -376,7 +304,7 @@
                             <button type="button" class="product-btn" aria-label="Commander Crocs">🛒 Commander</button>
                         </div>
                     </div>
-                <div class="product-card" data-category="crocs">
+                    <div class="product-card" data-category="crocs">
                         <div class="product-image">
                             <img src="images/chaussures/crocs/image27.webp" alt="Crocs" loading="lazy">
                         </div>
@@ -439,11 +367,10 @@
                             <span class="product-category">Crocs</span>
                             <h3 class="product-name">Crocs</h3>
                             <div class="product-price">7 000f</div>
-                            <button type="button" class="product-btn" aria-label="Commander Crocs">��� Commander</button>
+                            <button type="button" class="product-btn" aria-label="Commander Crocs">🛒 Commander</button>
                         </div>
                     </div>
-                <!--gants-->
-                <div class="products-grid" id="productsGrid">
+                    <!-- gants -->
                     <div class="product-card" data-category="gants">
                         <div class="product-image">
                             <img src="images/accessoires/gants/image47.webp" alt="Gants" loading="lazy">
@@ -455,9 +382,7 @@
                             <button type="button" class="product-btn" aria-label="Commander Gants NIKE">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <!--gourdes-->
-                <div class="products-grid" id="productsGrid">
+                    <!-- gourdes -->
                     <div class="product-card" data-category="gourdes">
                         <div class="product-image">
                             <img src="images/accessoires/gourdes/image107.webp" alt="Gourdes" loading="lazy">
@@ -469,8 +394,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Gourdes en plastique">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="gourdes">
                         <div class="product-image">
                             <img src="images/accessoires/gourdes/image109.webp" alt="Gourdes" loading="lazy">
@@ -482,10 +405,7 @@
                             <button type="button" class="product-btn" aria-label="Commander Gourdes en plastique">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-
-                <!--maroquinerie-->
-                <div class="products-grid" id="productsGrid">
+                    <!-- maroquinerie -->
                     <div class="product-card" data-category="maroquinerie">
                         <div class="product-image">
                             <img src="images/accessoires/maroquinerie/image14.webp" alt="Maroquinerie" loading="lazy">
@@ -497,8 +417,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Banane NIKE">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="maroquinerie">
                         <div class="product-image">
                             <img src="images/accessoires/maroquinerie/image21.webp" alt="Maroquinerie" loading="lazy">
@@ -510,8 +428,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Porte-monnaie NIKE">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="maroquinerie">
                         <div class="product-image">
                             <img src="images/accessoires/maroquinerie/image24.webp" alt="Maroquinerie" loading="lazy">
@@ -523,10 +439,7 @@
                             <button type="button" class="product-btn" aria-label="Commander Trousse EASTPAK">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <!--montres-->
-                <!--casio-->
-                <div class="products-grid" id="productsGrid">
+                    <!-- montres -->
                     <div class="product-card" data-category="montres">
                         <div class="product-image">
                             <img src="images/montres/casio/image79.webp" alt="Montres" loading="lazy">
@@ -538,8 +451,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Montre Casio">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="montres">
                         <div class="product-image">
                             <img src="images/montres/casio/image80.webp" alt="Montres" loading="lazy">
@@ -551,8 +462,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Montre Casio">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="montres">
                         <div class="product-image">
                             <img src="images/montres/casio/image81.webp" alt="Montres" loading="lazy">
@@ -564,8 +473,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Montre Casio">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="montres">
                         <div class="product-image">
                             <img src="images/montres/casio/image84.webp" alt="Montres" loading="lazy">
@@ -577,8 +484,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Montre Casio">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="montres">
                         <div class="product-image">
                             <img src="images/montres/casio/image85.webp" alt="Montres" loading="lazy">
@@ -590,8 +495,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Montre Casio">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="montres">
                         <div class="product-image">
                             <img src="images/montres/casio/image86.webp" alt="Montres" loading="lazy">
@@ -603,8 +506,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Montre Casio">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="montres">
                         <div class="product-image">
                             <img src="images/montres/casio/image87.webp" alt="Montres" loading="lazy">
@@ -616,8 +517,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Montre Casio">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="montres">
                         <div class="product-image">
                             <img src="images/montres/casio/image88.webp" alt="Montres" loading="lazy">
@@ -629,8 +528,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Montre Casio">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="montres">
                         <div class="product-image">
                             <img src="images/montres/casio/image89.webp" alt="Montres" loading="lazy">
@@ -642,8 +539,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Montre Casio">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="montres">
                         <div class="product-image">
                             <img src="images/montres/casio/image90.webp" alt="Montres" loading="lazy">
@@ -655,8 +550,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Montre Casio">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="montres">
                         <div class="product-image">
                             <img src="images/montres/casio/image91.webp" alt="Montres" loading="lazy">
@@ -668,8 +561,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Montre Casio">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="montres">
                         <div class="product-image">
                             <img src="images/montres/casio/image92.webp" alt="Montres" loading="lazy">
@@ -681,8 +572,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Montre Casio">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="montres">
                         <div class="product-image">
                             <img src="images/montres/rolex/image82.webp" alt="Montres" loading="lazy">
@@ -694,9 +583,7 @@
                             <button type="button" class="product-btn" aria-label="Commander Montre Rolex">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <!--peluches-->
-                <div class="products-grid" id="productsGrid">
+                    <!-- peluches -->
                     <div class="product-card" data-category="peluches">
                         <div class="product-image">
                             <img src="images/accessoires/peluche/image55.webp" alt="Peluches" loading="lazy">
@@ -708,8 +595,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Ours en peluche">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="peluches">
                         <div class="product-image">
                             <img src="images/accessoires/peluche/image56.webp" alt="Peluches" loading="lazy">
@@ -721,8 +606,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Ours en peluche">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="peluches">
                         <div class="product-image">
                             <img src="images/accessoires/peluche/image73.webp" alt="Peluches" loading="lazy">
@@ -734,8 +617,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Ours en peluche">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="peluches">
                         <div class="product-image">
                             <img src="images/accessoires/peluche/image74.webp" alt="Peluches" loading="lazy">
@@ -747,8 +628,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Ours en peluche">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="peluches">
                         <div class="product-image">
                             <img src="images/accessoires/peluche/image116.webp" alt="Peluches" loading="lazy">
@@ -760,9 +639,8 @@
                             <button type="button" class="product-btn" aria-label="Commander Ours en peluche">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <!--sacs-->
-                <div class="product-card" data-category="sacs">
+                    <!-- sacs -->
+                    <div class="product-card" data-category="sacs">
                         <div class="product-image">
                             <img src="images/sacs/eastpak/image11.webp" alt="Sacs Eastpak" loading="lazy">
                         </div>
@@ -1015,8 +893,7 @@
                             <button type="button" class="product-btn" aria-label="Commander Sac Under Armour">🛒 Commander</button>
                         </div>
                     </div>
-                <!--sous vetements-->
-                <div class="products-grid" id="productsGrid">
+                    <!-- sous-vêtements -->
                     <div class="product-card" data-category="sous_vetements">
                         <div class="product-image">
                             <img src="images/sous_vetements/boxers/image109.webp" alt="Boxers" loading="lazy">
@@ -1028,8 +905,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Boxers UNDER ARMOUR">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="sous_vetements">
                         <div class="product-image">
                             <img src="images/sous_vetements/boxers/image110.webp" alt="Boxers" loading="lazy">
@@ -1041,8 +916,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Boxers ADIDAS">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="sous_vetements">
                         <div class="product-image">
                             <img src="images/sous_vetements/boxers/image111.webp" alt="Boxers" loading="lazy">
@@ -1054,8 +927,6 @@
                             <button type="button" class="product-btn" aria-label="Commander Boxers HUGO BOSS">🛒 Commander</button>
                         </div>
                     </div>
-                </div>
-                <div class="products-grid" id="productsGrid">
                     <div class="product-card" data-category="sous_vetements">
                         <div class="product-image">
                             <img src="images/sous_vetements/boxers/image112.webp" alt="Boxers" loading="lazy">
@@ -1068,5 +939,5 @@
                         </div>
                     </div>
                 </div>
+                <!-- Fin de la grille unique -->
             </div>
-        </section>
