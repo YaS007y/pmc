@@ -35,7 +35,7 @@
             </div>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#apropos">À Propos</a></li>
+                <li><a href="#apropos">À propos</a></li>
                 <li><a href="#actualites">Actualités</a></li>
                 <li><a href="#produits">Produits</a></li>
                 <li><a href="#services">Services</a></li>
@@ -60,7 +60,7 @@
         <!-- Section À propos -->
         <section class="about" id="apropos">
             <div class="container">
-                <h2 class="section-title">À Propos de PMC</h2>
+                <h2 class="section-title">À propos de PMC</h2>
                 <div class="about-content">
                     <div class="about-text">
                         <p>PMC (Petit Moins Chers) est votre espace shopping de confiance situé en plein cœur de Ouagadougou. Nous sommes spécialisés dans la vente d'articles de qualité à des prix accessibles, pensés pour tous les budgets.</p>
@@ -82,35 +82,35 @@
                     <div class="carousel-wrapper">
                         <div class="carousel-slides" id="carouselSlides">
                             <!-- Diapositives (images et vidéos) -->
-                            <div class="carousel-slide active" role="group" aria-roledescription="slide" aria-label="1 sur 5">
+                            <div class="carousel-slide active" role="group" aria-roledescription="slide" aria-label="1 sur 10">
                                 <img src="images/actus/images/image1.webp" alt="Nouveauté : Affiche promotionnelle 1" loading="lazy">
                             </div>
-                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 sur 5">
+                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 sur 10">
                                 <img src="images/actus/images/image2.webp" alt="Nouveauté : Affiche promotionnelle 2" loading="lazy">
                             </div>
-                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 sur 5">
+                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 sur 10">
                                 <img src="images/actus/images/image3.webp" alt="Nouveauté : Affiche promotionnelle 3" loading="lazy">
                             </div>
-                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="4 sur 5">
+                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="4 sur 10">
                                 <video autoplay muted loop playsinline loading="lazy" title="Présentation PMC">
                                     <source src="images/actus/videos/video1.mp4" type="video/mp4">
                                 </video>
                             </div>
-                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="5 sur 5">
+                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="5 sur 10">
                                 <img src="images/actus/images/image4.webp" alt="Nouveauté : Affiche promotionnelle 4" loading="lazy">
                             </div>
-                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="6 sur 6">
+                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="6 sur 10">
                                 <img src="images/actus/images/image5.jpg" alt="Nouveauté : Affiche promotionnelle 5" loading="lazy">
                             </div>
-                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="7 sur 7">
+                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="7 sur 10">
                                 <video autoplay muted loop playsinline loading="lazy" title="Présentation PMC">
                                     <source src="images/actus/videos/video4.mp4" type="video/mp4">
                                 </video>
                             </div>
-                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="8 sur 8">
+                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="8 sur 10">
                                 <img src="images/actus/images/image6.jpg" alt="Nouveauté : Affiche promotionnelle 6" loading="lazy">
                             </div>
-                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="9 sur 9">
+                            <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="9 sur 10">
                                 <img src="images/actus/images/image7.jpg" alt="Nouveauté : Affiche promotionnelle 7" loading="lazy">
                             </div>
                             <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="10 sur 10">
@@ -132,11 +132,10 @@
                         <button type="button" class="indicator" data-slide="7" aria-label="Aller à la diapositive 8"></button>
                         <button type="button" class="indicator" data-slide="8" aria-label="Aller à la diapositive 9"></button>
                         <button type="button" class="indicator" data-slide="9" aria-label="Aller à la diapositive 10"></button>
-                        <button type="button" class="indicator" data-slide="10" aria-label="Aller à la diapositive 11"></button>
                     </div>
                     <!-- Boutons de navigation -->
-                    <button type="button" class="carousel-btn prev" id="prevBtn" aria-label="Diapositive précédente">‹</button>
-                    <button type="button" class="carousel-btn next" id="nextBtn" aria-label="Diapositive suivante">›</button>
+                    <button type="button" class="carousel-btn prev" id="prevBtn" aria-label="Diapositive précédente" aria-controls="carouselSlides">‹</button>
+                    <button type="button" class="carousel-btn next" id="nextBtn" aria-label="Diapositive suivante" aria-controls="carouselSlides">›</button>
                 </div>
             </div>
         </section>
@@ -302,14 +301,15 @@
     <div id="cart-panel" class="cart-panel" role="region" aria-label="Panier d'achat">
         <div class="cart-header">
             🛒 <span>Votre panier</span>
+            <button type="button" id="closeCart" class="cart-close-btn" aria-label="Fermer le panier">×</button>
         </div>
         <ul id="cart-list" class="cart-list"></ul>
         <div class="cart-total" id="cart-total"></div>
         <button type="button" id="cart-whatsapp" class="cart-whatsapp-btn" style="display:none;" aria-label="Commander via WhatsApp">Commander via WhatsApp</button>
     </div>
 
-    <!-- Bouton flottant WhatsApp -->
-    <a href="https://wa.me/22678997603" class="floating-contact" title="Contactez-nous sur WhatsApp" target="_blank" rel="noopener">💬</a>
+    <!-- Bouton flottant pour ouvrir le panier -->
+    <button type="button" id="openCart" class="cart-fab" aria-label="Ouvrir le panier">🛒</button>
 
     <!-- Fallback noscript -->
     <noscript>
