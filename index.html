@@ -288,7 +288,7 @@
                 <div class="footer-section">
                     <h3>Horaires</h3>
                     <p>Ouvert tous les jours<br>
-                    de 07:30 à 21:30</p>
+                    de 07:30 à 20:40</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -298,7 +298,7 @@
     </footer>
 
     <!-- Panier flottant WhatsApp -->
-    <div id="cart-panel" class="cart-panel" role="region" aria-label="Panier d'achat">
+    <div id="cart-panel" class="cart-panel" role="region" aria-label="Panier d'achat" aria-hidden="true">
         <div class="cart-header">
             🛒 <span>Votre panier</span>
             <button type="button" id="closeCart" class="cart-close-btn" aria-label="Fermer le panier">×</button>
@@ -309,7 +309,9 @@
     </div>
 
     <!-- Bouton flottant pour ouvrir le panier -->
-    <button type="button" id="openCart" class="cart-fab" aria-label="Ouvrir le panier">🛒</button>
+    <button type="button" id="openCart" class="cart-fab" aria-label="Ouvrir le panier">🛒
+        <span class="cart-badge hidden" id="cartBadge">0</span>
+    </button>
 
     <!-- Fallback noscript -->
     <noscript>
@@ -321,7 +323,7 @@
 
     <!-- Modal de zoom image produit -->
     <div id="image-zoom-modal" class="image-zoom-modal" tabindex="-1" role="dialog" aria-hidden="true" aria-label="Image agrandie">
-        <img id="zoomed-image" src="/placeholder.svg" alt="Aperçu du produit">
+        <img id="zoomed-image" src="placeholder.svg" alt="Aperçu du produit">
     </div>
 </body>
 </html>

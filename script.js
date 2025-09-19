@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Erreur fetch produits (try) :", e);
   }
 
-  // === DROPDOWN FILTRES CATEGORIES ===
+  // === DROPDOWN FILTRES CATÉGORIES ===
   try {
     const dropdownBtn = document.getElementById("dropdownMenuBtn");
     const dropdownContainer = dropdownBtn?.parentElement;
@@ -222,11 +222,42 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     closeCart();
 
+    // Fonction updateCartBadge pour gérer le badge
+    function updateCartBadge(count) {
+      try {
+        const badge = document.getElementById("cartBadge");
+        if (!badge) return;
+
+        if (count > 0) {
+          badge.textContent = count > 99 ? "99+" : count.toString();
+          badge.classList.remove("hidden");
+
+          // Animation pulse lors du changement
+          badge.classList.add("pulse");
+          setTimeout(() => badge.classList.remove("pulse"), 600);
+        } else {
+          badge.classList.add("hidden");
+        }
+      } catch (e) {
+        console.error("Erreur updateCartBadge :", e);
+      }
+    }
+
+    // Fonction updateCart() complète avec toutes les modifications
     function updateCart() {
       try {
         if (!cartList || !cartTotal || !cartWhatsappBtn) return;
 
+        // Calculer le nombre total d'articles (quantités incluses)
+        const totalItems = cart.reduce((sum, item) => sum + (item.qty || 0), 0);
+
+        // Mettre à jour le badge
+        updateCartBadge(totalItems);
+
+        // Vider la liste d'affichage
         cartList.innerHTML = "";
+
+        // Si le panier est vide
         if (!Array.isArray(cart) || cart.length === 0) {
           cartList.innerHTML = "<li style='text-align:center;color:#888'>Votre panier est vide.</li>";
           cartTotal.textContent = "";
@@ -237,33 +268,68 @@ document.addEventListener("DOMContentLoaded", () => {
           return;
         }
 
+        // Construire la liste des articles et calculer le total
         let total = 0;
         cart.forEach((item, idx) => {
           const prixNum = parseInt((item.price || "").replace(/[^\d]/g, "")) || 0;
-          total += prixNum * item.qty;
+          const quantity = item.qty || 1;
+          total += prixNum * quantity;
+
           const li = document.createElement("li");
           li.innerHTML = `
-            <span>${item.name} <span style="color:#2E5BBA">${item.price}</span> x${item.qty}</span>
+            <span>${item.name} <span style="color:#2E5BBA">${item.price}</span> ×${quantity}</span>
             <button class="cart-remove" type="button" data-idx="${idx}" aria-label="Retirer ${item.name}">×</button>
           `;
           cartList.appendChild(li);
         });
 
+        // Afficher le total avec animation
         cartTotal.classList.add("updated");
         cartTotal.textContent = `Total : ${total.toLocaleString()} F`;
         setTimeout(() => cartTotal.classList.remove("updated"), 500);
 
+        // Afficher le bouton WhatsApp
         cartWhatsappBtn.style.display = "block";
 
+        // Mettre à jour l'état du bouton panier principal
         if (openCartBtn) {
           openCartBtn.classList.add("has-items");
           openCartBtn.classList.add("notification");
           setTimeout(() => openCartBtn.classList.remove("notification"), 600);
         }
+
       } catch (e) {
         console.error("Erreur updateCart :", e);
       }
     }
+
+    // Fonction de suppression d'article corrigée (pour éviter la fermeture du panier)
+    document.body.addEventListener("click", (e) => {
+      try {
+        const removeBtn = e.target.closest(".cart-remove");
+        if (removeBtn) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          const idx = parseInt(removeBtn.getAttribute("data-idx"));
+          if (!isNaN(idx) && idx >= 0 && idx < cart.length) {
+            // Supprimer l'article
+            cart.splice(idx, 1);
+            updateCart();
+
+            // Ne fermer le panier que s'il est complètement vide
+            if (cart.length === 0) {
+              setTimeout(() => {
+                closeCart();
+              }, 1500); // Délai pour que l'utilisateur voie le message "panier vide"
+            }
+            // Sinon, garder le panier ouvert pour continuer les modifications
+          }
+        }
+      } catch (e) {
+        console.error("Erreur suppression article panier :", e);
+      }
+    });
 
     // Gestion des boutons "Commander"
     document.body.addEventListener("click", (e) => {
@@ -349,22 +415,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Supprimer un article du panier
-    document.body.addEventListener("click", (e) => {
-      try {
-        const removeBtn = e.target.closest(".cart-remove");
-        if (removeBtn) {
-          const idx = parseInt(removeBtn.getAttribute("data-idx"));
-          if (!isNaN(idx) && idx >= 0 && idx < cart.length) {
-            cart.splice(idx, 1);
-            updateCart();
-          }
-        }
-      } catch (e) {
-        console.error("Erreur suppression article panier :", e);
-      }
-    });
-
     // Commande WhatsApp (depuis le panneau panier uniquement)
     if (cartWhatsappBtn) {
       cartWhatsappBtn.addEventListener("click", () => {
@@ -377,7 +427,7 @@ document.addEventListener("DOMContentLoaded", () => {
           cart.forEach(item => {
             const prixNum = parseInt((item.price || "").replace(/[^\d]/g, "")) || 0;
             total += prixNum * item.qty;
-            message += `• ${item.name} - ${item.price} x${item.qty}\n`;
+            message += `• ${item.name} - ${item.price} ×${item.qty}\n`;
           });
 
           message += `\nTotal : ${total.toLocaleString()} F\n\nMerci !`;
